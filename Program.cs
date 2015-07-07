@@ -24,6 +24,7 @@ namespace Employee
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
             if (FXFW.SqlDB.LoadSqlDBPath("Employees") && Authentication())
             {
+                Properties.Settings.Default["EmployeesConnectionString"] = FXFW.SqlDB.SqlConStr;
                 FXFW.SqlDB.LoadSQLReports();
                 Logger = new FXFW.Logger(FXFW.Logger.LanguageInfo.English, Application.ProductName, Properties.Resources.EESoft, false);
                 

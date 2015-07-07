@@ -51,6 +51,7 @@
             this.navBarItemEmpTBL_EmpLite = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpTBLTankolat1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpTBLTankolat2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpTBLTankolat3 = new DevExpress.XtraNavBar.NavBarItem();
             this.imageCollection32 = new DevExpress.Utils.ImageCollection(this.components);
             this.DPCode = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -84,8 +85,6 @@
             this.navBarItemEmpAppOptions = new DevExpress.XtraNavBar.NavBarItem();
             this.DPQuery = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel4_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.navBarControlQry = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
@@ -100,7 +99,9 @@
             this.CESelect = new DevExpress.XtraEditors.CheckEdit();
             this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
             this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
-            this.navBarItemEmpTBLTankolat3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarControlQry = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemEmpvQry01 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlSelect)).BeginInit();
             this.groupControlSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LUEItems.Properties)).BeginInit();
@@ -118,7 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlPriv)).BeginInit();
             this.DPQuery.SuspendLayout();
             this.dockPanel4_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).BeginInit();
             this.DPReport.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).BeginInit();
@@ -128,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlSelect
@@ -183,7 +184,7 @@
             // 
             // pnlContainerMain
             // 
-            this.pnlContainerMain.ActiveChild = this.DPData;
+            this.pnlContainerMain.ActiveChild = this.DPQuery;
             this.pnlContainerMain.Controls.Add(this.DPCode);
             this.pnlContainerMain.Controls.Add(this.DPData);
             this.pnlContainerMain.Controls.Add(this.DPPriv);
@@ -370,6 +371,14 @@
             this.navBarItemEmpTBLTankolat2.SmallImageIndex = 34;
             this.navBarItemEmpTBLTankolat2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
             // 
+            // navBarItemEmpTBLTankolat3
+            // 
+            this.navBarItemEmpTBLTankolat3.Caption = "النقل الخارجي";
+            this.navBarItemEmpTBLTankolat3.LargeImageIndex = 34;
+            this.navBarItemEmpTBLTankolat3.Name = "navBarItemEmpTBLTankolat3";
+            this.navBarItemEmpTBLTankolat3.SmallImageIndex = 34;
+            this.navBarItemEmpTBLTankolat3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            // 
             // imageCollection32
             // 
             this.imageCollection32.ImageSize = new System.Drawing.Size(32, 32);
@@ -409,6 +418,7 @@
             this.imageCollection32.Images.SetKeyName(32, "EMP_report.png");
             this.imageCollection32.Images.SetKeyName(33, "CD_EmpTIME.png");
             this.imageCollection32.Images.SetKeyName(34, "EMPinout32.png");
+            this.imageCollection32.Images.SetKeyName(35, "Qry32.png");
             // 
             // DPCode
             // 
@@ -746,30 +756,6 @@
             this.dockPanel4_Container.Size = new System.Drawing.Size(326, 416);
             this.dockPanel4_Container.TabIndex = 0;
             // 
-            // navBarControlQry
-            // 
-            this.navBarControlQry.ActiveGroup = this.navBarGroup5;
-            this.navBarControlQry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControlQry.ExplorerBarShowGroupButtons = false;
-            this.navBarControlQry.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup5});
-            this.navBarControlQry.Location = new System.Drawing.Point(0, 0);
-            this.navBarControlQry.Name = "navBarControlQry";
-            this.navBarControlQry.OptionsNavPane.ExpandedWidth = 192;
-            this.navBarControlQry.Size = new System.Drawing.Size(326, 416);
-            this.navBarControlQry.StoreDefaultPaintStyleName = true;
-            this.navBarControlQry.TabIndex = 10;
-            this.navBarControlQry.Text = "navBarControl1";
-            // 
-            // navBarGroup5
-            // 
-            this.navBarGroup5.Caption = "";
-            this.navBarGroup5.Expanded = true;
-            this.navBarGroup5.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.LargeImage")));
-            this.navBarGroup5.Name = "navBarGroup5";
-            this.navBarGroup5.NavigationPaneVisible = false;
-            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
-            // 
             // DPReport
             // 
             this.DPReport.Controls.Add(this.dockPanel5_Container);
@@ -903,13 +889,43 @@
             this.CEInsert.Size = new System.Drawing.Size(75, 19);
             this.CEInsert.TabIndex = 0;
             // 
-            // navBarItemEmpTBLTankolat3
+            // navBarControlQry
             // 
-            this.navBarItemEmpTBLTankolat3.Caption = "النقل الخارجي";
-            this.navBarItemEmpTBLTankolat3.LargeImageIndex = 34;
-            this.navBarItemEmpTBLTankolat3.Name = "navBarItemEmpTBLTankolat3";
-            this.navBarItemEmpTBLTankolat3.SmallImageIndex = 34;
-            this.navBarItemEmpTBLTankolat3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            this.navBarControlQry.ActiveGroup = this.navBarGroup5;
+            this.navBarControlQry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControlQry.ExplorerBarShowGroupButtons = false;
+            this.navBarControlQry.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup5});
+            this.navBarControlQry.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItemEmpvQry01});
+            this.navBarControlQry.LargeImages = this.imageCollection32;
+            this.navBarControlQry.Location = new System.Drawing.Point(0, 0);
+            this.navBarControlQry.Name = "navBarControlQry";
+            this.navBarControlQry.OptionsNavPane.ExpandedWidth = 326;
+            this.navBarControlQry.Size = new System.Drawing.Size(326, 416);
+            this.navBarControlQry.SmallImages = this.imageCollection32;
+            this.navBarControlQry.StoreDefaultPaintStyleName = true;
+            this.navBarControlQry.TabIndex = 10;
+            this.navBarControlQry.Text = "navBarControl1";
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "";
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry01)});
+            this.navBarGroup5.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.LargeImage")));
+            this.navBarGroup5.Name = "navBarGroup5";
+            this.navBarGroup5.NavigationPaneVisible = false;
+            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
+            // 
+            // navBarItemEmpvQry01
+            // 
+            this.navBarItemEmpvQry01.Caption = "بيانات اساسية";
+            this.navBarItemEmpvQry01.LargeImageIndex = 35;
+            this.navBarItemEmpvQry01.Name = "navBarItemEmpvQry01";
+            this.navBarItemEmpvQry01.SmallImageIndex = 35;
+            this.navBarItemEmpvQry01.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
             // 
             // RoleDetialFrm
             // 
@@ -940,7 +956,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlPriv)).EndInit();
             this.DPQuery.ResumeLayout(false);
             this.dockPanel4_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).EndInit();
             this.DPReport.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).EndInit();
@@ -950,6 +965,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -971,8 +987,6 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel5_Container;
         private DevExpress.XtraBars.Docking.DockPanel DPPriv;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel3_Container;
-        private DevExpress.XtraNavBar.NavBarControl navBarControlQry;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.CheckEdit CEUpdate;
         private DevExpress.XtraEditors.CheckEdit CESelect;
@@ -1027,5 +1041,8 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBL_EmpLite;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBLTankolat2;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBLTankolat3;
+        private DevExpress.XtraNavBar.NavBarControl navBarControlQry;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry01;
     }
 }

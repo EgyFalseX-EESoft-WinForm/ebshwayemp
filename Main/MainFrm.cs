@@ -517,7 +517,14 @@ namespace Employee
             TBLTankolat3Frm frm = new TBLTankolat3Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["EMPinout32.png"], 32, false) };
             frm.Show();
         }
+        private void navBarItemEmpvQry01_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Employee.Qry36Frm frm = new Employee.Qry36Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
+            frm.Show();
+        }
         #endregion
+
+        
 
         
     }

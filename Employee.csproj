@@ -36,7 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Releases\Files\Employee\</OutputPath>
+    <OutputPath>Releases\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -122,6 +122,7 @@
     <Reference Include="System.Data">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Deployment">
       <Private>False</Private>
     </Reference>
@@ -147,6 +148,16 @@
     </Compile>
     <Compile Include="Code\CodeFrm.designer.cs">
       <DependentUpon>CodeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsQry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQry.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\TBLTankolat3Frm.cs">
       <SubType>Form</SubType>
@@ -287,6 +298,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\Qry01Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\Qry01Frm.designer.cs">
+      <DependentUpon>Qry01Frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RepGeneralFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +420,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Qry\Qry01Frm.resx">
+      <DependentUpon>Qry01Frm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RepGeneralFrm.resx">
       <DependentUpon>RepGeneralFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,6 +434,33 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Datasource\dsData.xsc">
+      <DependentUpon>dsData.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasource\dsData.xss">
+      <DependentUpon>dsData.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsQry.xsc">
+      <DependentUpon>dsQry.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsQry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQry.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasource\dsQry.xss">
+      <DependentUpon>dsQry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\Close.png" />
     <None Include="Resources\Code.png" />
     <None Include="Resources\Connection.png" />
@@ -502,9 +554,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Qry\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
