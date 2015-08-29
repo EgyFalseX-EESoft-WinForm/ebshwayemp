@@ -28,7 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule15 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule16 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule14 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule17 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule18 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule19 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule12 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule13 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule7 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
@@ -58,6 +76,7 @@
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.LUEDepartmentId = new DevExpress.XtraEditors.LookUpEdit();
             this.LUEJOB_STATUS_ID = new DevExpress.XtraEditors.LookUpEdit();
@@ -67,6 +86,7 @@
             this.LUEqualId = new DevExpress.XtraEditors.LookUpEdit();
             this.LUEmarhala_code = new DevExpress.XtraEditors.LookUpEdit();
             this.LUEJobDescriptionId = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueJobTypeId = new DevExpress.XtraEditors.LookUpEdit();
             this.LUEEmpJobId = new DevExpress.XtraEditors.LookUpEdit();
             this.xtraTabPageBasic = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
@@ -106,8 +126,7 @@
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.lueJobTypeId = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.dxVP = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LUEEmp.Properties)).BeginInit();
@@ -133,6 +152,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LUEqualId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEmarhala_code.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEJobDescriptionId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueJobTypeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEEmpJobId.Properties)).BeginInit();
             this.xtraTabPageBasic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -163,7 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Txttameen_no.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueJobTypeId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxVP)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -400,6 +420,9 @@
             this.TxtMoaahel_Date.Properties.MaxLength = 4;
             this.TxtMoaahel_Date.Size = new System.Drawing.Size(175, 20);
             this.TxtMoaahel_Date.TabIndex = 12;
+            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule9.ErrorText = "يجب ادخال سنة التخرج";
+            this.dxVP.SetValidationRule(this.TxtMoaahel_Date, conditionValidationRule9);
             // 
             // DEEnd_Work_Date
             // 
@@ -459,6 +482,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DEWork_Start_Date.Size = new System.Drawing.Size(175, 20);
             this.DEWork_Start_Date.TabIndex = 7;
+            conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule15.ErrorText = "يجب ادخال تاريخ التعيين";
+            this.dxVP.SetValidationRule(this.DEWork_Start_Date, conditionValidationRule15);
             this.DEWork_Start_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl20
@@ -551,6 +577,16 @@
             this.labelControl9.TabIndex = 26;
             this.labelControl9.Text = "الوصف الوظيفي";
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl3.Location = new System.Drawing.Point(512, 40);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(0);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(64, 17);
+            this.labelControl3.TabIndex = 25;
+            this.labelControl3.Text = "نوع الوظيفة";
+            // 
             // labelControl33
             // 
             this.labelControl33.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -574,8 +610,10 @@
             this.LUEDepartmentId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEDepartmentId.Size = new System.Drawing.Size(175, 20);
             this.LUEDepartmentId.TabIndex = 4;
+            conditionValidationRule16.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule16.ErrorText = "يجب ادخال الوظيفة علي الكادر";
+            this.dxVP.SetValidationRule(this.LUEDepartmentId, conditionValidationRule16);
             this.LUEDepartmentId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEDepartmentId_ButtonClick);
-            this.LUEDepartmentId.EditValueChanged += new System.EventHandler(this.LUEDepartmentId_EditValueChanged);
             this.LUEDepartmentId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEJOB_STATUS_ID
@@ -586,7 +624,7 @@
             this.LUEJOB_STATUS_ID.Name = "LUEJOB_STATUS_ID";
             this.LUEJOB_STATUS_ID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, false, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, false, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.LUEJOB_STATUS_ID.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpStateName", "الحاله بالعربيه", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpStateName_e", 40, "الحاله بالانجليزيه")});
@@ -594,6 +632,9 @@
             this.LUEJOB_STATUS_ID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEJOB_STATUS_ID.Size = new System.Drawing.Size(175, 20);
             this.LUEJOB_STATUS_ID.TabIndex = 2;
+            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule10.ErrorText = "يجب ادخال الحالة الوظيفية";
+            this.dxVP.SetValidationRule(this.LUEJOB_STATUS_ID, conditionValidationRule10);
             this.LUEJOB_STATUS_ID.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEJOB_STATUS_ID_ButtonClick);
             this.LUEJOB_STATUS_ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -632,6 +673,9 @@
             this.LUESpecializationId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUESpecializationId.Size = new System.Drawing.Size(175, 20);
             this.LUESpecializationId.TabIndex = 10;
+            conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule14.ErrorText = "يجب ادخال التخصص";
+            this.dxVP.SetValidationRule(this.LUESpecializationId, conditionValidationRule14);
             this.LUESpecializationId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUESpecializationId_ButtonClick);
             this.LUESpecializationId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -670,6 +714,9 @@
             this.LUEqualId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEqualId.Size = new System.Drawing.Size(175, 20);
             this.LUEqualId.TabIndex = 9;
+            conditionValidationRule17.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule17.ErrorText = "يجب ادخال المؤهل";
+            this.dxVP.SetValidationRule(this.LUEqualId, conditionValidationRule17);
             this.LUEqualId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEqualId_ButtonClick);
             this.LUEqualId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -688,6 +735,10 @@
             this.LUEmarhala_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEmarhala_code.Size = new System.Drawing.Size(175, 20);
             this.LUEmarhala_code.TabIndex = 5;
+            conditionValidationRule18.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule18.ErrorText = "يجب ادخال جهة العمل";
+            this.dxVP.SetValidationRule(this.LUEmarhala_code, conditionValidationRule18);
+            this.LUEmarhala_code.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEmarhala_code_ButtonClick);
             this.LUEmarhala_code.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEJobDescriptionId
@@ -703,7 +754,31 @@
             this.LUEJobDescriptionId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEJobDescriptionId.Size = new System.Drawing.Size(175, 20);
             this.LUEJobDescriptionId.TabIndex = 3;
+            conditionValidationRule19.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule19.ErrorText = "يجب ادخال الوصف الوظيفي";
+            this.dxVP.SetValidationRule(this.LUEJobDescriptionId, conditionValidationRule19);
             this.LUEJobDescriptionId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEJobDescriptionId_ButtonClick);
+            // 
+            // lueJobTypeId
+            // 
+            this.lueJobTypeId.EnterMoveNextControl = true;
+            this.lueJobTypeId.Location = new System.Drawing.Point(306, 39);
+            this.lueJobTypeId.Margin = new System.Windows.Forms.Padding(0);
+            this.lueJobTypeId.Name = "lueJobTypeId";
+            this.lueJobTypeId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
+            this.lueJobTypeId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("JobType", "الاسم", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center)});
+            this.lueJobTypeId.Properties.NullText = "";
+            this.lueJobTypeId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lueJobTypeId.Size = new System.Drawing.Size(175, 20);
+            this.lueJobTypeId.TabIndex = 0;
+            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule11.ErrorText = "يجب ادخال نوع الوظيفة";
+            this.dxVP.SetValidationRule(this.lueJobTypeId, conditionValidationRule11);
+            this.lueJobTypeId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.lueJobTypeId_ButtonClick);
+            this.lueJobTypeId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEEmpJobId
             // 
@@ -721,6 +796,9 @@
             this.LUEEmpJobId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEEmpJobId.Size = new System.Drawing.Size(175, 20);
             this.LUEEmpJobId.TabIndex = 1;
+            conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule12.ErrorText = "يجب ادخال الوظيفة";
+            this.dxVP.SetValidationRule(this.LUEEmpJobId, conditionValidationRule12);
             this.LUEEmpJobId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEEmpJobId_ButtonClick);
             this.LUEEmpJobId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -766,7 +844,7 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl7.Location = new System.Drawing.Point(460, 133);
+            this.labelControl7.Location = new System.Drawing.Point(458, 133);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(0);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(109, 17);
@@ -808,6 +886,9 @@
             this.LUEMaritalStatusId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEMaritalStatusId.Size = new System.Drawing.Size(161, 20);
             this.LUEMaritalStatusId.TabIndex = 6;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "يجب ادخال الحالة الاجتماعية";
+            this.dxVP.SetValidationRule(this.LUEMaritalStatusId, conditionValidationRule1);
             this.LUEMaritalStatusId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEdyana_code
@@ -825,6 +906,9 @@
             this.LUEdyana_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEdyana_code.Size = new System.Drawing.Size(161, 20);
             this.LUEdyana_code.TabIndex = 7;
+            conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule13.ErrorText = "يجب ادخال الديانة";
+            this.dxVP.SetValidationRule(this.LUEdyana_code, conditionValidationRule13);
             this.LUEdyana_code.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEGENDER_ID
@@ -843,12 +927,15 @@
             this.LUEGENDER_ID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEGENDER_ID.Size = new System.Drawing.Size(161, 20);
             this.LUEGENDER_ID.TabIndex = 5;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "يجب ادخال النوع";
+            this.dxVP.SetValidationRule(this.LUEGENDER_ID, conditionValidationRule2);
             this.LUEGENDER_ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl14.Location = new System.Drawing.Point(485, 101);
+            this.labelControl14.Location = new System.Drawing.Point(517, 101);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(0);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(50, 17);
@@ -871,6 +958,9 @@
             this.LUEnationaltyId.Size = new System.Drawing.Size(161, 20);
             this.LUEnationaltyId.TabIndex = 4;
             this.LUEnationaltyId.Tag = "";
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "يجب ادخال الجنسية";
+            this.dxVP.SetValidationRule(this.LUEnationaltyId, conditionValidationRule3);
             this.LUEnationaltyId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // cbBIRTH_PLACE
@@ -902,6 +992,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DEBIRTH_DATE.Size = new System.Drawing.Size(161, 20);
             this.DEBIRTH_DATE.TabIndex = 2;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "يجب ادخال تاريخ الميلاد";
+            this.dxVP.SetValidationRule(this.DEBIRTH_DATE, conditionValidationRule4);
             this.DEBIRTH_DATE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // TxtEmpNationalID
@@ -913,6 +1006,9 @@
             this.TxtEmpNationalID.Properties.MaxLength = 14;
             this.TxtEmpNationalID.Size = new System.Drawing.Size(161, 20);
             this.TxtEmpNationalID.TabIndex = 0;
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "يجب ادخال الرقم القومي";
+            this.dxVP.SetValidationRule(this.TxtEmpNationalID, conditionValidationRule5);
             this.TxtEmpNationalID.EditValueChanged += new System.EventHandler(this.TxtEmpNationalID_EditValueChanged);
             this.TxtEmpNationalID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -931,13 +1027,16 @@
             this.LUEBIRTH_GOV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEBIRTH_GOV.Size = new System.Drawing.Size(161, 20);
             this.LUEBIRTH_GOV.TabIndex = 1;
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "يجب ادخال محافظة الميلاد";
+            this.dxVP.SetValidationRule(this.LUEBIRTH_GOV, conditionValidationRule6);
             this.LUEBIRTH_GOV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl19
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.labelControl19.Location = new System.Drawing.Point(470, 34);
+            this.labelControl19.Location = new System.Drawing.Point(481, 34);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(0);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(86, 17);
@@ -948,7 +1047,7 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.labelControl18.Location = new System.Drawing.Point(470, 69);
+            this.labelControl18.Location = new System.Drawing.Point(498, 69);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(0);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(69, 17);
@@ -1010,6 +1109,9 @@
             this.TxtEMP_FIRST_NAME.Name = "TxtEMP_FIRST_NAME";
             this.TxtEMP_FIRST_NAME.Size = new System.Drawing.Size(428, 20);
             this.TxtEMP_FIRST_NAME.TabIndex = 0;
+            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule7.ErrorText = "يجب ادخال الاسم";
+            this.dxVP.SetValidationRule(this.TxtEMP_FIRST_NAME, conditionValidationRule7);
             this.TxtEMP_FIRST_NAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // xtraTabControlMain
@@ -1234,34 +1336,6 @@
             this.btnSave.ToolTipTitle = "حفظ عامل جديد F6";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lueJobTypeId
-            // 
-            this.lueJobTypeId.EnterMoveNextControl = true;
-            this.lueJobTypeId.Location = new System.Drawing.Point(306, 39);
-            this.lueJobTypeId.Margin = new System.Windows.Forms.Padding(0);
-            this.lueJobTypeId.Name = "lueJobTypeId";
-            this.lueJobTypeId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.lueJobTypeId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("JobType", "الاسم", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center)});
-            this.lueJobTypeId.Properties.NullText = "";
-            this.lueJobTypeId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueJobTypeId.Size = new System.Drawing.Size(175, 20);
-            this.lueJobTypeId.TabIndex = 0;
-            this.lueJobTypeId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEEmpJobId_ButtonClick);
-            this.lueJobTypeId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl3.Location = new System.Drawing.Point(512, 40);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(0);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(64, 17);
-            this.labelControl3.TabIndex = 25;
-            this.labelControl3.Text = "نوع الوظيفة";
-            // 
             // TBL_EmpFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1302,6 +1376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LUEqualId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEmarhala_code.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEJobDescriptionId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueJobTypeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LUEEmpJobId.Properties)).EndInit();
             this.xtraTabPageBasic.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -1335,7 +1410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Txttameen_no.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lueJobTypeId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxVP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1421,5 +1496,6 @@
         private DevExpress.XtraEditors.TextEdit TxtMoaahel_Date;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LookUpEdit lueJobTypeId;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxVP;
     }
 }

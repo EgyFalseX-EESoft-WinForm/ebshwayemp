@@ -437,6 +437,7 @@ namespace Employee
             TxtPHONE_NO.Text = string.Empty;
             TxtMOBILE_NO.Text = string.Empty;
 
+            lueJobTypeId.EditValue = null;
             LUEEmpJobId.EditValue = null;
             LUEJOB_STATUS_ID.EditValue = null;
             LUEJobDescriptionId.EditValue = null;
@@ -466,6 +467,14 @@ namespace Employee
             if (OFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 PBImage.ImageLocation = OFD.FileName;
         }
+        private void lueJobTypeId_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Kind != DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
+                return;
+            CodeFrm FrmCode = new CodeFrm(CodeFrm.TableNames.CDJobType);
+            FrmCode.ShowDialog();
+            LoadDefaultData(TableName.CDJobType);
+        }
         private void LUEEmpJobId_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Kind != DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
@@ -481,6 +490,14 @@ namespace Employee
             CodeFrm FrmCode = new CodeFrm(CodeFrm.TableNames.CD_JobDescription);
             FrmCode.ShowDialog();
             LoadDefaultData(TableName.CD_JobDescription);
+        }
+        private void LUEmarhala_code_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Kind != DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)
+                return;
+            CodeFrm FrmCode = new CodeFrm(CodeFrm.TableNames.TBLGehawork);
+            FrmCode.ShowDialog();
+            LoadDefaultData(TableName.TBLGehawork);
         }
         private void LUEDepartmentId_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -532,6 +549,12 @@ namespace Employee
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!dxVP.Validate())
+            {
+                Program.ShowMsg("من فضلك اكمل البيانات المطلوبة", true, this);
+                Program.Logger.LogThis("من فضلك اكمل البيانات المطلوبة", Text, FXFW.Logger.OpType.fail, null, null, this);
+                return;
+            }
             SqlConnection con = new SqlConnection(FXFW.SqlDB.SqlConStr);
             SqlCommand cmd = new SqlCommand("", con);
           
@@ -742,7 +765,12 @@ namespace Employee
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            if (!dxVP.Validate())
+            {
+                Program.ShowMsg("من فضلك اكمل البيانات المطلوبة", true, this);
+                Program.Logger.LogThis("من فضلك اكمل البيانات المطلوبة", Text, FXFW.Logger.OpType.fail, null, null, this);
+                return;
+            }
             SqlConnection con = new SqlConnection(FXFW.SqlDB.SqlConStr);
             SqlCommand cmd = new SqlCommand("", con);
 
@@ -919,9 +947,9 @@ namespace Employee
             {
                 con.Open();
                 cmd.CommandText = string.Format(@"Update TBL_Emp Set GehaworkId= {0}, EmpNationalID= {1}, EMPNAME= {2},  
-                nationaltyId = {6}, dyana_code = {7}, MaritalStatusId = {8}, SubjectId = {9}, JobkaderId = {10}, EmpJobId = {11}, BIRTH_DATE = {12}, GENDER_ID = {13}, BIRTH_GOV = {14}, JOB_STATUS_ID = {15}, JobTypeId = {16}, BIRTH_PLACE = {17}, Emp_Address = {18}, PHONE_NO = {19}, 
-                MOBILE_NO = {20}, JobDescriptionId = {21}, Work_Start_Date = {22}, End_Work_Date = {23}, qualId = {24}, SpecializationId = {25}, QualifiedPlaceId = {26}, Moaahel_Date = {27}, tameen_no = {28}, tameen_date1 = {29}, 
-                betaka_tameen = {30}, noview = {31}, orderreport = {32}, EMPPIC = @EMPPIC Where EmpID = {33}",
+                nationaltyId = {3}, dyana_code = {4}, MaritalStatusId = {5}, SubjectId = {6}, JobkaderId = {7}, EmpJobId = {8}, BIRTH_DATE = {9}, GENDER_ID = {10}, BIRTH_GOV = {11}, JOB_STATUS_ID = {12}, JobTypeId = {13}, BIRTH_PLACE = {14}, Emp_Address = {15}, PHONE_NO = {16}, 
+                MOBILE_NO = {17}, JobDescriptionId = {18}, Work_Start_Date = {19}, End_Work_Date = {20}, qualId = {21}, SpecializationId = {22}, QualifiedPlaceId = {23}, Moaahel_Date = {24}, tameen_no = {25}, tameen_date1 = {26}, 
+                betaka_tameen = {27}, noview = {28}, orderreport = {29}, EMPPIC = @EMPPIC Where EmpID = {30}",
                 marhala_code, EmpNationalID, EMP_FIRST_NAME, nationaltyId, dyana_code, MaritalStatusId, SubjectId, DepartmentId,
                 EmpJobId, BIRTH_DATE, GENDER_ID, BIRTH_GOV, JOB_STATUS_ID, JobTypeId, BIRTH_PLACE, Emp_Address, PHONE_NO, MOBILE_NO, JobDescriptionId, Work_Start_Date, End_Work_Date, qualId,
                 SpecializationId, QualifiedPlaceId, Moaahel_Date, tameen_no, tameen_date1, betaka_tameen, noview, orderreport, LUEEmp.EditValue);
@@ -987,13 +1015,9 @@ namespace Employee
                 Program.Logger.LogThis(null, Text, FXFW.Logger.OpType.fail, null, ex, this);
             }
         }
-        #endregion         #region -   Variables   -
+        #endregion
 
-        private void LUEDepartmentId_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
 
-      
     }
 }

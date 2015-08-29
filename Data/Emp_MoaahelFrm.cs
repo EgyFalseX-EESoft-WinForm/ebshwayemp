@@ -113,7 +113,7 @@ namespace Employee
                 repositoryItemButtonEditSave.Buttons[0].Enabled = false;
             repositoryItemButtonEditDel.Buttons[0].Enabled = Deleting;
         }
-#endregion
+        #endregion
         #region - Event Handlers -
         private void stu_nashatFrm_Load(object sender, EventArgs e)
         {

@@ -37,7 +37,8 @@ namespace Employee
             CD_EmpTIME,
             TBLGehawork,
             CDkaderJob,
-            CDAgazainout
+            CDAgazainout,
+            CDJobType,
         }
         private readonly TableNames ViewName;
         #endregion
@@ -143,6 +144,11 @@ namespace Employee
                     LoadData(TableNames.CDAgazainout);
                     Text += " انواع الاجازات";
                     break;
+                case TableNames.CDJobType:
+                    gridControlCode.MainView = gridViewCDJobType;
+                    LoadData(TableNames.CDJobType);
+                    Text += " انواع الوظائف";
+                    break;
                 default:
                     break;
             }
@@ -221,6 +227,9 @@ namespace Employee
                 case TableNames.CDAgazainout:
                     dt = FXFW.SqlDB.LoadDataTable(@"SELECT AgazainoutId, Agazainout FROM CDAgazainout");
                     break;
+                case TableNames.CDJobType:
+                    dt = FXFW.SqlDB.LoadDataTable(@"SELECT JobTypeId, JobType FROM CDJobType");
+                    break;
                 default:
                     break;
             }
@@ -264,7 +273,7 @@ namespace Employee
                 repositoryItemButtonEditSave.Buttons[0].Enabled = false;
             repositoryItemButtonEditDel.Buttons[0].Enabled = Deleting;
         }
-#endregion
+        #endregion
         #region - Event Handlers -
         private void CodeFrm_Load(object sender, EventArgs e)
         {
@@ -609,6 +618,20 @@ namespace Employee
                         }
                         cmd.ExecuteNonQuery();
                         break;
+                    case "gridViewCDJobType":
+                        DataRow rowgridViewCDJobType = gridViewCDJobType.GetFocusedDataRow();
+                        if (rowgridViewCDJobType["JobTypeId"].ToString() == string.Empty)
+                        {
+                            cmd.CommandText = string.Format(@"INSERT INTO CDJobType (JobTypeId, JobType)
+                            VALUES ((SELECT ISNULL(MAX(JobTypeId) + 1, 1) FROM CDJobType), N'{0}')", rowgridViewCDJobType["JobTypeId"]);
+                        }
+                        else
+                        {
+                            cmd.CommandText = string.Format(@"UPDATE CDJobType SET JobType = N'{0}' WHERE (JobTypeId = {1})",
+                            rowgridViewCDJobType["JobType"], rowgridViewCDJobType["JobTypeId"]);
+                        }
+                        cmd.ExecuteNonQuery();
+                        break;
                     default:
                         break;
                 }
@@ -783,6 +806,15 @@ namespace Employee
                         if (rowgridViewCDAgazainout["AgazainoutId"].ToString() != string.Empty)
                         {
                             cmd.CommandText = string.Format(@"DELETE FROM CDAgazainout WHERE (AgazainoutId = {0})", rowgridViewCDAgazainout["AgazainoutId"]);
+                            cmd.ExecuteNonQuery();
+                        }
+                        break;
+
+                    case "gridViewCDJobType":
+                        DataRow rowgridViewCDJobType = gridViewCDJobType.GetFocusedDataRow();
+                        if (rowgridViewCDJobType["JobTypeId"].ToString() != string.Empty)
+                        {
+                            cmd.CommandText = string.Format(@"DELETE FROM CDJobType WHERE (JobTypeId = {0})", rowgridViewCDJobType["JobTypeId"]);
                             cmd.ExecuteNonQuery();
                         }
                         break;

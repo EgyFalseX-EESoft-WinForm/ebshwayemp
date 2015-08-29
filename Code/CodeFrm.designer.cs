@@ -46,6 +46,7 @@
             DevExpress.XtraGrid.GridLevelNode gridLevelNode16 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode17 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode18 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode19 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridViewCD_EmpState = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -155,6 +156,10 @@
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridViewCDAgazainout = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridViewCD_AsaseEmp = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn106 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn107 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -168,10 +173,10 @@
             this.gridColumn115 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn116 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn117 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridViewCDAgazainout = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridViewCDJobType = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCD_EmpState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEditCheckMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditSave)).BeginInit();
@@ -200,10 +205,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditEmpID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEditTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAgazainout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCD_AsaseEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditSPOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAgazainout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDJobType)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewCD_EmpState
@@ -353,6 +359,8 @@
             gridLevelNode17.RelationName = "Level12";
             gridLevelNode18.LevelTemplate = this.gridViewCDAgazainout;
             gridLevelNode18.RelationName = "Level13";
+            gridLevelNode19.LevelTemplate = this.gridViewCDJobType;
+            gridLevelNode19.RelationName = "Level14";
             this.gridControlCode.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1,
             gridLevelNode2,
@@ -371,7 +379,8 @@
             gridLevelNode15,
             gridLevelNode16,
             gridLevelNode17,
-            gridLevelNode18});
+            gridLevelNode18,
+            gridLevelNode19});
             this.gridControlCode.Location = new System.Drawing.Point(0, 0);
             this.gridControlCode.MainView = this.gridViewCD_AsaseEmp;
             this.gridControlCode.Name = "gridControlCode";
@@ -404,9 +413,10 @@
             this.gridViewCD_GzaaType,
             this.gridViewCD_GehaGazaa,
             this.gridViewCD_EmpTIME,
+            this.gridViewCDAgazainout,
             this.gridViewCD_AsaseEmp,
             this.gridViewCD_EmpState,
-            this.gridViewCDAgazainout});
+            this.gridViewCDJobType});
             this.gridControlCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // gridViewCD_JobDescription
@@ -1623,6 +1633,53 @@
             this.gridColumn57.Visible = true;
             this.gridColumn57.VisibleIndex = 4;
             // 
+            // gridViewCDAgazainout
+            // 
+            this.gridViewCDAgazainout.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn60,
+            this.gridColumn61,
+            this.gridColumn62});
+            this.gridViewCDAgazainout.GridControl = this.gridControlCode;
+            this.gridViewCDAgazainout.Name = "gridViewCDAgazainout";
+            this.gridViewCDAgazainout.OptionsView.ColumnAutoWidth = false;
+            // 
+            // gridColumn60
+            // 
+            this.gridColumn60.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn60.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn60.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn60.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn60.Caption = "اسم النوع";
+            this.gridColumn60.FieldName = "Agazainout";
+            this.gridColumn60.Name = "gridColumn60";
+            this.gridColumn60.Visible = true;
+            this.gridColumn60.VisibleIndex = 0;
+            this.gridColumn60.Width = 93;
+            // 
+            // gridColumn61
+            // 
+            this.gridColumn61.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn61.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn61.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn61.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn61.Caption = "حفظ";
+            this.gridColumn61.ColumnEdit = this.repositoryItemButtonEditSave;
+            this.gridColumn61.Name = "gridColumn61";
+            this.gridColumn61.Visible = true;
+            this.gridColumn61.VisibleIndex = 1;
+            // 
+            // gridColumn62
+            // 
+            this.gridColumn62.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn62.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn62.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn62.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn62.Caption = "حذف";
+            this.gridColumn62.ColumnEdit = this.repositoryItemButtonEditDel;
+            this.gridColumn62.Name = "gridColumn62";
+            this.gridColumn62.Visible = true;
+            this.gridColumn62.VisibleIndex = 2;
+            // 
             // gridViewCD_AsaseEmp
             // 
             this.gridViewCD_AsaseEmp.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -1793,52 +1850,54 @@
             this.gridColumn117.VisibleIndex = 7;
             this.gridColumn117.Width = 133;
             // 
-            // gridViewCDAgazainout
+            // gridViewCDJobType
             // 
-            this.gridViewCDAgazainout.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn60,
-            this.gridColumn61,
-            this.gridColumn62});
-            this.gridViewCDAgazainout.GridControl = this.gridControlCode;
-            this.gridViewCDAgazainout.Name = "gridViewCDAgazainout";
-            this.gridViewCDAgazainout.OptionsView.ColumnAutoWidth = false;
+            this.gridViewCDJobType.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn63,
+            this.gridColumn64,
+            this.gridColumn65});
+            this.gridViewCDJobType.GridControl = this.gridControlCode;
+            this.gridViewCDJobType.Name = "gridViewCDJobType";
+            this.gridViewCDJobType.OptionsView.ColumnAutoWidth = false;
             // 
-            // gridColumn60
+            // gridColumn63
             // 
-            this.gridColumn60.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn60.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn60.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn60.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn60.Caption = "اسم النوع";
-            this.gridColumn60.FieldName = "Agazainout";
-            this.gridColumn60.Name = "gridColumn60";
-            this.gridColumn60.Visible = true;
-            this.gridColumn60.VisibleIndex = 0;
-            this.gridColumn60.Width = 93;
+            this.gridColumn63.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn63.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn63.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn63.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn63.Caption = "اسم النوع";
+            this.gridColumn63.FieldName = "JobType";
+            this.gridColumn63.Name = "gridColumn63";
+            this.gridColumn63.Visible = true;
+            this.gridColumn63.VisibleIndex = 0;
+            this.gridColumn63.Width = 210;
             // 
-            // gridColumn61
+            // gridColumn64
             // 
-            this.gridColumn61.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn61.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn61.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn61.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn61.Caption = "حفظ";
-            this.gridColumn61.ColumnEdit = this.repositoryItemButtonEditSave;
-            this.gridColumn61.Name = "gridColumn61";
-            this.gridColumn61.Visible = true;
-            this.gridColumn61.VisibleIndex = 1;
+            this.gridColumn64.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn64.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn64.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn64.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn64.Caption = "حفظ";
+            this.gridColumn64.ColumnEdit = this.repositoryItemButtonEditSave;
+            this.gridColumn64.Name = "gridColumn64";
+            this.gridColumn64.Visible = true;
+            this.gridColumn64.VisibleIndex = 1;
+            this.gridColumn64.Width = 137;
             // 
-            // gridColumn62
+            // gridColumn65
             // 
-            this.gridColumn62.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn62.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn62.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn62.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn62.Caption = "حذف";
-            this.gridColumn62.ColumnEdit = this.repositoryItemButtonEditDel;
-            this.gridColumn62.Name = "gridColumn62";
-            this.gridColumn62.Visible = true;
-            this.gridColumn62.VisibleIndex = 2;
+            this.gridColumn65.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn65.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn65.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn65.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn65.Caption = "حذف";
+            this.gridColumn65.ColumnEdit = this.repositoryItemButtonEditDel;
+            this.gridColumn65.Name = "gridColumn65";
+            this.gridColumn65.Visible = true;
+            this.gridColumn65.VisibleIndex = 2;
+            this.gridColumn65.Width = 58;
             // 
             // CodeFrm
             // 
@@ -1878,10 +1937,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditEmpID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEditTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAgazainout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCD_AsaseEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditSPOS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAgazainout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCDJobType)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2014,5 +2074,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCDJobType;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn63;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn64;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
     }
 }
