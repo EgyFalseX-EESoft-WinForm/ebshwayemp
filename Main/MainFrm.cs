@@ -77,7 +77,6 @@ namespace Employee
                 navBarControlReport.Groups[(int)FXFW.SqlDB.ConvertStringToInt(FXFW.SqlDB.SQLRep[i].RepPosition)].ItemLinks.Add(navBarItemRPT);
                 //navBarGroup4.ItemLinks.Add(navBarItemRPT);
                 navBarItemRPT.LinkClicked += navBarItemRPT_LinkClicked;
-                
             }
         }
         private void LoadUserPriv(string RoleID)
@@ -143,7 +142,7 @@ namespace Employee
                 //continue;
             }
         }
-#endregion
+        #endregion
         #region - Event Handlers -
         private void MainFrm_Load(object sender, EventArgs e)
         {
@@ -523,8 +522,6 @@ namespace Employee
             frm.Show();
         }
         #endregion
-
-        
 
         
     }

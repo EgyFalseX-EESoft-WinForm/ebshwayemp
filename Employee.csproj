@@ -423,6 +423,7 @@
     <EmbeddedResource Include="Qry\Qry01Frm.resx">
       <DependentUpon>Qry01Frm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Qry\Report1.rdlc" />
     <EmbeddedResource Include="Reports\RepGeneralFrm.resx">
       <DependentUpon>RepGeneralFrm.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridControlData = new DevExpress.XtraGrid.GridControl();
-            this.vQry36BindingSource = new System.Windows.Forms.BindingSource();
-            this.gridViewData = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemDateEditDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.repositoryItemPictureEditImg = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemDateEditDMY = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnPrintExport = new DevExpress.XtraEditors.SimpleButton();
+            this.vQry01BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsQry = new Employee.Datasource.dsQry();
-            this.vQry01BindingSource = new System.Windows.Forms.BindingSource();
-            this.vQry01TableAdapter = new Employee.Datasource.dsQryTableAdapters.vQry01TableAdapter();
+            this.gridViewData = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmpID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEMPNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBIRTH_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,8 +40,30 @@
             this.colDepartment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMOBILE_NO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmpJobName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmp_Address = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldyana_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmpStateName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJobType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnationaltyname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQualifiedPlaceName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colqualName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSpecializationName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltameen_date1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltameen_no = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMoaahel_Date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSubject = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colWork_Start_Date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEditDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.repositoryItemPictureEditImg = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemDateEditDMY = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnPrintExport = new DevExpress.XtraEditors.SimpleButton();
+            this.vQry01TableAdapter = new Employee.Datasource.dsQryTableAdapters.vQry01TableAdapter();
+            this.colGehawork = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vQry36BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vQry01BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsQry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate.VistaTimeProperties)).BeginInit();
@@ -58,8 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsQry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vQry01BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlData
@@ -86,6 +99,16 @@
             this.gridControlData.UseEmbeddedNavigator = true;
             this.gridControlData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewData});
+            // 
+            // vQry01BindingSource
+            // 
+            this.vQry01BindingSource.DataMember = "vQry01";
+            this.vQry01BindingSource.DataSource = this.dsQry;
+            // 
+            // dsQry
+            // 
+            this.dsQry.DataSetName = "dsQry";
+            this.dsQry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridViewData
             // 
@@ -169,7 +192,21 @@
             this.colEmpNationalID,
             this.colDepartment,
             this.colMOBILE_NO,
-            this.colEmpJobName});
+            this.colEmpJobName,
+            this.colEmp_Address,
+            this.coldyana_name,
+            this.colEmpStateName,
+            this.colJobType,
+            this.colnationaltyname,
+            this.colQualifiedPlaceName,
+            this.colqualName,
+            this.colSpecializationName,
+            this.coltameen_date1,
+            this.coltameen_no,
+            this.colMoaahel_Date,
+            this.colSubject,
+            this.colWork_Start_Date,
+            this.colGehawork});
             this.gridViewData.GridControl = this.gridControlData;
             this.gridViewData.Name = "gridViewData";
             this.gridViewData.OptionsBehavior.Editable = false;
@@ -183,74 +220,6 @@
             this.gridViewData.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewData.OptionsView.ShowAutoFilterRow = true;
             this.gridViewData.OptionsView.ShowFooter = true;
-            // 
-            // repositoryItemDateEditDate
-            // 
-            this.repositoryItemDateEditDate.AutoHeight = false;
-            this.repositoryItemDateEditDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEditDate.DisplayFormat.FormatString = "u";
-            this.repositoryItemDateEditDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.repositoryItemDateEditDate.Mask.EditMask = "u";
-            this.repositoryItemDateEditDate.Name = "repositoryItemDateEditDate";
-            this.repositoryItemDateEditDate.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // repositoryItemPictureEditImg
-            // 
-            this.repositoryItemPictureEditImg.Name = "repositoryItemPictureEditImg";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
-            // repositoryItemDateEditDMY
-            // 
-            this.repositoryItemDateEditDMY.AutoHeight = false;
-            this.repositoryItemDateEditDMY.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEditDMY.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.repositoryItemDateEditDMY.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.repositoryItemDateEditDMY.EditFormat.FormatString = "dd/MM/yyyy";
-            this.repositoryItemDateEditDMY.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.repositoryItemDateEditDMY.Mask.EditMask = "dd/MM/yyyy";
-            this.repositoryItemDateEditDMY.Name = "repositoryItemDateEditDMY";
-            this.repositoryItemDateEditDMY.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.btnPrintExport);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(734, 47);
-            this.panelControl1.TabIndex = 3;
-            // 
-            // btnPrintExport
-            // 
-            this.btnPrintExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintExport.Location = new System.Drawing.Point(588, 12);
-            this.btnPrintExport.Name = "btnPrintExport";
-            this.btnPrintExport.Size = new System.Drawing.Size(134, 23);
-            this.btnPrintExport.TabIndex = 0;
-            this.btnPrintExport.Text = "طباعه و تصدير";
-            this.btnPrintExport.Click += new System.EventHandler(this.btnPrintExport_Click);
-            // 
-            // dsQry
-            // 
-            this.dsQry.DataSetName = "dsQry";
-            this.dsQry.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vQry01BindingSource
-            // 
-            this.vQry01BindingSource.DataMember = "vQry01";
-            this.vQry01BindingSource.DataSource = this.dsQry;
-            // 
-            // vQry01TableAdapter
-            // 
-            this.vQry01TableAdapter.ClearBeforeFill = true;
             // 
             // colEmpID
             // 
@@ -336,6 +305,232 @@
             this.colEmpJobName.Visible = true;
             this.colEmpJobName.VisibleIndex = 6;
             // 
+            // colEmp_Address
+            // 
+            this.colEmp_Address.AppearanceCell.Options.UseTextOptions = true;
+            this.colEmp_Address.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmp_Address.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmp_Address.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmp_Address.Caption = "العنوان";
+            this.colEmp_Address.FieldName = "Emp_Address";
+            this.colEmp_Address.Name = "colEmp_Address";
+            this.colEmp_Address.Visible = true;
+            this.colEmp_Address.VisibleIndex = 7;
+            // 
+            // coldyana_name
+            // 
+            this.coldyana_name.AppearanceCell.Options.UseTextOptions = true;
+            this.coldyana_name.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldyana_name.AppearanceHeader.Options.UseTextOptions = true;
+            this.coldyana_name.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldyana_name.Caption = "الديانة";
+            this.coldyana_name.FieldName = "dyana_name";
+            this.coldyana_name.Name = "coldyana_name";
+            this.coldyana_name.Visible = true;
+            this.coldyana_name.VisibleIndex = 8;
+            // 
+            // colEmpStateName
+            // 
+            this.colEmpStateName.AppearanceCell.Options.UseTextOptions = true;
+            this.colEmpStateName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmpStateName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmpStateName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmpStateName.Caption = "الحالة الوظيفية";
+            this.colEmpStateName.FieldName = "EmpStateName";
+            this.colEmpStateName.Name = "colEmpStateName";
+            this.colEmpStateName.Visible = true;
+            this.colEmpStateName.VisibleIndex = 9;
+            // 
+            // colJobType
+            // 
+            this.colJobType.AppearanceCell.Options.UseTextOptions = true;
+            this.colJobType.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colJobType.AppearanceHeader.Options.UseTextOptions = true;
+            this.colJobType.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colJobType.Caption = "نوع الوظيفة";
+            this.colJobType.FieldName = "JobType";
+            this.colJobType.Name = "colJobType";
+            this.colJobType.Visible = true;
+            this.colJobType.VisibleIndex = 10;
+            // 
+            // colnationaltyname
+            // 
+            this.colnationaltyname.AppearanceCell.Options.UseTextOptions = true;
+            this.colnationaltyname.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colnationaltyname.AppearanceHeader.Options.UseTextOptions = true;
+            this.colnationaltyname.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colnationaltyname.Caption = "الجنسية";
+            this.colnationaltyname.FieldName = "nationaltyname";
+            this.colnationaltyname.Name = "colnationaltyname";
+            this.colnationaltyname.Visible = true;
+            this.colnationaltyname.VisibleIndex = 12;
+            // 
+            // colQualifiedPlaceName
+            // 
+            this.colQualifiedPlaceName.AppearanceCell.Options.UseTextOptions = true;
+            this.colQualifiedPlaceName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colQualifiedPlaceName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colQualifiedPlaceName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colQualifiedPlaceName.Caption = "جهة الحصول";
+            this.colQualifiedPlaceName.FieldName = "QualifiedPlaceName";
+            this.colQualifiedPlaceName.Name = "colQualifiedPlaceName";
+            this.colQualifiedPlaceName.Visible = true;
+            this.colQualifiedPlaceName.VisibleIndex = 13;
+            // 
+            // colqualName
+            // 
+            this.colqualName.AppearanceCell.Options.UseTextOptions = true;
+            this.colqualName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colqualName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colqualName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colqualName.Caption = "المؤهل";
+            this.colqualName.FieldName = "qualName";
+            this.colqualName.Name = "colqualName";
+            this.colqualName.Visible = true;
+            this.colqualName.VisibleIndex = 14;
+            // 
+            // colSpecializationName
+            // 
+            this.colSpecializationName.AppearanceCell.Options.UseTextOptions = true;
+            this.colSpecializationName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSpecializationName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSpecializationName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSpecializationName.Caption = "التخصص";
+            this.colSpecializationName.FieldName = "SpecializationName";
+            this.colSpecializationName.Name = "colSpecializationName";
+            this.colSpecializationName.Visible = true;
+            this.colSpecializationName.VisibleIndex = 15;
+            // 
+            // coltameen_date1
+            // 
+            this.coltameen_date1.AppearanceCell.Options.UseTextOptions = true;
+            this.coltameen_date1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coltameen_date1.AppearanceHeader.Options.UseTextOptions = true;
+            this.coltameen_date1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coltameen_date1.Caption = "تاريخ التأمين";
+            this.coltameen_date1.FieldName = "tameen_date1";
+            this.coltameen_date1.Name = "coltameen_date1";
+            this.coltameen_date1.Visible = true;
+            this.coltameen_date1.VisibleIndex = 16;
+            // 
+            // coltameen_no
+            // 
+            this.coltameen_no.AppearanceCell.Options.UseTextOptions = true;
+            this.coltameen_no.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coltameen_no.AppearanceHeader.Options.UseTextOptions = true;
+            this.coltameen_no.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coltameen_no.Caption = "رقم التأمين";
+            this.coltameen_no.FieldName = "tameen_no";
+            this.coltameen_no.Name = "coltameen_no";
+            this.coltameen_no.Visible = true;
+            this.coltameen_no.VisibleIndex = 17;
+            // 
+            // colMoaahel_Date
+            // 
+            this.colMoaahel_Date.AppearanceCell.Options.UseTextOptions = true;
+            this.colMoaahel_Date.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMoaahel_Date.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMoaahel_Date.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMoaahel_Date.Caption = "سنة التخرج";
+            this.colMoaahel_Date.FieldName = "Moaahel_Date";
+            this.colMoaahel_Date.Name = "colMoaahel_Date";
+            this.colMoaahel_Date.Visible = true;
+            this.colMoaahel_Date.VisibleIndex = 18;
+            // 
+            // colSubject
+            // 
+            this.colSubject.AppearanceCell.Options.UseTextOptions = true;
+            this.colSubject.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSubject.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSubject.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSubject.Caption = "المادة";
+            this.colSubject.FieldName = "Subject";
+            this.colSubject.Name = "colSubject";
+            this.colSubject.Visible = true;
+            this.colSubject.VisibleIndex = 19;
+            // 
+            // colWork_Start_Date
+            // 
+            this.colWork_Start_Date.AppearanceCell.Options.UseTextOptions = true;
+            this.colWork_Start_Date.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colWork_Start_Date.AppearanceHeader.Options.UseTextOptions = true;
+            this.colWork_Start_Date.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colWork_Start_Date.Caption = "تاريخ بداية العمل";
+            this.colWork_Start_Date.FieldName = "Work_Start_Date";
+            this.colWork_Start_Date.Name = "colWork_Start_Date";
+            this.colWork_Start_Date.Visible = true;
+            this.colWork_Start_Date.VisibleIndex = 20;
+            // 
+            // repositoryItemDateEditDate
+            // 
+            this.repositoryItemDateEditDate.AutoHeight = false;
+            this.repositoryItemDateEditDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDate.DisplayFormat.FormatString = "u";
+            this.repositoryItemDateEditDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDate.Mask.EditMask = "u";
+            this.repositoryItemDateEditDate.Name = "repositoryItemDateEditDate";
+            this.repositoryItemDateEditDate.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // repositoryItemPictureEditImg
+            // 
+            this.repositoryItemPictureEditImg.Name = "repositoryItemPictureEditImg";
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
+            // repositoryItemDateEditDMY
+            // 
+            this.repositoryItemDateEditDMY.AutoHeight = false;
+            this.repositoryItemDateEditDMY.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.EditFormat.FormatString = "dd/MM/yyyy";
+            this.repositoryItemDateEditDMY.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.Mask.EditMask = "dd/MM/yyyy";
+            this.repositoryItemDateEditDMY.Name = "repositoryItemDateEditDMY";
+            this.repositoryItemDateEditDMY.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnPrintExport);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(734, 47);
+            this.panelControl1.TabIndex = 3;
+            // 
+            // btnPrintExport
+            // 
+            this.btnPrintExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintExport.Location = new System.Drawing.Point(588, 12);
+            this.btnPrintExport.Name = "btnPrintExport";
+            this.btnPrintExport.Size = new System.Drawing.Size(134, 23);
+            this.btnPrintExport.TabIndex = 0;
+            this.btnPrintExport.Text = "طباعه و تصدير";
+            this.btnPrintExport.Click += new System.EventHandler(this.btnPrintExport_Click);
+            // 
+            // vQry01TableAdapter
+            // 
+            this.vQry01TableAdapter.ClearBeforeFill = true;
+            // 
+            // colGehawork
+            // 
+            this.colGehawork.AppearanceCell.Options.UseTextOptions = true;
+            this.colGehawork.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGehawork.AppearanceHeader.Options.UseTextOptions = true;
+            this.colGehawork.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGehawork.Caption = "جهة العمل";
+            this.colGehawork.FieldName = "Gehawork";
+            this.colGehawork.Name = "colGehawork";
+            this.colGehawork.Visible = true;
+            this.colGehawork.VisibleIndex = 11;
+            // 
             // Qry36Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,7 +543,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Qry06Frm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vQry36BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vQry01BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsQry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDate)).EndInit();
@@ -358,8 +554,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dsQry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vQry01BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,7 +568,6 @@
         private DevExpress.XtraEditors.SimpleButton btnPrintExport;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditDMY;
-        private System.Windows.Forms.BindingSource vQry36BindingSource;
         private Datasource.dsQry dsQry;
         private System.Windows.Forms.BindingSource vQry01BindingSource;
         private Datasource.dsQryTableAdapters.vQry01TableAdapter vQry01TableAdapter;
@@ -385,6 +578,20 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDepartment;
         private DevExpress.XtraGrid.Columns.GridColumn colMOBILE_NO;
         private DevExpress.XtraGrid.Columns.GridColumn colEmpJobName;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmp_Address;
+        private DevExpress.XtraGrid.Columns.GridColumn coldyana_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpStateName;
+        private DevExpress.XtraGrid.Columns.GridColumn colJobType;
+        private DevExpress.XtraGrid.Columns.GridColumn colnationaltyname;
+        private DevExpress.XtraGrid.Columns.GridColumn colQualifiedPlaceName;
+        private DevExpress.XtraGrid.Columns.GridColumn colqualName;
+        private DevExpress.XtraGrid.Columns.GridColumn colSpecializationName;
+        private DevExpress.XtraGrid.Columns.GridColumn coltameen_date1;
+        private DevExpress.XtraGrid.Columns.GridColumn coltameen_no;
+        private DevExpress.XtraGrid.Columns.GridColumn colMoaahel_Date;
+        private DevExpress.XtraGrid.Columns.GridColumn colSubject;
+        private DevExpress.XtraGrid.Columns.GridColumn colWork_Start_Date;
+        private DevExpress.XtraGrid.Columns.GridColumn colGehawork;
 
     }
 }

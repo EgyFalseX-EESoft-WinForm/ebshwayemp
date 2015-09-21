@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule15 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule16 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule14 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule17 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule18 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule19 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule12 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule13 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule7 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule8 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule12 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule13 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule14 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule15 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule16 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule17 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule18 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
@@ -126,7 +127,7 @@
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.dxVP = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider();
+            this.dxVP = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LUEEmp.Properties)).BeginInit();
@@ -420,9 +421,9 @@
             this.TxtMoaahel_Date.Properties.MaxLength = 4;
             this.TxtMoaahel_Date.Size = new System.Drawing.Size(175, 20);
             this.TxtMoaahel_Date.TabIndex = 12;
-            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule9.ErrorText = "يجب ادخال سنة التخرج";
-            this.dxVP.SetValidationRule(this.TxtMoaahel_Date, conditionValidationRule9);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "يجب ادخال سنة التخرج";
+            this.dxVP.SetValidationRule(this.TxtMoaahel_Date, conditionValidationRule1);
             // 
             // DEEnd_Work_Date
             // 
@@ -482,9 +483,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DEWork_Start_Date.Size = new System.Drawing.Size(175, 20);
             this.DEWork_Start_Date.TabIndex = 7;
-            conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule15.ErrorText = "يجب ادخال تاريخ التعيين";
-            this.dxVP.SetValidationRule(this.DEWork_Start_Date, conditionValidationRule15);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "يجب ادخال تاريخ التعيين";
+            this.dxVP.SetValidationRule(this.DEWork_Start_Date, conditionValidationRule2);
             this.DEWork_Start_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl20
@@ -610,9 +611,9 @@
             this.LUEDepartmentId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEDepartmentId.Size = new System.Drawing.Size(175, 20);
             this.LUEDepartmentId.TabIndex = 4;
-            conditionValidationRule16.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule16.ErrorText = "يجب ادخال الوظيفة علي الكادر";
-            this.dxVP.SetValidationRule(this.LUEDepartmentId, conditionValidationRule16);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "يجب ادخال الوظيفة علي الكادر";
+            this.dxVP.SetValidationRule(this.LUEDepartmentId, conditionValidationRule3);
             this.LUEDepartmentId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEDepartmentId_ButtonClick);
             this.LUEDepartmentId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -632,9 +633,9 @@
             this.LUEJOB_STATUS_ID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEJOB_STATUS_ID.Size = new System.Drawing.Size(175, 20);
             this.LUEJOB_STATUS_ID.TabIndex = 2;
-            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule10.ErrorText = "يجب ادخال الحالة الوظيفية";
-            this.dxVP.SetValidationRule(this.LUEJOB_STATUS_ID, conditionValidationRule10);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "يجب ادخال الحالة الوظيفية";
+            this.dxVP.SetValidationRule(this.LUEJOB_STATUS_ID, conditionValidationRule4);
             this.LUEJOB_STATUS_ID.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEJOB_STATUS_ID_ButtonClick);
             this.LUEJOB_STATUS_ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -673,9 +674,9 @@
             this.LUESpecializationId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUESpecializationId.Size = new System.Drawing.Size(175, 20);
             this.LUESpecializationId.TabIndex = 10;
-            conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule14.ErrorText = "يجب ادخال التخصص";
-            this.dxVP.SetValidationRule(this.LUESpecializationId, conditionValidationRule14);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "يجب ادخال التخصص";
+            this.dxVP.SetValidationRule(this.LUESpecializationId, conditionValidationRule5);
             this.LUESpecializationId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUESpecializationId_ButtonClick);
             this.LUESpecializationId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -714,9 +715,9 @@
             this.LUEqualId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEqualId.Size = new System.Drawing.Size(175, 20);
             this.LUEqualId.TabIndex = 9;
-            conditionValidationRule17.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule17.ErrorText = "يجب ادخال المؤهل";
-            this.dxVP.SetValidationRule(this.LUEqualId, conditionValidationRule17);
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "يجب ادخال المؤهل";
+            this.dxVP.SetValidationRule(this.LUEqualId, conditionValidationRule6);
             this.LUEqualId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEqualId_ButtonClick);
             this.LUEqualId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -735,9 +736,9 @@
             this.LUEmarhala_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEmarhala_code.Size = new System.Drawing.Size(175, 20);
             this.LUEmarhala_code.TabIndex = 5;
-            conditionValidationRule18.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule18.ErrorText = "يجب ادخال جهة العمل";
-            this.dxVP.SetValidationRule(this.LUEmarhala_code, conditionValidationRule18);
+            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule7.ErrorText = "يجب ادخال جهة العمل";
+            this.dxVP.SetValidationRule(this.LUEmarhala_code, conditionValidationRule7);
             this.LUEmarhala_code.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEmarhala_code_ButtonClick);
             this.LUEmarhala_code.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -754,9 +755,9 @@
             this.LUEJobDescriptionId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEJobDescriptionId.Size = new System.Drawing.Size(175, 20);
             this.LUEJobDescriptionId.TabIndex = 3;
-            conditionValidationRule19.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule19.ErrorText = "يجب ادخال الوصف الوظيفي";
-            this.dxVP.SetValidationRule(this.LUEJobDescriptionId, conditionValidationRule19);
+            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule8.ErrorText = "يجب ادخال الوصف الوظيفي";
+            this.dxVP.SetValidationRule(this.LUEJobDescriptionId, conditionValidationRule8);
             this.LUEJobDescriptionId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEJobDescriptionId_ButtonClick);
             // 
             // lueJobTypeId
@@ -774,9 +775,9 @@
             this.lueJobTypeId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lueJobTypeId.Size = new System.Drawing.Size(175, 20);
             this.lueJobTypeId.TabIndex = 0;
-            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule11.ErrorText = "يجب ادخال نوع الوظيفة";
-            this.dxVP.SetValidationRule(this.lueJobTypeId, conditionValidationRule11);
+            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule9.ErrorText = "يجب ادخال نوع الوظيفة";
+            this.dxVP.SetValidationRule(this.lueJobTypeId, conditionValidationRule9);
             this.lueJobTypeId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.lueJobTypeId_ButtonClick);
             this.lueJobTypeId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -796,9 +797,9 @@
             this.LUEEmpJobId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEEmpJobId.Size = new System.Drawing.Size(175, 20);
             this.LUEEmpJobId.TabIndex = 1;
-            conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule12.ErrorText = "يجب ادخال الوظيفة";
-            this.dxVP.SetValidationRule(this.LUEEmpJobId, conditionValidationRule12);
+            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule10.ErrorText = "يجب ادخال الوظيفة";
+            this.dxVP.SetValidationRule(this.LUEEmpJobId, conditionValidationRule10);
             this.LUEEmpJobId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.LUEEmpJobId_ButtonClick);
             this.LUEEmpJobId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -886,9 +887,9 @@
             this.LUEMaritalStatusId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEMaritalStatusId.Size = new System.Drawing.Size(161, 20);
             this.LUEMaritalStatusId.TabIndex = 6;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "يجب ادخال الحالة الاجتماعية";
-            this.dxVP.SetValidationRule(this.LUEMaritalStatusId, conditionValidationRule1);
+            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule11.ErrorText = "يجب ادخال الحالة الاجتماعية";
+            this.dxVP.SetValidationRule(this.LUEMaritalStatusId, conditionValidationRule11);
             this.LUEMaritalStatusId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEdyana_code
@@ -906,9 +907,9 @@
             this.LUEdyana_code.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEdyana_code.Size = new System.Drawing.Size(161, 20);
             this.LUEdyana_code.TabIndex = 7;
-            conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule13.ErrorText = "يجب ادخال الديانة";
-            this.dxVP.SetValidationRule(this.LUEdyana_code, conditionValidationRule13);
+            conditionValidationRule12.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule12.ErrorText = "يجب ادخال الديانة";
+            this.dxVP.SetValidationRule(this.LUEdyana_code, conditionValidationRule12);
             this.LUEdyana_code.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // LUEGENDER_ID
@@ -927,9 +928,9 @@
             this.LUEGENDER_ID.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEGENDER_ID.Size = new System.Drawing.Size(161, 20);
             this.LUEGENDER_ID.TabIndex = 5;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "يجب ادخال النوع";
-            this.dxVP.SetValidationRule(this.LUEGENDER_ID, conditionValidationRule2);
+            conditionValidationRule13.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule13.ErrorText = "يجب ادخال النوع";
+            this.dxVP.SetValidationRule(this.LUEGENDER_ID, conditionValidationRule13);
             this.LUEGENDER_ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl14
@@ -958,9 +959,9 @@
             this.LUEnationaltyId.Size = new System.Drawing.Size(161, 20);
             this.LUEnationaltyId.TabIndex = 4;
             this.LUEnationaltyId.Tag = "";
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "يجب ادخال الجنسية";
-            this.dxVP.SetValidationRule(this.LUEnationaltyId, conditionValidationRule3);
+            conditionValidationRule14.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule14.ErrorText = "يجب ادخال الجنسية";
+            this.dxVP.SetValidationRule(this.LUEnationaltyId, conditionValidationRule14);
             this.LUEnationaltyId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // cbBIRTH_PLACE
@@ -992,9 +993,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DEBIRTH_DATE.Size = new System.Drawing.Size(161, 20);
             this.DEBIRTH_DATE.TabIndex = 2;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "يجب ادخال تاريخ الميلاد";
-            this.dxVP.SetValidationRule(this.DEBIRTH_DATE, conditionValidationRule4);
+            conditionValidationRule15.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule15.ErrorText = "يجب ادخال تاريخ الميلاد";
+            this.dxVP.SetValidationRule(this.DEBIRTH_DATE, conditionValidationRule15);
             this.DEBIRTH_DATE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // TxtEmpNationalID
@@ -1006,9 +1007,9 @@
             this.TxtEmpNationalID.Properties.MaxLength = 14;
             this.TxtEmpNationalID.Size = new System.Drawing.Size(161, 20);
             this.TxtEmpNationalID.TabIndex = 0;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "يجب ادخال الرقم القومي";
-            this.dxVP.SetValidationRule(this.TxtEmpNationalID, conditionValidationRule5);
+            conditionValidationRule16.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule16.ErrorText = "يجب ادخال الرقم القومي";
+            this.dxVP.SetValidationRule(this.TxtEmpNationalID, conditionValidationRule16);
             this.TxtEmpNationalID.EditValueChanged += new System.EventHandler(this.TxtEmpNationalID_EditValueChanged);
             this.TxtEmpNationalID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
@@ -1027,9 +1028,9 @@
             this.LUEBIRTH_GOV.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LUEBIRTH_GOV.Size = new System.Drawing.Size(161, 20);
             this.LUEBIRTH_GOV.TabIndex = 1;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "يجب ادخال محافظة الميلاد";
-            this.dxVP.SetValidationRule(this.LUEBIRTH_GOV, conditionValidationRule6);
+            conditionValidationRule17.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule17.ErrorText = "يجب ادخال محافظة الميلاد";
+            this.dxVP.SetValidationRule(this.LUEBIRTH_GOV, conditionValidationRule17);
             this.LUEBIRTH_GOV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // labelControl19
@@ -1109,9 +1110,9 @@
             this.TxtEMP_FIRST_NAME.Name = "TxtEMP_FIRST_NAME";
             this.TxtEMP_FIRST_NAME.Size = new System.Drawing.Size(428, 20);
             this.TxtEMP_FIRST_NAME.TabIndex = 0;
-            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule7.ErrorText = "يجب ادخال الاسم";
-            this.dxVP.SetValidationRule(this.TxtEMP_FIRST_NAME, conditionValidationRule7);
+            conditionValidationRule18.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule18.ErrorText = "يجب ادخال الاسم";
+            this.dxVP.SetValidationRule(this.TxtEMP_FIRST_NAME, conditionValidationRule18);
             this.TxtEMP_FIRST_NAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
             // 
             // xtraTabControlMain

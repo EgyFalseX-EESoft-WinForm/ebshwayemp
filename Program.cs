@@ -9,6 +9,7 @@ namespace Employee
     {
         public static FXFW.SqlDB MCL = new FXFW.SqlDB();
         public static FXFW.Logger Logger;
+        public static string Local_RDL_Path = Application.StartupPath + "\\SqlRpt\\rdl\\";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
