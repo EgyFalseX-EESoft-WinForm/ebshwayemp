@@ -518,10 +518,30 @@ namespace Employee
         }
         private void navBarItemEmpvQry01_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-            Employee.Qry36Frm frm = new Employee.Qry36Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
+            Employee.Qry01Frm frm = new Employee.Qry01Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
+            frm.Show();
+        }
+        private void navBarItemEmpvQry02_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Employee.Qry02Frm frm = new Employee.Qry02Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
+            frm.Show();
+        }
+        private void navBarItemEmpvQry03_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Employee.Qry03Frm frm = new Employee.Qry03Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
+            frm.Show();
+        }
+        private void navBarItemEmpvQry04_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Employee.Qry04Frm frm = new Employee.Qry04Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
             frm.Show();
         }
         #endregion
+
+        
+
+        
+
 
         
     }

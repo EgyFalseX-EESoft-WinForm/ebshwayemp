@@ -32,6 +32,7 @@ namespace Employee
                 try
                 {
                     LoadStartupArgs(args);
+                    DatabaseScripts.FireScript();
                     Application.Run(new MainFrm());
                 }
                 catch (Exception ex)

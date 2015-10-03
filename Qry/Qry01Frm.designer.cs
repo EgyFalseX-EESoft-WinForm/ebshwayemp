@@ -1,6 +1,6 @@
 ﻿namespace Employee
 {
-    partial class Qry36Frm
+    partial class Qry01Frm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gridControlData = new DevExpress.XtraGrid.GridControl();
-            this.vQry01BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vQry01BindingSource = new System.Windows.Forms.BindingSource();
             this.dsQry = new Employee.Datasource.dsQry();
             this.gridViewData = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmpID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,6 +52,7 @@
             this.colMoaahel_Date = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSubject = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWork_Start_Date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGehawork = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemDateEditDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryItemPictureEditImg = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -60,7 +60,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnPrintExport = new DevExpress.XtraEditors.SimpleButton();
             this.vQry01TableAdapter = new Employee.Datasource.dsQryTableAdapters.vQry01TableAdapter();
-            this.colGehawork = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAge = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmarhala_name_e = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vQry01BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsQry)).BeginInit();
@@ -206,7 +207,9 @@
             this.colMoaahel_Date,
             this.colSubject,
             this.colWork_Start_Date,
-            this.colGehawork});
+            this.colGehawork,
+            this.colAge,
+            this.colmarhala_name_e});
             this.gridViewData.GridControl = this.gridControlData;
             this.gridViewData.Name = "gridViewData";
             this.gridViewData.OptionsBehavior.Editable = false;
@@ -461,6 +464,18 @@
             this.colWork_Start_Date.Visible = true;
             this.colWork_Start_Date.VisibleIndex = 20;
             // 
+            // colGehawork
+            // 
+            this.colGehawork.AppearanceCell.Options.UseTextOptions = true;
+            this.colGehawork.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGehawork.AppearanceHeader.Options.UseTextOptions = true;
+            this.colGehawork.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGehawork.Caption = "جهة العمل";
+            this.colGehawork.FieldName = "Gehawork";
+            this.colGehawork.Name = "colGehawork";
+            this.colGehawork.Visible = true;
+            this.colGehawork.VisibleIndex = 11;
+            // 
             // repositoryItemDateEditDate
             // 
             this.repositoryItemDateEditDate.AutoHeight = false;
@@ -519,26 +534,38 @@
             // 
             this.vQry01TableAdapter.ClearBeforeFill = true;
             // 
-            // colGehawork
+            // colAge
             // 
-            this.colGehawork.AppearanceCell.Options.UseTextOptions = true;
-            this.colGehawork.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colGehawork.AppearanceHeader.Options.UseTextOptions = true;
-            this.colGehawork.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colGehawork.Caption = "جهة العمل";
-            this.colGehawork.FieldName = "Gehawork";
-            this.colGehawork.Name = "colGehawork";
-            this.colGehawork.Visible = true;
-            this.colGehawork.VisibleIndex = 11;
+            this.colAge.AppearanceCell.Options.UseTextOptions = true;
+            this.colAge.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAge.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAge.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAge.Caption = "العمر";
+            this.colAge.FieldName = "Age";
+            this.colAge.Name = "colAge";
+            this.colAge.Visible = true;
+            this.colAge.VisibleIndex = 21;
             // 
-            // Qry36Frm
+            // colmarhala_name_e
+            // 
+            this.colmarhala_name_e.AppearanceCell.Options.UseTextOptions = true;
+            this.colmarhala_name_e.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colmarhala_name_e.AppearanceHeader.Options.UseTextOptions = true;
+            this.colmarhala_name_e.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colmarhala_name_e.Caption = "المرحلة";
+            this.colmarhala_name_e.FieldName = "marhala_name_e";
+            this.colmarhala_name_e.Name = "colmarhala_name_e";
+            this.colmarhala_name_e.Visible = true;
+            this.colmarhala_name_e.VisibleIndex = 22;
+            // 
+            // Qry01Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 462);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.gridControlData);
-            this.Name = "Qry36Frm";
+            this.Name = "Qry01Frm";
             this.Text = "اعضاء لها رقم قومي";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Qry06Frm_Load);
@@ -592,6 +619,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSubject;
         private DevExpress.XtraGrid.Columns.GridColumn colWork_Start_Date;
         private DevExpress.XtraGrid.Columns.GridColumn colGehawork;
+        private DevExpress.XtraGrid.Columns.GridColumn colAge;
+        private DevExpress.XtraGrid.Columns.GridColumn colmarhala_name_e;
 
     }
 }

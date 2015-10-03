@@ -123,6 +123,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment">
       <Private>False</Private>
     </Reference>
@@ -149,10 +150,16 @@
     <Compile Include="Code\CodeFrm.designer.cs">
       <DependentUpon>CodeFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseScripts.cs" />
     <Compile Include="Datasource\dsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsLinq\dsLinqQry.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLinqQry.dbml</DependentUpon>
     </Compile>
     <Compile Include="Datasource\dsQry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -303,6 +310,24 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Qry\Qry04Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\Qry04Frm.designer.cs">
+      <DependentUpon>Qry04Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\Qry03Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\Qry03Frm.designer.cs">
+      <DependentUpon>Qry03Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qry\Qry02Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qry\Qry02Frm.designer.cs">
+      <DependentUpon>Qry02Frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Qry\Qry01Frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +374,9 @@
     <EmbeddedResource Include="Code\CodeFrm.resx">
       <DependentUpon>CodeFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datasource\dsLinq\dsLinqQry.dbml.layout">
+      <DependentUpon>dsLinqQry.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Data\TBLTankolat3Frm.resx">
       <DependentUpon>TBLTankolat3Frm.cs</DependentUpon>
     </EmbeddedResource>
@@ -420,6 +448,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Qry\Qry04Frm.resx">
+      <DependentUpon>Qry04Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\Qry03Frm.resx">
+      <DependentUpon>Qry03Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qry\Qry02Frm.resx">
+      <DependentUpon>Qry02Frm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Qry\Qry01Frm.resx">
       <DependentUpon>Qry01Frm.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +483,11 @@
     </None>
     <None Include="Datasource\dsData.xss">
       <DependentUpon>dsData.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsLinq\dsLinqQry.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dsLinqQry.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Datasource\dsQry.xsc">
       <DependentUpon>dsQry.xsd</DependentUpon>
@@ -555,7 +597,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

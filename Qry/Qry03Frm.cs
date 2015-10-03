@@ -12,10 +12,11 @@ using DevExpress.XtraSplashScreen;
 
 namespace Employee
 {
-    public partial class Qry01Frm : DevExpress.XtraEditors.XtraForm
+    public partial class Qry03Frm : DevExpress.XtraEditors.XtraForm
     {
+        Datasource.dsLinq.dsLinqQryDataContext dsLinq = new Datasource.dsLinq.dsLinqQryDataContext();
         #region -   Functions   -
-        public Qry01Frm()
+        public Qry03Frm()
         {
             InitializeComponent();
         }
@@ -23,8 +24,7 @@ namespace Employee
         #region -   Event Handlers   -
         private void Qry06Frm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dsQry.vQry01' table. You can move, or remove it, as needed.
-            this.vQry01TableAdapter.Fill(this.dsQry.vQry01);
+            LSMSData.QueryableSource = from q in dsLinq.vQry03s select q;
         }
         private void btnPrintExport_Click(object sender, EventArgs e)
         {

@@ -122,6 +122,9 @@
             this.navBarControlQry = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemEmpvQry01 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpvQry02 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpvQry03 = new DevExpress.XtraNavBar.NavBarItem();
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
@@ -1171,7 +1174,10 @@
             this.navBarControlQry.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup5});
             this.navBarControlQry.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItemEmpvQry01});
+            this.navBarItemEmpvQry01,
+            this.navBarItemEmpvQry02,
+            this.navBarItemEmpvQry03,
+            this.navBarItemEmpvQry04});
             this.navBarControlQry.LargeImages = this.imageCollection32;
             this.navBarControlQry.Location = new System.Drawing.Point(0, 0);
             this.navBarControlQry.Name = "navBarControlQry";
@@ -1187,7 +1193,10 @@
             this.navBarGroup5.Caption = "";
             this.navBarGroup5.Expanded = true;
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry01)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry01),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry02),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry03),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpvQry04)});
             this.navBarGroup5.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.LargeImage")));
             this.navBarGroup5.Name = "navBarGroup5";
             this.navBarGroup5.NavigationPaneVisible = false;
@@ -1200,6 +1209,30 @@
             this.navBarItemEmpvQry01.Name = "navBarItemEmpvQry01";
             this.navBarItemEmpvQry01.SmallImageIndex = 35;
             this.navBarItemEmpvQry01.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry01_LinkClicked);
+            // 
+            // navBarItemEmpvQry02
+            // 
+            this.navBarItemEmpvQry02.Caption = "جهة العمل - احصائي";
+            this.navBarItemEmpvQry02.LargeImageIndex = 35;
+            this.navBarItemEmpvQry02.Name = "navBarItemEmpvQry02";
+            this.navBarItemEmpvQry02.SmallImageIndex = 35;
+            this.navBarItemEmpvQry02.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry02_LinkClicked);
+            // 
+            // navBarItemEmpvQry04
+            // 
+            this.navBarItemEmpvQry04.Caption = "سن المعاش";
+            this.navBarItemEmpvQry04.LargeImageIndex = 35;
+            this.navBarItemEmpvQry04.Name = "navBarItemEmpvQry04";
+            this.navBarItemEmpvQry04.SmallImageIndex = 35;
+            this.navBarItemEmpvQry04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry04_LinkClicked);
+            // 
+            // navBarItemEmpvQry03
+            // 
+            this.navBarItemEmpvQry03.Caption = "الفئات العمرية";
+            this.navBarItemEmpvQry03.LargeImageIndex = 35;
+            this.navBarItemEmpvQry03.Name = "navBarItemEmpvQry03";
+            this.navBarItemEmpvQry03.SmallImageIndex = 35;
+            this.navBarItemEmpvQry03.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry03_LinkClicked);
             // 
             // DPReport
             // 
@@ -1459,6 +1492,9 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBLTankolat2;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBLTankolat3;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry01;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry02;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry04;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry03;
 
     }
 }

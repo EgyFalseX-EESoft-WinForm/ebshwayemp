@@ -321,6 +321,10 @@ namespace Employee.Datasource {
             
             private global::System.Data.DataColumn columnGehawork;
             
+            private global::System.Data.DataColumn columnAge;
+            
+            private global::System.Data.DataColumn columnmarhala_name_e;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vQry01DataTable() {
@@ -524,6 +528,22 @@ namespace Employee.Datasource {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AgeColumn {
+                get {
+                    return this.columnAge;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn marhala_name_eColumn {
+                get {
+                    return this.columnmarhala_name_e;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -580,7 +600,9 @@ namespace Employee.Datasource {
                         string Moaahel_Date, 
                         System.DateTime Work_Start_Date, 
                         string Subject, 
-                        string Gehawork) {
+                        string Gehawork, 
+                        int Age, 
+                        string marhala_name_e) {
                 vQry01Row rowvQry01Row = ((vQry01Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmpID,
@@ -603,7 +625,9 @@ namespace Employee.Datasource {
                         Moaahel_Date,
                         Work_Start_Date,
                         Subject,
-                        Gehawork};
+                        Gehawork,
+                        Age,
+                        marhala_name_e};
                 rowvQry01Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvQry01Row);
                 return rowvQry01Row;
@@ -654,6 +678,8 @@ namespace Employee.Datasource {
                 this.columnWork_Start_Date = base.Columns["Work_Start_Date"];
                 this.columnSubject = base.Columns["Subject"];
                 this.columnGehawork = base.Columns["Gehawork"];
+                this.columnAge = base.Columns["Age"];
+                this.columnmarhala_name_e = base.Columns["marhala_name_e"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -701,6 +727,10 @@ namespace Employee.Datasource {
                 base.Columns.Add(this.columnSubject);
                 this.columnGehawork = new global::System.Data.DataColumn("Gehawork", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGehawork);
+                this.columnAge = new global::System.Data.DataColumn("Age", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAge);
+                this.columnmarhala_name_e = new global::System.Data.DataColumn("marhala_name_e", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmarhala_name_e);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmpID}, true));
                 this.columnEmpID.AllowDBNull = false;
@@ -727,6 +757,8 @@ namespace Employee.Datasource {
                 this.columnWork_Start_Date.AllowDBNull = false;
                 this.columnSubject.MaxLength = 50;
                 this.columnGehawork.MaxLength = 75;
+                this.columnAge.ReadOnly = true;
+                this.columnmarhala_name_e.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1175,6 +1207,38 @@ namespace Employee.Datasource {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Age {
+                get {
+                    try {
+                        return ((int)(this[this.tablevQry01.AgeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Age\' in table \'vQry01\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevQry01.AgeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string marhala_name_e {
+                get {
+                    try {
+                        return ((string)(this[this.tablevQry01.marhala_name_eColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'marhala_name_e\' in table \'vQry01\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevQry01.marhala_name_eColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDepartmentNull() {
                 return this.IsNull(this.tablevQry01.DepartmentColumn);
             }
@@ -1351,6 +1415,30 @@ namespace Employee.Datasource {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGehaworkNull() {
                 this[this.tablevQry01.GehaworkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAgeNull() {
+                return this.IsNull(this.tablevQry01.AgeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAgeNull() {
+                this[this.tablevQry01.AgeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ismarhala_name_eNull() {
+                return this.IsNull(this.tablevQry01.marhala_name_eColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setmarhala_name_eNull() {
+                this[this.tablevQry01.marhala_name_eColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1534,6 +1622,8 @@ namespace Employee.Datasource.dsQryTableAdapters {
             tableMapping.ColumnMappings.Add("Work_Start_Date", "Work_Start_Date");
             tableMapping.ColumnMappings.Add("Subject", "Subject");
             tableMapping.ColumnMappings.Add("Gehawork", "Gehawork");
+            tableMapping.ColumnMappings.Add("Age", "Age");
+            tableMapping.ColumnMappings.Add("marhala_name_e", "marhala_name_e");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1556,22 +1646,25 @@ namespace Employee.Datasource.dsQryTableAdapters {
                 "Name, CD_QualifiedPlace.QualifiedPlaceName, CDJobType.JobType, CDQualification.q" +
                 "ualName, CDDyana.dyana_name, CDnationalty.nationaltyname, TBL_Emp.Emp_Address, \r" +
                 "\n                         TBL_Emp.tameen_no, TBL_Emp.tameen_date1, TBL_Emp.Moaah" +
-                "el_Date, TBL_Emp.Work_Start_Date, CD_Subject.Subject, TBLGehawork.Gehawork\r\nFROM" +
-                "            TBL_Emp LEFT OUTER JOIN\r\n                         TBLGehawork ON TBL" +
-                "_Emp.GehaworkId = TBLGehawork.GehaworkId LEFT OUTER JOIN\r\n                      " +
-                "   CD_Subject ON TBL_Emp.SubjectId = CD_Subject.SubjectId LEFT OUTER JOIN\r\n     " +
-                "                    CDQualification ON TBL_Emp.qualId = CDQualification.qualId L" +
-                "EFT OUTER JOIN\r\n                         CDnationalty ON TBL_Emp.nationaltyId = " +
-                "CDnationalty.nationaltyId LEFT OUTER JOIN\r\n                         CDDyana ON T" +
-                "BL_Emp.dyana_code = CDDyana.dyana_code LEFT OUTER JOIN\r\n                        " +
-                " CD_EmpJob ON TBL_Emp.EmpJobId = CD_EmpJob.EmpJobId LEFT OUTER JOIN\r\n           " +
-                "              CD_Department ON TBL_Emp.DepartmentId = CD_Department.DepartmentId" +
-                " LEFT OUTER JOIN\r\n                         CD_EmpState ON TBL_Emp.JOB_STATUS_ID " +
-                "= CD_EmpState.EmpStateID LEFT OUTER JOIN\r\n                         CD_Specializa" +
-                "tion ON TBL_Emp.SpecializationId = CD_Specialization.SpecializationId LEFT OUTER" +
-                " JOIN\r\n                         CD_QualifiedPlace ON TBL_Emp.QualifiedPlaceId = " +
-                "CD_QualifiedPlace.QualifiedPlaceId LEFT OUTER JOIN\r\n                         CDJ" +
-                "obType ON TBL_Emp.JobTypeId = CDJobType.JobTypeId";
+                "el_Date, TBL_Emp.Work_Start_Date, CD_Subject.Subject, TBLGehawork.Gehawork, YEAR" +
+                "(GETDATE()) - YEAR(TBL_Emp.BIRTH_DATE) AS Age, \r\n                         CDMara" +
+                "hel.marhala_name_e\r\nFROM            CDMarahel INNER JOIN\r\n                      " +
+                "   TBLGehawork ON CDMarahel.marhala_code = TBLGehawork.marhalaid RIGHT OUTER JOI" +
+                "N\r\n                         TBL_Emp ON TBLGehawork.GehaworkId = TBL_Emp.Gehawork" +
+                "Id LEFT OUTER JOIN\r\n                         CD_Subject ON TBL_Emp.SubjectId = C" +
+                "D_Subject.SubjectId LEFT OUTER JOIN\r\n                         CDQualification ON" +
+                " TBL_Emp.qualId = CDQualification.qualId LEFT OUTER JOIN\r\n                      " +
+                "   CDnationalty ON TBL_Emp.nationaltyId = CDnationalty.nationaltyId LEFT OUTER J" +
+                "OIN\r\n                         CDDyana ON TBL_Emp.dyana_code = CDDyana.dyana_code" +
+                " LEFT OUTER JOIN\r\n                         CD_EmpJob ON TBL_Emp.EmpJobId = CD_Em" +
+                "pJob.EmpJobId LEFT OUTER JOIN\r\n                         CD_Department ON TBL_Emp" +
+                ".DepartmentId = CD_Department.DepartmentId LEFT OUTER JOIN\r\n                    " +
+                "     CD_EmpState ON TBL_Emp.JOB_STATUS_ID = CD_EmpState.EmpStateID LEFT OUTER JO" +
+                "IN\r\n                         CD_Specialization ON TBL_Emp.SpecializationId = CD_" +
+                "Specialization.SpecializationId LEFT OUTER JOIN\r\n                         CD_Qua" +
+                "lifiedPlace ON TBL_Emp.QualifiedPlaceId = CD_QualifiedPlace.QualifiedPlaceId LEF" +
+                "T OUTER JOIN\r\n                         CDJobType ON TBL_Emp.JobTypeId = CDJobTyp" +
+                "e.JobTypeId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

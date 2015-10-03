@@ -14,9 +14,11 @@
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        TBL_Emp.EmpID, TBL_Emp.EMPNAME, TBL_Emp.BIRTH_DATE, TBL_Emp.EmpNationalID, CD_Department.Department, TBL_Emp.MOBILE_NO, CD_EmpJob.EmpJobName, CD_EmpState.EmpStateName, 
                          CD_Specialization.SpecializationName, CD_QualifiedPlace.QualifiedPlaceName, CDJobType.JobType, CDQualification.qualName, CDDyana.dyana_name, CDnationalty.nationaltyname, TBL_Emp.Emp_Address, 
-                         TBL_Emp.tameen_no, TBL_Emp.tameen_date1, TBL_Emp.Moaahel_Date, TBL_Emp.Work_Start_Date, CD_Subject.Subject, TBLGehawork.Gehawork
-FROM            TBL_Emp LEFT OUTER JOIN
-                         TBLGehawork ON TBL_Emp.GehaworkId = TBLGehawork.GehaworkId LEFT OUTER JOIN
+                         TBL_Emp.tameen_no, TBL_Emp.tameen_date1, TBL_Emp.Moaahel_Date, TBL_Emp.Work_Start_Date, CD_Subject.Subject, TBLGehawork.Gehawork, YEAR(GETDATE()) - YEAR(TBL_Emp.BIRTH_DATE) AS Age, 
+                         CDMarahel.marhala_name_e
+FROM            CDMarahel INNER JOIN
+                         TBLGehawork ON CDMarahel.marhala_code = TBLGehawork.marhalaid RIGHT OUTER JOIN
+                         TBL_Emp ON TBLGehawork.GehaworkId = TBL_Emp.GehaworkId LEFT OUTER JOIN
                          CD_Subject ON TBL_Emp.SubjectId = CD_Subject.SubjectId LEFT OUTER JOIN
                          CDQualification ON TBL_Emp.qualId = CDQualification.qualId LEFT OUTER JOIN
                          CDnationalty ON TBL_Emp.nationaltyId = CDnationalty.nationaltyId LEFT OUTER JOIN
@@ -54,6 +56,8 @@ FROM            TBL_Emp LEFT OUTER JOIN
               <Mapping SourceColumn="Work_Start_Date" DataSetColumn="Work_Start_Date" />
               <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
               <Mapping SourceColumn="Gehawork" DataSetColumn="Gehawork" />
+              <Mapping SourceColumn="Age" DataSetColumn="Age" />
+              <Mapping SourceColumn="marhala_name_e" DataSetColumn="marhala_name_e" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -65,7 +69,7 @@ FROM            TBL_Emp LEFT OUTER JOIN
   <xs:element name="dsQry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsQry" msprop:Generator_UserDSName="dsQry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vQry01" msprop:Generator_TableClassName="vQry01DataTable" msprop:Generator_TableVarName="tablevQry01" msprop:Generator_RowChangedName="vQry01RowChanged" msprop:Generator_TablePropName="vQry01" msprop:Generator_RowDeletingName="vQry01RowDeleting" msprop:Generator_RowChangingName="vQry01RowChanging" msprop:Generator_RowEvHandlerName="vQry01RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry01RowDeleted" msprop:Generator_RowClassName="vQry01Row" msprop:Generator_UserTableName="vQry01" msprop:Generator_RowEvArgName="vQry01RowChangeEvent">
+        <xs:element name="vQry01" msprop:Generator_TableClassName="vQry01DataTable" msprop:Generator_TableVarName="tablevQry01" msprop:Generator_TablePropName="vQry01" msprop:Generator_RowDeletingName="vQry01RowDeleting" msprop:Generator_RowChangingName="vQry01RowChanging" msprop:Generator_RowEvHandlerName="vQry01RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry01RowDeleted" msprop:Generator_UserTableName="vQry01" msprop:Generator_RowChangedName="vQry01RowChanged" msprop:Generator_RowEvArgName="vQry01RowChangeEvent" msprop:Generator_RowClassName="vQry01Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EmpID" msprop:Generator_ColumnVarNameInTable="columnEmpID" msprop:Generator_ColumnPropNameInRow="EmpID" msprop:Generator_ColumnPropNameInTable="EmpIDColumn" msprop:Generator_UserColumnName="EmpID" type="xs:int" />
@@ -188,6 +192,14 @@ FROM            TBL_Emp LEFT OUTER JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Age" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAge" msprop:Generator_ColumnPropNameInRow="Age" msprop:Generator_ColumnPropNameInTable="AgeColumn" msprop:Generator_UserColumnName="Age" type="xs:int" minOccurs="0" />
+              <xs:element name="marhala_name_e" msprop:Generator_ColumnVarNameInTable="columnmarhala_name_e" msprop:Generator_ColumnPropNameInRow="marhala_name_e" msprop:Generator_ColumnPropNameInTable="marhala_name_eColumn" msprop:Generator_UserColumnName="marhala_name_e" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
