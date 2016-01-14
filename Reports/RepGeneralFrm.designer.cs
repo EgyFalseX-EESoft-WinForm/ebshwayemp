@@ -35,7 +35,7 @@
             // RVGeneral
             // 
             this.RVGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RVGeneral.LocalReport.MapTileServerConfiguration.Timeout = 600;
+            //this.RVGeneral.LocalReport.MapTileServerConfiguration.Timeout = 600;
             this.RVGeneral.Location = new System.Drawing.Point(0, 0);
             this.RVGeneral.Name = "RVGeneral";
             this.RVGeneral.Size = new System.Drawing.Size(884, 562);

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dsLinqQry">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.5" name="dsLinqQry">
   <DataContextMoniker Name="/dsLinqQryDataContext" />
   <nestedChildShapes>
     <classShape Id="b3252c47-d23f-4e7f-8eee-0f3e8005f67c" absoluteBounds="1.625, 0.5, 2, 1.5785953776041666">
@@ -20,5 +20,50 @@
         <elementListCompartment Id="4e8706fc-2024-4d11-8106-d473f2f4cefb" absoluteBounds="6.89, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="cc2862e3-d745-47de-92a8-88065e2a65b9" absoluteBounds="2.25, 3.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/dsLinqQryDataContext/TBLManager" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2605746-9ee3-4a0f-b0f7-b3ebf6beae62" absoluteBounds="2.265, 4.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c080e31-0d55-46ab-8bb8-3e016852e1cf" absoluteBounds="5.375, 4, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/dsLinqQryDataContext/TBL_Emp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6aee94c7-7fd0-4010-abf5-332b9cfbdb60" absoluteBounds="5.39, 4.46, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 5.59215413411458); (4.25 : 5.59215413411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsLinqQryDataContext/TBL_Emp/TBL_Emp_TBLManager" />
+      <nodes>
+        <classShapeMoniker Id="5c080e31-0d55-46ab-8bb8-3e016852e1cf" />
+        <classShapeMoniker Id="cc2862e3-d745-47de-92a8-88065e2a65b9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="70bfa9fc-241d-4242-a099-b8c7bc28551c" absoluteBounds="8.625, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dsLinqQryDataContext/TBLGehawork" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16e6097e-ff08-4823-8e7f-268b102d25dc" absoluteBounds="8.64, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 5.41429768880208); (7.375 : 5.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsLinqQryDataContext/TBLGehawork/TBLGehawork_TBL_Emp" />
+      <nodes>
+        <classShapeMoniker Id="70bfa9fc-241d-4242-a099-b8c7bc28551c" />
+        <classShapeMoniker Id="5c080e31-0d55-46ab-8bb8-3e016852e1cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bb11d602-ac8d-49f9-b46f-e33b9f65f89f" absoluteBounds="2.25, 7.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dsLinqQryDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="477ba2c4-5b76-477f-9ff6-c58a989eac2f" absoluteBounds="2.2650000000000006, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 7.75); (3.25 : 7.18430826822917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsLinqQryDataContext/User/User_TBLManager" />
+      <nodes>
+        <classShapeMoniker Id="bb11d602-ac8d-49f9-b46f-e33b9f65f89f" />
+        <classShapeMoniker Id="cc2862e3-d745-47de-92a8-88065e2a65b9" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

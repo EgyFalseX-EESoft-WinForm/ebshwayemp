@@ -2,7 +2,7 @@
 <xs:schema id="dsQry" targetNamespace="http://tempuri.org/dsQry.xsd" xmlns:mstns="http://tempuri.org/dsQry.xsd" xmlns="http://tempuri.org/dsQry.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EmployeesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EmployeesConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Employee.Properties.Settings.GlobalReference.Default.EmployeesConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
@@ -62,14 +62,23 @@ FROM            CDMarahel INNER JOIN
             <Sources />
           </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="EmployeesConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetServerDatetime" MethodsParameterType="CLR" Modifier="Public" Name="GetServerDatetime" QueryType="Scalar" ScalarCallRetval="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetServerDatetime">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT GETDATE()</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="dsQry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsQry" msprop:Generator_UserDSName="dsQry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vQry01" msprop:Generator_TableClassName="vQry01DataTable" msprop:Generator_TableVarName="tablevQry01" msprop:Generator_TablePropName="vQry01" msprop:Generator_RowDeletingName="vQry01RowDeleting" msprop:Generator_RowChangingName="vQry01RowChanging" msprop:Generator_RowEvHandlerName="vQry01RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry01RowDeleted" msprop:Generator_UserTableName="vQry01" msprop:Generator_RowChangedName="vQry01RowChanged" msprop:Generator_RowEvArgName="vQry01RowChangeEvent" msprop:Generator_RowClassName="vQry01Row">
+        <xs:element name="vQry01" msprop:Generator_TableClassName="vQry01DataTable" msprop:Generator_TableVarName="tablevQry01" msprop:Generator_RowChangedName="vQry01RowChanged" msprop:Generator_TablePropName="vQry01" msprop:Generator_RowDeletingName="vQry01RowDeleting" msprop:Generator_RowChangingName="vQry01RowChanging" msprop:Generator_RowEvHandlerName="vQry01RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry01RowDeleted" msprop:Generator_RowClassName="vQry01Row" msprop:Generator_UserTableName="vQry01" msprop:Generator_RowEvArgName="vQry01RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EmpID" msprop:Generator_ColumnVarNameInTable="columnEmpID" msprop:Generator_ColumnPropNameInRow="EmpID" msprop:Generator_ColumnPropNameInTable="EmpIDColumn" msprop:Generator_UserColumnName="EmpID" type="xs:int" />

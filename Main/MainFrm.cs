@@ -516,6 +516,11 @@ namespace Employee
             TBLTankolat3Frm frm = new TBLTankolat3Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["EMPinout32.png"], 32, false) };
             frm.Show();
         }
+        private void navBarItemEmpTBLManagers_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Data.TBLManagersFrm FrmTBL_Emp = new Data.TBLManagersFrm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["TBL_Emp.png"], 32, false) };
+            FrmTBL_Emp.Show();
+        }
         private void navBarItemEmpvQry01_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             Employee.Qry01Frm frm = new Employee.Qry01Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
@@ -538,12 +543,6 @@ namespace Employee
         }
         #endregion
 
-        
-
-        
-
-
-        
     }
 
 }

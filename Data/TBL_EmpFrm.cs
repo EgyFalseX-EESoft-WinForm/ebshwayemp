@@ -205,7 +205,7 @@ namespace Employee
         private void LoadData()
         {
             DataTable Emp = FXFW.SqlDB.LoadDataTable(@"SELECT EmpID, GehaworkId, EmpNationalID, EMPNAME, nationaltyId, dyana_code, 
-            MaritalStatusId, SubjectId, JobkaderId, EmpJobId, BIRTH_DATE, GENDER_ID, BIRTH_GOV, JOB_STATUS_ID, BIRTH_PLACE, Emp_Address, PHONE_NO, 
+            MaritalStatusId, SubjectId, JobkaderId, EmpJobId, BIRTH_DATE, GENDER_ID, BIRTH_GOV, JOB_STATUS_ID, BIRTH_PLACE, JobTypeId, Emp_Address, PHONE_NO, 
             MOBILE_NO, JobDescriptionId, Work_Start_Date, End_Work_Date, qualId, SpecializationId, QualifiedPlaceId, Moaahel_Date, tagned_id, tameen_no, tameen_date1, 
             betaka_tameen, noview, orderreport, EMPPIC
             FROM TBL_Emp");
@@ -317,14 +317,15 @@ namespace Employee
                 LUEGENDER_ID.ItemIndex = 0;//male
             string birthdate = string.Empty;
             //get birth day
-            birthdate = TxtEmpNationalID.Text.Substring(5, 2) + "/";
-            birthdate += TxtEmpNationalID.Text.Substring(3, 2) + "/";
+            int day = Convert.ToInt32(TxtEmpNationalID.Text.Substring(5, 2));
+            int month = Convert.ToInt32(TxtEmpNationalID.Text.Substring(3, 2));
+            int year = 0;
             if (TxtEmpNationalID.Text.Substring(0, 1) == "2")
-                birthdate += "19" + TxtEmpNationalID.Text.Substring(1, 2);
+                year = Convert.ToInt32("19" + TxtEmpNationalID.Text.Substring(1, 2));
             else
-                birthdate += "20" + TxtEmpNationalID.Text.Substring(1, 2);
-            DEBIRTH_DATE.Text = birthdate;
-            DEBIRTH_DATE.EditValue = DEBIRTH_DATE.DateTime;
+                year = Convert.ToInt32("20" + TxtEmpNationalID.Text.Substring(1, 2));
+            DEBIRTH_DATE.EditValue = new DateTime(year,month,day);
+            //DEBIRTH_DATE.EditValue = DEBIRTH_DATE.DateTime;
             //get the birth state
             try
             { LUEBIRTH_GOV.EditValue = TxtEmpNationalID.Text.Substring(7, 2); }
@@ -374,6 +375,7 @@ namespace Employee
             TxtPHONE_NO.Text = row["PHONE_NO"].ToString();
             TxtMOBILE_NO.Text = row["MOBILE_NO"].ToString();
 
+            lueJobTypeId.EditValue = row["JobTypeId"];
             LUEEmpJobId.EditValue = row["EmpJobId"];
             LUEJOB_STATUS_ID.EditValue = row["JOB_STATUS_ID"];
             LUEJobDescriptionId.EditValue = row["JobDescriptionId"];

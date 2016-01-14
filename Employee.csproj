@@ -166,6 +166,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsQry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\TBLManagersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\TBLManagersFrm.Designer.cs">
+      <DependentUpon>TBLManagersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TBLManagersDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\TBLManagersDlg.Designer.cs">
+      <DependentUpon>TBLManagersDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\TBLTankolat3Frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +389,12 @@
     <None Include="Datasource\dsLinq\dsLinqQry.dbml.layout">
       <DependentUpon>dsLinqQry.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Data\TBLManagersDlg.resx">
+      <DependentUpon>TBLManagersDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\TBLManagersFrm.resx">
+      <DependentUpon>TBLManagersFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\TBLTankolat3Frm.resx">
       <DependentUpon>TBLTankolat3Frm.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,6 +551,8 @@
     <None Include="Resources\SplashScreen.jpg" />
     <None Include="Resources\NoImg.jpg" />
     <None Include="Note.txt" />
+    <None Include="Resources\add_16x16.png" />
+    <None Include="Resources\apply_16x16.png" />
     <Content Include="SqlRpt\RSBuild.Core.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

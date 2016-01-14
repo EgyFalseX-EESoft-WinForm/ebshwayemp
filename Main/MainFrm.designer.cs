@@ -85,6 +85,7 @@
             this.navBarItemEmpTBLTankolat1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpTBLTankolat2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpTBLTankolat3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpTBLManagers = new DevExpress.XtraNavBar.NavBarItem();
             this.imageCollection32 = new DevExpress.Utils.ImageCollection(this.components);
             this.DPCode = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -123,8 +124,8 @@
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemEmpvQry01 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpvQry02 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpvQry03 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
@@ -202,6 +203,7 @@
             this.mbcloseAll});
             this.barManagerMain.MainMenu = this.barUp;
             this.barManagerMain.MaxItemId = 28;
+            this.barManagerMain.MdiMenuMergeStyle = DevExpress.XtraBars.BarMdiMenuMergeStyle.Never;
             this.barManagerMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBoxSkins,
             this.repositoryItemLookUpEditasase_code});
@@ -632,7 +634,8 @@
             this.navBarItemEmpTBLTankolat1,
             this.navBarItemEmpTBL_EmpLite,
             this.navBarItemEmpTBLTankolat2,
-            this.navBarItemEmpTBLTankolat3});
+            this.navBarItemEmpTBLTankolat3,
+            this.navBarItemEmpTBLManagers});
             this.navBarControlData.LargeImages = this.imageCollection32;
             this.navBarControlData.Location = new System.Drawing.Point(0, 0);
             this.navBarControlData.Name = "navBarControlData";
@@ -660,7 +663,8 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBL_EmpLite),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBLTankolat1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBLTankolat2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBLTankolat3)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBLTankolat3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpTBLManagers)});
             this.navBarGroup2.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup2.LargeImage")));
             this.navBarGroup2.Name = "navBarGroup2";
             this.navBarGroup2.NavigationPaneVisible = false;
@@ -769,6 +773,14 @@
             this.navBarItemEmpTBLTankolat3.Name = "navBarItemEmpTBLTankolat3";
             this.navBarItemEmpTBLTankolat3.SmallImageIndex = 34;
             this.navBarItemEmpTBLTankolat3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpTBLTankolat3_LinkClicked);
+            // 
+            // navBarItemEmpTBLManagers
+            // 
+            this.navBarItemEmpTBLManagers.Caption = "بيانات المديرين";
+            this.navBarItemEmpTBLManagers.LargeImageIndex = 20;
+            this.navBarItemEmpTBLManagers.Name = "navBarItemEmpTBLManagers";
+            this.navBarItemEmpTBLManagers.SmallImageIndex = 20;
+            this.navBarItemEmpTBLManagers.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpTBLManagers_LinkClicked);
             // 
             // imageCollection32
             // 
@@ -1218,14 +1230,6 @@
             this.navBarItemEmpvQry02.SmallImageIndex = 35;
             this.navBarItemEmpvQry02.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry02_LinkClicked);
             // 
-            // navBarItemEmpvQry04
-            // 
-            this.navBarItemEmpvQry04.Caption = "سن المعاش";
-            this.navBarItemEmpvQry04.LargeImageIndex = 35;
-            this.navBarItemEmpvQry04.Name = "navBarItemEmpvQry04";
-            this.navBarItemEmpvQry04.SmallImageIndex = 35;
-            this.navBarItemEmpvQry04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry04_LinkClicked);
-            // 
             // navBarItemEmpvQry03
             // 
             this.navBarItemEmpvQry03.Caption = "الفئات العمرية";
@@ -1233,6 +1237,14 @@
             this.navBarItemEmpvQry03.Name = "navBarItemEmpvQry03";
             this.navBarItemEmpvQry03.SmallImageIndex = 35;
             this.navBarItemEmpvQry03.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry03_LinkClicked);
+            // 
+            // navBarItemEmpvQry04
+            // 
+            this.navBarItemEmpvQry04.Caption = "سن المعاش";
+            this.navBarItemEmpvQry04.LargeImageIndex = 35;
+            this.navBarItemEmpvQry04.Name = "navBarItemEmpvQry04";
+            this.navBarItemEmpvQry04.SmallImageIndex = 35;
+            this.navBarItemEmpvQry04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpvQry04_LinkClicked);
             // 
             // DPReport
             // 
@@ -1495,6 +1507,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry02;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry04;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpvQry03;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpTBLManagers;
 
     }
 }
