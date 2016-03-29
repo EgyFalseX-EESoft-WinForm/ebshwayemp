@@ -349,12 +349,12 @@ namespace Employee
                 return;
             }
 
-            lueJobTypeId.Enabled = false;
-            LUEJOB_STATUS_ID.Enabled = false;
-            LUEEmpJobId.Enabled = false;
-            LUEJobDescriptionId.Enabled = false;
-            LUEDepartmentId.Enabled = false;
-            LUEmarhala_code.Enabled = false;
+            //lueJobTypeId.Enabled = false;
+            //LUEJOB_STATUS_ID.Enabled = false;
+            //LUEEmpJobId.Enabled = false;
+            //LUEJobDescriptionId.Enabled = false;
+            //LUEDepartmentId.Enabled = false;
+            //LUEmarhala_code.Enabled = false;
 
             DataRow row = ((DataTable)LUEEmp.Properties.DataSource).Rows[LUEEmp.ItemIndex];
 
@@ -393,7 +393,11 @@ namespace Employee
             DEtameen_date1.EditValue = row["tameen_date1"];
             Txtbetaka_tameen.Text = row["betaka_tameen"].ToString();
             Txtorderreport.Text = row["orderreport"].ToString();
-            CEnoview.Checked = (bool)row["noview"]; ;
+            if (!FXFW.SqlDB.IsNullOrEmpty(row["noview"]))
+                CEnoview.Checked = (bool)row["noview"];    
+            else
+                CEnoview.Checked = false;
+            
             // Load Pic
             if (DBNull.Value != row["EMPPIC"])
             {
@@ -957,7 +961,16 @@ namespace Employee
                 SpecializationId, QualifiedPlaceId, Moaahel_Date, tameen_no, tameen_date1, betaka_tameen, noview, orderreport, LUEEmp.EditValue);
 
                 if (FXFW.SqlDB.IsNullOrEmpty(PBImage.ImageLocation))
-                    EMPPIC = (byte[])((DataTable)LUEEmp.Properties.DataSource).Rows[LUEEmp.ItemIndex]["EMPPIC"];    
+                {
+                    if (!FXFW.SqlDB.IsNullOrEmpty(((DataTable)LUEEmp.Properties.DataSource).Rows[LUEEmp.ItemIndex]["EMPPIC"]))
+                        EMPPIC = (byte[])((DataTable)LUEEmp.Properties.DataSource).Rows[LUEEmp.ItemIndex]["EMPPIC"];
+                    else
+                    {
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                        global::Employee.Properties.Resources.NoImg.Save(ms, global::Employee.Properties.Resources.NoImg.RawFormat);
+                        EMPPIC = ms.GetBuffer();
+                    }
+                }
                 else
                     EMPPIC = System.IO.File.ReadAllBytes(PBImage.ImageLocation);
                 cmd.Parameters.AddWithValue("@EMPPIC", EMPPIC);
