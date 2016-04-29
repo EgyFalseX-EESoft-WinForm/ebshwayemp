@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReport" targetNamespace="http://tempuri.org/dsReport.xsd" xmlns:mstns="http://tempuri.org/dsReport.xsd" xmlns="http://tempuri.org/dsReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EmployeesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EmployeesConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Employee.Properties.Settings.GlobalReference.Default.EmployeesConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblorgprogTableAdapter" GeneratorDataComponentClassName="tblorgprogTableAdapter" Name="tblorgprog" UserDataComponentName="tblorgprogTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EmployeesConnectionString (Settings)" DbObjectName="Employees.dbo.tblorgprog" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, foter2, foter3, foter4
+FROM            tblorgprog</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="orgid" DataSetColumn="orgid" />
+              <Mapping SourceColumn="orgname" DataSetColumn="orgname" />
+              <Mapping SourceColumn="logo" DataSetColumn="logo" />
+              <Mapping SourceColumn="hederright1" DataSetColumn="hederright1" />
+              <Mapping SourceColumn="hederright2" DataSetColumn="hederright2" />
+              <Mapping SourceColumn="hederright3" DataSetColumn="hederright3" />
+              <Mapping SourceColumn="foter1" DataSetColumn="foter1" />
+              <Mapping SourceColumn="foter2" DataSetColumn="foter2" />
+              <Mapping SourceColumn="foter3" DataSetColumn="foter3" />
+              <Mapping SourceColumn="foter4" DataSetColumn="foter4" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="XRep_04TableAdapter" GeneratorDataComponentClassName="XRep_04TableAdapter" Name="XRep_04" UserDataComponentName="XRep_04TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EmployeesConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBL_Emp.EmpID, TBL_Emp.EMPNAME, TBL_Emp.GehaworkId, TBLGehawork.Gehawork, CD_EmpJob.EmpJobName, CDQualification.qualName, CD_Specialization.SpecializationName, TBL_Emp.BIRTH_DATE, 
+                         TBL_Emp.End_Work_Date, TBL_Emp.tameen_date1, TBL_Emp.tameen_no, TBL_Emp.Emp_Address, TBL_Emp.PHONE_NO, TBL_Emp.EmpNationalID
+FROM            TBL_Emp LEFT OUTER JOIN
+                         CD_Specialization ON TBL_Emp.SpecializationId = CD_Specialization.SpecializationId LEFT OUTER JOIN
+                         CDQualification ON TBL_Emp.qualId = CDQualification.qualId LEFT OUTER JOIN
+                         TBLGehawork ON TBL_Emp.GehaworkId = TBLGehawork.GehaworkId LEFT OUTER JOIN
+                         CD_EmpJob ON TBL_Emp.EmpJobId = CD_EmpJob.EmpJobId
+WHERE        (TBL_Emp.GehaworkId = @GehaworkId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="GehaworkId" ColumnName="GehaworkId" DataSourceName="Employees.dbo.TBL_Emp" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@GehaworkId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="GehaworkId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpID" DataSetColumn="EmpID" />
+              <Mapping SourceColumn="EMPNAME" DataSetColumn="EMPNAME" />
+              <Mapping SourceColumn="GehaworkId" DataSetColumn="GehaworkId" />
+              <Mapping SourceColumn="Gehawork" DataSetColumn="Gehawork" />
+              <Mapping SourceColumn="EmpJobName" DataSetColumn="EmpJobName" />
+              <Mapping SourceColumn="qualName" DataSetColumn="qualName" />
+              <Mapping SourceColumn="SpecializationName" DataSetColumn="SpecializationName" />
+              <Mapping SourceColumn="BIRTH_DATE" DataSetColumn="BIRTH_DATE" />
+              <Mapping SourceColumn="End_Work_Date" DataSetColumn="End_Work_Date" />
+              <Mapping SourceColumn="tameen_date1" DataSetColumn="tameen_date1" />
+              <Mapping SourceColumn="tameen_no" DataSetColumn="tameen_no" />
+              <Mapping SourceColumn="Emp_Address" DataSetColumn="Emp_Address" />
+              <Mapping SourceColumn="PHONE_NO" DataSetColumn="PHONE_NO" />
+              <Mapping SourceColumn="EmpNationalID" DataSetColumn="EmpNationalID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="XRep_04_ATableAdapter" GeneratorDataComponentClassName="XRep_04_ATableAdapter" Name="XRep_04_A" UserDataComponentName="XRep_04_ATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EmployeesConnectionString (Settings)" DbObjectName="Employees.dbo.CDGehaworktype" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        GehaworktypeId, Gehaworktype
+FROM            CDGehaworktype</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GehaworktypeId" DataSetColumn="GehaworktypeId" />
+              <Mapping SourceColumn="Gehaworktype" DataSetColumn="Gehaworktype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReport" msprop:Generator_UserDSName="dsReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblorgprog" msprop:Generator_TableClassName="tblorgprogDataTable" msprop:Generator_TableVarName="tabletblorgprog" msprop:Generator_TablePropName="tblorgprog" msprop:Generator_RowDeletingName="tblorgprogRowDeleting" msprop:Generator_RowChangingName="tblorgprogRowChanging" msprop:Generator_RowEvHandlerName="tblorgprogRowChangeEventHandler" msprop:Generator_RowDeletedName="tblorgprogRowDeleted" msprop:Generator_UserTableName="tblorgprog" msprop:Generator_RowChangedName="tblorgprogRowChanged" msprop:Generator_RowEvArgName="tblorgprogRowChangeEvent" msprop:Generator_RowClassName="tblorgprogRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orgid" msprop:Generator_ColumnVarNameInTable="columnorgid" msprop:Generator_ColumnPropNameInRow="orgid" msprop:Generator_ColumnPropNameInTable="orgidColumn" msprop:Generator_UserColumnName="orgid" type="xs:unsignedByte" />
+              <xs:element name="orgname" msprop:Generator_ColumnVarNameInTable="columnorgname" msprop:Generator_ColumnPropNameInRow="orgname" msprop:Generator_ColumnPropNameInTable="orgnameColumn" msprop:Generator_UserColumnName="orgname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="logo" msprop:Generator_ColumnVarNameInTable="columnlogo" msprop:Generator_ColumnPropNameInRow="logo" msprop:Generator_ColumnPropNameInTable="logoColumn" msprop:Generator_UserColumnName="logo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="hederright1" msprop:Generator_ColumnVarNameInTable="columnhederright1" msprop:Generator_ColumnPropNameInRow="hederright1" msprop:Generator_ColumnPropNameInTable="hederright1Column" msprop:Generator_UserColumnName="hederright1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hederright2" msprop:Generator_ColumnVarNameInTable="columnhederright2" msprop:Generator_ColumnPropNameInRow="hederright2" msprop:Generator_ColumnPropNameInTable="hederright2Column" msprop:Generator_UserColumnName="hederright2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hederright3" msprop:Generator_ColumnVarNameInTable="columnhederright3" msprop:Generator_ColumnPropNameInRow="hederright3" msprop:Generator_ColumnPropNameInTable="hederright3Column" msprop:Generator_UserColumnName="hederright3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foter1" msprop:Generator_ColumnVarNameInTable="columnfoter1" msprop:Generator_ColumnPropNameInRow="foter1" msprop:Generator_ColumnPropNameInTable="foter1Column" msprop:Generator_UserColumnName="foter1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foter2" msprop:Generator_ColumnVarNameInTable="columnfoter2" msprop:Generator_ColumnPropNameInRow="foter2" msprop:Generator_ColumnPropNameInTable="foter2Column" msprop:Generator_UserColumnName="foter2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foter3" msprop:Generator_ColumnVarNameInTable="columnfoter3" msprop:Generator_ColumnPropNameInRow="foter3" msprop:Generator_ColumnPropNameInTable="foter3Column" msprop:Generator_UserColumnName="foter3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foter4" msprop:Generator_ColumnVarNameInTable="columnfoter4" msprop:Generator_ColumnPropNameInRow="foter4" msprop:Generator_ColumnPropNameInTable="foter4Column" msprop:Generator_UserColumnName="foter4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="XRep_04" msprop:Generator_TableClassName="XRep_04DataTable" msprop:Generator_TableVarName="tableXRep_04" msprop:Generator_RowChangedName="XRep_04RowChanged" msprop:Generator_TablePropName="XRep_04" msprop:Generator_RowDeletingName="XRep_04RowDeleting" msprop:Generator_RowChangingName="XRep_04RowChanging" msprop:Generator_RowEvHandlerName="XRep_04RowChangeEventHandler" msprop:Generator_RowDeletedName="XRep_04RowDeleted" msprop:Generator_RowClassName="XRep_04Row" msprop:Generator_UserTableName="XRep_04" msprop:Generator_RowEvArgName="XRep_04RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpID" msprop:Generator_ColumnVarNameInTable="columnEmpID" msprop:Generator_ColumnPropNameInRow="EmpID" msprop:Generator_ColumnPropNameInTable="EmpIDColumn" msprop:Generator_UserColumnName="EmpID" type="xs:int" />
+              <xs:element name="EMPNAME" msprop:Generator_ColumnVarNameInTable="columnEMPNAME" msprop:Generator_ColumnPropNameInRow="EMPNAME" msprop:Generator_ColumnPropNameInTable="EMPNAMEColumn" msprop:Generator_UserColumnName="EMPNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GehaworkId" msprop:Generator_ColumnVarNameInTable="columnGehaworkId" msprop:Generator_ColumnPropNameInRow="GehaworkId" msprop:Generator_ColumnPropNameInTable="GehaworkIdColumn" msprop:Generator_UserColumnName="GehaworkId" type="xs:long" />
+              <xs:element name="Gehawork" msprop:Generator_ColumnVarNameInTable="columnGehawork" msprop:Generator_ColumnPropNameInRow="Gehawork" msprop:Generator_ColumnPropNameInTable="GehaworkColumn" msprop:Generator_UserColumnName="Gehawork" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpJobName" msprop:Generator_ColumnVarNameInTable="columnEmpJobName" msprop:Generator_ColumnPropNameInRow="EmpJobName" msprop:Generator_ColumnPropNameInTable="EmpJobNameColumn" msprop:Generator_UserColumnName="EmpJobName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qualName" msprop:Generator_ColumnVarNameInTable="columnqualName" msprop:Generator_ColumnPropNameInRow="qualName" msprop:Generator_ColumnPropNameInTable="qualNameColumn" msprop:Generator_UserColumnName="qualName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpecializationName" msprop:Generator_ColumnVarNameInTable="columnSpecializationName" msprop:Generator_ColumnPropNameInRow="SpecializationName" msprop:Generator_ColumnPropNameInTable="SpecializationNameColumn" msprop:Generator_UserColumnName="SpecializationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BIRTH_DATE" msprop:Generator_ColumnVarNameInTable="columnBIRTH_DATE" msprop:Generator_ColumnPropNameInRow="BIRTH_DATE" msprop:Generator_ColumnPropNameInTable="BIRTH_DATEColumn" msprop:Generator_UserColumnName="BIRTH_DATE" type="xs:dateTime" />
+              <xs:element name="End_Work_Date" msprop:Generator_ColumnVarNameInTable="columnEnd_Work_Date" msprop:Generator_ColumnPropNameInRow="End_Work_Date" msprop:Generator_ColumnPropNameInTable="End_Work_DateColumn" msprop:Generator_UserColumnName="End_Work_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tameen_date1" msprop:Generator_ColumnVarNameInTable="columntameen_date1" msprop:Generator_ColumnPropNameInRow="tameen_date1" msprop:Generator_ColumnPropNameInTable="tameen_date1Column" msprop:Generator_UserColumnName="tameen_date1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tameen_no" msprop:Generator_ColumnVarNameInTable="columntameen_no" msprop:Generator_ColumnPropNameInRow="tameen_no" msprop:Generator_ColumnPropNameInTable="tameen_noColumn" msprop:Generator_UserColumnName="tameen_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emp_Address" msprop:Generator_ColumnVarNameInTable="columnEmp_Address" msprop:Generator_ColumnPropNameInRow="Emp_Address" msprop:Generator_ColumnPropNameInTable="Emp_AddressColumn" msprop:Generator_UserColumnName="Emp_Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PHONE_NO" msprop:Generator_ColumnVarNameInTable="columnPHONE_NO" msprop:Generator_ColumnPropNameInRow="PHONE_NO" msprop:Generator_ColumnPropNameInTable="PHONE_NOColumn" msprop:Generator_UserColumnName="PHONE_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpNationalID" msprop:Generator_ColumnVarNameInTable="columnEmpNationalID" msprop:Generator_ColumnPropNameInRow="EmpNationalID" msprop:Generator_ColumnPropNameInTable="EmpNationalIDColumn" msprop:Generator_UserColumnName="EmpNationalID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="XRep_04_A" msprop:Generator_TableClassName="XRep_04_ADataTable" msprop:Generator_TableVarName="tableXRep_04_A" msprop:Generator_TablePropName="XRep_04_A" msprop:Generator_RowDeletingName="XRep_04_ARowDeleting" msprop:Generator_RowChangingName="XRep_04_ARowChanging" msprop:Generator_RowEvHandlerName="XRep_04_ARowChangeEventHandler" msprop:Generator_RowDeletedName="XRep_04_ARowDeleted" msprop:Generator_UserTableName="XRep_04_A" msprop:Generator_RowChangedName="XRep_04_ARowChanged" msprop:Generator_RowEvArgName="XRep_04_ARowChangeEvent" msprop:Generator_RowClassName="XRep_04_ARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GehaworktypeId" msprop:Generator_ColumnVarNameInTable="columnGehaworktypeId" msprop:Generator_ColumnPropNameInRow="GehaworktypeId" msprop:Generator_ColumnPropNameInTable="GehaworktypeIdColumn" msprop:Generator_UserColumnName="GehaworktypeId" type="xs:unsignedByte" />
+              <xs:element name="Gehaworktype" msprop:Generator_ColumnVarNameInTable="columnGehaworktype" msprop:Generator_ColumnPropNameInRow="Gehaworktype" msprop:Generator_ColumnPropNameInTable="GehaworktypeColumn" msprop:Generator_UserColumnName="Gehaworktype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblorgprog" />
+      <xs:field xpath="mstns:orgid" />
+    </xs:unique>
+    <xs:unique name="XRep_04_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:XRep_04" />
+      <xs:field xpath="mstns:EmpID" />
+    </xs:unique>
+    <xs:unique name="XRep_04_A_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:XRep_04_A" />
+      <xs:field xpath="mstns:GehaworktypeId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -196,7 +196,7 @@ namespace Employee
         #region - Event Handlers -
         private void EditorRoleMenuFrm_Load(object sender, EventArgs e)
         {
-            LoadSQLReports();
+            //LoadSQLReports();
             ActivePriv();
             ClearMenuCheck();
             LoadData();

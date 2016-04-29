@@ -41,6 +41,22 @@ namespace Employee
                 }
                 cmd.CommandText = vQry04;
                 cmd.ExecuteNonQuery();
+                //vtbl_maradiy
+                if (CheckViewExists("vtbl_maradiy"))
+                {
+                    cmd.CommandText = DropObject("vtbl_maradiy");
+                    cmd.ExecuteNonQuery();
+                }
+                cmd.CommandText = vtbl_maradiy;
+                cmd.ExecuteNonQuery();
+                //vTBL_Emp
+                if (CheckViewExists("vTBL_Emp"))
+                {
+                    cmd.CommandText = DropObject("vTBL_Emp");
+                    cmd.ExecuteNonQuery();
+                }
+                cmd.CommandText = vTBL_Emp;
+                cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)
             {
@@ -145,6 +161,40 @@ FROM CTE3 GROUP BY GehaworkId, Gehawork, EmpJobId, EmpJobName";
 FROM            TBL_Emp INNER JOIN
                          CD_EmpJob ON TBL_Emp.EmpJobId = CD_EmpJob.EmpJobId INNER JOIN
                          TBLGehawork ON TBL_Emp.GehaworkId = TBLGehawork.GehaworkId";
+            }
+        }
+        public static string vtbl_maradiy
+        {
+            get
+            {
+                return @"
+                CREATE VIEW [dbo].[vtbl_maradiy]
+                AS
+                SELECT        dbo.tbl_maradiy.mid, dbo.tbl_maradiy.EmpID, dbo.tbl_maradiy.teldatae, dbo.tbl_maradiy.datefrom, dbo.tbl_maradiy.dateto, dbo.tbl_maradiy.lagnatebea, dbo.tbl_maradiy.datelagna, dbo.tbl_maradiy.krar, 
+                         dbo.tbl_maradiy.userin, dbo.tbl_maradiy.datein, dbo.Users.UserName, dbo.TBL_Emp.EMPNAME, dbo.CDGehaworktype.Gehaworktype
+FROM            dbo.tbl_maradiy INNER JOIN
+                         dbo.TBL_Emp ON dbo.tbl_maradiy.EmpID = dbo.TBL_Emp.EmpID INNER JOIN
+                         dbo.Users ON dbo.tbl_maradiy.userin = dbo.Users.UserID INNER JOIN
+                         dbo.CDGehaworktype ON dbo.TBL_Emp.GehaworkId = dbo.CDGehaworktype.GehaworktypeId";
+            }
+        }
+        public static string vTBL_Emp
+        {
+            get
+            {
+                return @"
+                CREATE VIEW [dbo].[vTBL_Emp]
+                AS
+                SELECT        dbo.TBL_Emp.EmpID, dbo.TBL_Emp.EMPNAME, dbo.TBL_Emp.GehaworkId, dbo.TBL_Emp.marhala_code, dbo.TBL_Emp.EmpNationalID, dbo.TBL_Emp.BIRTH_DATE, dbo.TBL_Emp.BIRTH_GOV, 
+                         dbo.TBL_Emp.BIRTH_PLACE, dbo.TBL_Emp.GENDER_ID, dbo.TBL_Emp.EMP_FIRST_NAME, dbo.TBL_Emp.EMP_FATHER_NAME, dbo.TBL_Emp.EMP_FAM_NAME, dbo.TBL_Emp.EMP_FOURTH_NAME, 
+                         dbo.TBL_Emp.nationaltyId, dbo.TBL_Emp.dyana_code, dbo.TBL_Emp.MaritalStatusId, dbo.TBL_Emp.SubjectId, dbo.TBL_Emp.DepartmentId, dbo.TBL_Emp.EmpJobId, dbo.TBL_Emp.JobkaderId, 
+                         dbo.TBL_Emp.JOB_STATUS_ID, dbo.TBL_Emp.JobTypeId, dbo.TBL_Emp.Emp_Address, dbo.TBL_Emp.PHONE_NO, dbo.TBL_Emp.MOBILE_NO, dbo.TBL_Emp.Work_Start_Date, dbo.TBL_Emp.End_Work_Date, 
+                         dbo.TBL_Emp.qualId, dbo.TBL_Emp.SpecializationId, dbo.TBL_Emp.QualifiedPlaceId, dbo.TBL_Emp.Moaahel_Date, dbo.TBL_Emp.tagned_id, dbo.TBL_Emp.tameen_no, dbo.TBL_Emp.tameen_date1, 
+                         dbo.TBL_Emp.tameen_date2, dbo.TBL_Emp.betaka_tameen, dbo.TBL_Emp.noview, dbo.TBL_Emp.orderreport, dbo.TBL_Emp.userin, dbo.TBL_Emp.datein, dbo.TBL_Emp.JobDescriptionId, 
+                         dbo.TBL_Emp.codemortabat, dbo.TBL_Emp.eschoolcode, dbo.Users.UserName, dbo.CDGehaworktype.Gehaworktype
+FROM            dbo.TBL_Emp INNER JOIN
+                         dbo.CDGehaworktype ON dbo.TBL_Emp.GehaworkId = dbo.CDGehaworktype.GehaworktypeId INNER JOIN
+                         dbo.Users ON dbo.TBL_Emp.userin = dbo.Users.UserID";
             }
         }
     }

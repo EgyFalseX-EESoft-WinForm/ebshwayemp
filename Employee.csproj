@@ -61,16 +61,34 @@
     <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Utils.v12.2.UI, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -83,6 +101,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2.Extensions, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="FXFW">
@@ -165,6 +192,23 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsQry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tblorgprogFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tblorgprogFrm.designer.cs">
+      <DependentUpon>tblorgprogFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tbl_maradiyEditFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tbl_maradiyEditFrm.designer.cs">
+      <DependentUpon>tbl_maradiyEditFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\TBLManagersFrm.cs">
       <SubType>Form</SubType>
@@ -250,6 +294,18 @@
     <Compile Include="Data\EMP_reportFrm.designer.cs">
       <DependentUpon>EMP_reportFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\tbl_maradiyAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tbl_maradiyAddFrm.designer.cs">
+      <DependentUpon>tbl_maradiyAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tbl_maradiyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tbl_maradiyFrm.designer.cs">
+      <DependentUpon>tbl_maradiyFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\AboutBoxFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +342,7 @@
     <Compile Include="Main\SplashFrm.designer.cs">
       <DependentUpon>SplashFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misc.cs" />
     <Compile Include="Permission\RoleDetialFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +421,30 @@
     <Compile Include="Data\Emp_MoaahelFrm.designer.cs">
       <DependentUpon>Emp_MoaahelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_04.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_04.designer.cs">
+      <DependentUpon>XRep_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_03.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_03.designer.cs">
+      <DependentUpon>XRep_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_02.designer.cs">
+      <DependentUpon>XRep_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_01.designer.cs">
+      <DependentUpon>XRep_01.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -386,9 +467,27 @@
     <EmbeddedResource Include="Code\CodeFrm.resx">
       <DependentUpon>CodeFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Data\tblorgprogFrm.resx">
+      <DependentUpon>tblorgprogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_04.resx">
+      <DependentUpon>XRep_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_03.resx">
+      <DependentUpon>XRep_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_02.resx">
+      <DependentUpon>XRep_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_01.resx">
+      <DependentUpon>XRep_01.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datasource\dsLinq\dsLinqQry.dbml.layout">
       <DependentUpon>dsLinqQry.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Data\tbl_maradiyEditFrm.resx">
+      <DependentUpon>tbl_maradiyEditFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\TBLManagersDlg.resx">
       <DependentUpon>TBLManagersDlg.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +529,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\EMP_reportFrm.resx">
       <DependentUpon>EMP_reportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\tbl_maradiyAddFrm.resx">
+      <DependentUpon>tbl_maradiyAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\tbl_maradiyFrm.resx">
+      <DependentUpon>tbl_maradiyFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\AboutBoxFrm.resx">
       <DependentUpon>AboutBoxFrm.cs</DependentUpon>
@@ -517,6 +622,17 @@
     </None>
     <None Include="Datasource\dsQry.xss">
       <DependentUpon>dsQry.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasource\dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

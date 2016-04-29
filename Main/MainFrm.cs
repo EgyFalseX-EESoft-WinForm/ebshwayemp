@@ -148,7 +148,7 @@ namespace Employee
         {
 
             //Load Reports from file and create its item in the interface
-            LoadSQLReports();
+            //LoadSQLReports();
             //Load Skins and layout
             DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(galleryControlSkins, true);
             UserLookAndFeel.Default.StyleChanged += Default_StyleChanged;
@@ -256,6 +256,7 @@ namespace Employee
         }
         private void navBarItemDeployRpt_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            return;
             try
             {
                 if (!FXFW.SqlDB.ChangeBasicSSRSAuthType())
@@ -521,6 +522,16 @@ namespace Employee
             Data.TBLManagersFrm FrmTBL_Emp = new Data.TBLManagersFrm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["TBL_Emp.png"], 32, false) };
             FrmTBL_Emp.Show();
         }
+        private void navBarItemEmptbl_maradiy_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Data.tbl_maradiyFrm FrmTBL_Emp = new Data.tbl_maradiyFrm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["EMPinout32.png"], 32, false) };
+            FrmTBL_Emp.Show();
+        }
+        private void navBarItemEmptblorgprog_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            Data.tblorgprogFrm FrmTBL_Emp = new Data.tblorgprogFrm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Options32.png"], 32, false) };
+            FrmTBL_Emp.Show();
+        }
         private void navBarItemEmpvQry01_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             Employee.Qry01Frm frm = new Employee.Qry01Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry32.png"], 32, false) };
@@ -542,6 +553,12 @@ namespace Employee
             frm.Show();
         }
         #endregion
+
+        private void navBarItemEmpXRep_04_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            XRep.XRep_04 FrmRep = new XRep.XRep_04();
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
 
     }
 
