@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.5" name="dsLinqQry">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 20.125" name="dsLinqQry">
   <DataContextMoniker Name="/dsLinqQryDataContext" />
   <nestedChildShapes>
     <classShape Id="b3252c47-d23f-4e7f-8eee-0f3e8005f67c" absoluteBounds="1.625, 0.5, 2, 1.5785953776041666">
@@ -71,10 +71,10 @@
         <elementListCompartment Id="56d1fd48-eec0-42d2-a0f9-8c65375f42c0" absoluteBounds="8.39, 8.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="aa77a162-16d3-454b-b3ca-1572814214d5" absoluteBounds="2.375, 9.75, 2, 9.4629541015625">
+    <classShape Id="03b3b875-848a-4705-bbda-6ba200c8fb52" absoluteBounds="2.625, 9.625, 2, 10.232159830729165">
       <DataClassMoniker Name="/dsLinqQryDataContext/vTBL_Emp" />
       <nestedChildShapes>
-        <elementListCompartment Id="b2701420-649f-43d5-9b60-d81903b45b43" absoluteBounds="2.3899999999999997, 10.21, 1.9700000000000002, 8.9029541015625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0585380b-1965-4c6b-a605-19dcd3070b52" absoluteBounds="2.64, 10.085, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -3038,6 +3038,14 @@ namespace Employee.Datasource.dsLinq
 		
 		private string _Gehaworktype;
 		
+		private string _EmpJobName;
+		
+		private string _qualName;
+		
+		private string _SpecializationName;
+		
+		private string _QualifiedPlaceName;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3132,6 +3140,14 @@ namespace Employee.Datasource.dsLinq
     partial void OnUserNameChanged();
     partial void OnGehaworktypeChanging(string value);
     partial void OnGehaworktypeChanged();
+    partial void OnEmpJobNameChanging(string value);
+    partial void OnEmpJobNameChanged();
+    partial void OnqualNameChanging(string value);
+    partial void OnqualNameChanged();
+    partial void OnSpecializationNameChanging(string value);
+    partial void OnSpecializationNameChanged();
+    partial void OnQualifiedPlaceNameChanging(string value);
+    partial void OnQualifiedPlaceNameChanged();
     #endregion
 		
 		public vTBL_Emp()
@@ -3999,7 +4015,7 @@ namespace Employee.Datasource.dsLinq
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50)")]
 		public string UserName
 		{
 			get
@@ -4019,7 +4035,7 @@ namespace Employee.Datasource.dsLinq
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gehaworktype", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gehaworktype", DbType="NVarChar(50)")]
 		public string Gehaworktype
 		{
 			get
@@ -4035,6 +4051,86 @@ namespace Employee.Datasource.dsLinq
 					this._Gehaworktype = value;
 					this.SendPropertyChanged("Gehaworktype");
 					this.OnGehaworktypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmpJobName", DbType="NVarChar(50)")]
+		public string EmpJobName
+		{
+			get
+			{
+				return this._EmpJobName;
+			}
+			set
+			{
+				if ((this._EmpJobName != value))
+				{
+					this.OnEmpJobNameChanging(value);
+					this.SendPropertyChanging();
+					this._EmpJobName = value;
+					this.SendPropertyChanged("EmpJobName");
+					this.OnEmpJobNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_qualName", DbType="NVarChar(50)")]
+		public string qualName
+		{
+			get
+			{
+				return this._qualName;
+			}
+			set
+			{
+				if ((this._qualName != value))
+				{
+					this.OnqualNameChanging(value);
+					this.SendPropertyChanging();
+					this._qualName = value;
+					this.SendPropertyChanged("qualName");
+					this.OnqualNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SpecializationName", DbType="NVarChar(50)")]
+		public string SpecializationName
+		{
+			get
+			{
+				return this._SpecializationName;
+			}
+			set
+			{
+				if ((this._SpecializationName != value))
+				{
+					this.OnSpecializationNameChanging(value);
+					this.SendPropertyChanging();
+					this._SpecializationName = value;
+					this.SendPropertyChanged("SpecializationName");
+					this.OnSpecializationNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QualifiedPlaceName", DbType="NVarChar(50)")]
+		public string QualifiedPlaceName
+		{
+			get
+			{
+				return this._QualifiedPlaceName;
+			}
+			set
+			{
+				if ((this._QualifiedPlaceName != value))
+				{
+					this.OnQualifiedPlaceNameChanging(value);
+					this.SendPropertyChanging();
+					this._QualifiedPlaceName = value;
+					this.SendPropertyChanged("QualifiedPlaceName");
+					this.OnQualifiedPlaceNameChanged();
 				}
 			}
 		}

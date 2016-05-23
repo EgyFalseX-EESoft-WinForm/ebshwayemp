@@ -123,9 +123,10 @@
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemEmpDeployRpt = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -139,7 +140,7 @@
             this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBoxSkins = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpXRep_05 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditasase_code)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerMain)).BeginInit();
@@ -1205,7 +1206,7 @@
             // 
             // navBarControlReport
             // 
-            this.navBarControlReport.ActiveGroup = this.navBarGroup4;
+            this.navBarControlReport.ActiveGroup = this.navBarGroup6;
             this.navBarControlReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControlReport.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup6,
@@ -1215,7 +1216,8 @@
             this.navBarGroup9});
             this.navBarControlReport.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItemEmpDeployRpt,
-            this.navBarItemEmpXRep_04});
+            this.navBarItemEmpXRep_04,
+            this.navBarItemEmpXRep_05});
             this.navBarControlReport.LargeImages = this.imageCollection32;
             this.navBarControlReport.Location = new System.Drawing.Point(0, 0);
             this.navBarControlReport.Name = "navBarControlReport";
@@ -1225,6 +1227,26 @@
             this.navBarControlReport.TabIndex = 9;
             this.navBarControlReport.Text = "navBarControl1";
             this.navBarControlReport.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("DevExpress Style");
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "تقارير 1";
+            this.navBarGroup4.Expanded = true;
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05)});
+            this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
+            this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.NavigationPaneVisible = false;
+            this.navBarGroup4.SmallImage = global::Employee.Properties.Resources.Print;
+            // 
+            // navBarItemEmpXRep_04
+            // 
+            this.navBarItemEmpXRep_04.Caption = "سجل شؤن العاملين";
+            this.navBarItemEmpXRep_04.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_04.Name = "navBarItemEmpXRep_04";
+            this.navBarItemEmpXRep_04.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_04_LinkClicked);
             // 
             // navBarGroup6
             // 
@@ -1242,17 +1264,6 @@
             this.navBarItemEmpDeployRpt.SmallImageIndex = 5;
             this.navBarItemEmpDeployRpt.Visible = false;
             this.navBarItemEmpDeployRpt.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemDeployRpt_LinkClicked);
-            // 
-            // navBarGroup4
-            // 
-            this.navBarGroup4.Caption = "تقارير 1";
-            this.navBarGroup4.Expanded = true;
-            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04)});
-            this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
-            this.navBarGroup4.Name = "navBarGroup4";
-            this.navBarGroup4.NavigationPaneVisible = false;
-            this.navBarGroup4.SmallImage = global::Employee.Properties.Resources.Print;
             // 
             // navBarGroup7
             // 
@@ -1379,13 +1390,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBoxSkins.Name = "repositoryItemComboBoxSkins";
             // 
-            // navBarItemEmpXRep_04
+            // navBarItemEmpXRep_05
             // 
-            this.navBarItemEmpXRep_04.Caption = "سجل شؤن العاملين";
-            this.navBarItemEmpXRep_04.LargeImageIndex = 4;
-            this.navBarItemEmpXRep_04.Name = "navBarItemEmpXRep_04";
-            this.navBarItemEmpXRep_04.SmallImageIndex = 4;
-            this.navBarItemEmpXRep_04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_04_LinkClicked);
+            this.navBarItemEmpXRep_05.Caption = "بيان حالة لموظف";
+            this.navBarItemEmpXRep_05.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_05.Name = "navBarItemEmpXRep_05";
+            this.navBarItemEmpXRep_05.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_05.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_05_LinkClicked);
             // 
             // MainFrm
             // 
@@ -1551,6 +1562,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmptbl_maradiy;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmptblorgprog;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_04;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_05;
 
     }
 }

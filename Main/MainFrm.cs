@@ -559,6 +559,11 @@ namespace Employee
             XRep.XRep_04 FrmRep = new XRep.XRep_04();
             Misc.Misc.ShowPrintPreview(FrmRep);
         }
+        private void navBarItemEmpXRep_05_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            XRep.XRep_05 FrmRep = new XRep.XRep_05();
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
 
     }
 

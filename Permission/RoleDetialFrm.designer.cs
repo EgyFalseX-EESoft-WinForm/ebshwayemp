@@ -96,11 +96,6 @@
             this.navBarItemEmpvQry03 = new DevExpress.XtraNavBar.NavBarItem();
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.CEUpdate = new DevExpress.XtraEditors.CheckEdit();
-            this.CESelect = new DevExpress.XtraEditors.CheckEdit();
-            this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
-            this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
@@ -109,6 +104,12 @@
             this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.CEUpdate = new DevExpress.XtraEditors.CheckEdit();
+            this.CESelect = new DevExpress.XtraEditors.CheckEdit();
+            this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
+            this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
+            this.navBarItemEmpXRep_05 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlSelect)).BeginInit();
             this.groupControlSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LUEItems.Properties)).BeginInit();
@@ -129,13 +130,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).BeginInit();
             this.DPReport.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlSelect
@@ -883,56 +884,9 @@
             this.dockPanel5_Container.Size = new System.Drawing.Size(326, 416);
             this.dockPanel5_Container.TabIndex = 0;
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupControl2.AppearanceCaption.Options.UseTextOptions = true;
-            this.groupControl2.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.groupControl2.Controls.Add(this.CEUpdate);
-            this.groupControl2.Controls.Add(this.CESelect);
-            this.groupControl2.Controls.Add(this.CEDelete);
-            this.groupControl2.Controls.Add(this.CEInsert);
-            this.groupControl2.Location = new System.Drawing.Point(47, 65);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(240, 73);
-            this.groupControl2.TabIndex = 5;
-            this.groupControl2.Text = "عناصر السماح";
-            // 
-            // CEUpdate
-            // 
-            this.CEUpdate.Location = new System.Drawing.Point(21, 49);
-            this.CEUpdate.Name = "CEUpdate";
-            this.CEUpdate.Properties.Caption = "تعديل";
-            this.CEUpdate.Size = new System.Drawing.Size(75, 19);
-            this.CEUpdate.TabIndex = 0;
-            // 
-            // CESelect
-            // 
-            this.CESelect.Location = new System.Drawing.Point(21, 24);
-            this.CESelect.Name = "CESelect";
-            this.CESelect.Properties.Caption = "عرض";
-            this.CESelect.Size = new System.Drawing.Size(75, 19);
-            this.CESelect.TabIndex = 0;
-            // 
-            // CEDelete
-            // 
-            this.CEDelete.Location = new System.Drawing.Point(144, 49);
-            this.CEDelete.Name = "CEDelete";
-            this.CEDelete.Properties.Caption = "حذف";
-            this.CEDelete.Size = new System.Drawing.Size(75, 19);
-            this.CEDelete.TabIndex = 0;
-            // 
-            // CEInsert
-            // 
-            this.CEInsert.Location = new System.Drawing.Point(144, 24);
-            this.CEInsert.Name = "CEInsert";
-            this.CEInsert.Properties.Caption = "اضافه";
-            this.CEInsert.Size = new System.Drawing.Size(75, 19);
-            this.CEInsert.TabIndex = 0;
-            // 
             // navBarControlReport
             // 
-            this.navBarControlReport.ActiveGroup = this.navBarGroup4;
+            this.navBarControlReport.ActiveGroup = this.navBarGroup6;
             this.navBarControlReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControlReport.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup6,
@@ -942,7 +896,8 @@
             this.navBarGroup9});
             this.navBarControlReport.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItemEmpDeployRpt,
-            this.navBarItemEmpXRep_04});
+            this.navBarItemEmpXRep_04,
+            this.navBarItemEmpXRep_05});
             this.navBarControlReport.LargeImages = this.imageCollection32;
             this.navBarControlReport.Location = new System.Drawing.Point(0, 0);
             this.navBarControlReport.Name = "navBarControlReport";
@@ -958,7 +913,8 @@
             this.navBarGroup4.Caption = "تقارير 1";
             this.navBarGroup4.Expanded = true;
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05)});
             this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
             this.navBarGroup4.Name = "navBarGroup4";
             this.navBarGroup4.NavigationPaneVisible = false;
@@ -1012,6 +968,61 @@
             this.navBarGroup9.Name = "navBarGroup9";
             this.navBarGroup9.SmallImage = global::Employee.Properties.Resources.Print;
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupControl2.AppearanceCaption.Options.UseTextOptions = true;
+            this.groupControl2.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.groupControl2.Controls.Add(this.CEUpdate);
+            this.groupControl2.Controls.Add(this.CESelect);
+            this.groupControl2.Controls.Add(this.CEDelete);
+            this.groupControl2.Controls.Add(this.CEInsert);
+            this.groupControl2.Location = new System.Drawing.Point(47, 65);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(240, 73);
+            this.groupControl2.TabIndex = 5;
+            this.groupControl2.Text = "عناصر السماح";
+            // 
+            // CEUpdate
+            // 
+            this.CEUpdate.Location = new System.Drawing.Point(21, 49);
+            this.CEUpdate.Name = "CEUpdate";
+            this.CEUpdate.Properties.Caption = "تعديل";
+            this.CEUpdate.Size = new System.Drawing.Size(75, 19);
+            this.CEUpdate.TabIndex = 0;
+            // 
+            // CESelect
+            // 
+            this.CESelect.Location = new System.Drawing.Point(21, 24);
+            this.CESelect.Name = "CESelect";
+            this.CESelect.Properties.Caption = "عرض";
+            this.CESelect.Size = new System.Drawing.Size(75, 19);
+            this.CESelect.TabIndex = 0;
+            // 
+            // CEDelete
+            // 
+            this.CEDelete.Location = new System.Drawing.Point(144, 49);
+            this.CEDelete.Name = "CEDelete";
+            this.CEDelete.Properties.Caption = "حذف";
+            this.CEDelete.Size = new System.Drawing.Size(75, 19);
+            this.CEDelete.TabIndex = 0;
+            // 
+            // CEInsert
+            // 
+            this.CEInsert.Location = new System.Drawing.Point(144, 24);
+            this.CEInsert.Name = "CEInsert";
+            this.CEInsert.Properties.Caption = "اضافه";
+            this.CEInsert.Size = new System.Drawing.Size(75, 19);
+            this.CEInsert.TabIndex = 0;
+            // 
+            // navBarItemEmpXRep_05
+            // 
+            this.navBarItemEmpXRep_05.Caption = "بيان حالة لموظف";
+            this.navBarItemEmpXRep_05.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_05.Name = "navBarItemEmpXRep_05";
+            this.navBarItemEmpXRep_05.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_05.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            // 
             // RoleDetialFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1044,13 +1055,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).EndInit();
             this.DPReport.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1136,5 +1147,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup7;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup9;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_05;
     }
 }

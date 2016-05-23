@@ -183,8 +183,12 @@
       <Column Name="JobDescriptionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="codemortabat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="eschoolcode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Gehaworktype" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gehaworktype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmpJobName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qualName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SpecializationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QualifiedPlaceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

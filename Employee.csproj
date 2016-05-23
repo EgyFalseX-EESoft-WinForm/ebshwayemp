@@ -421,6 +421,12 @@
     <Compile Include="Data\Emp_MoaahelFrm.designer.cs">
       <DependentUpon>Emp_MoaahelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_05.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_05.designer.cs">
+      <DependentUpon>XRep_05.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRep\XRep_04.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -469,6 +475,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\tblorgprogFrm.resx">
       <DependentUpon>tblorgprogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_05.resx">
+      <DependentUpon>XRep_05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRep\XRep_04.resx">
       <DependentUpon>XRep_04.cs</DependentUpon>

@@ -191,10 +191,15 @@ FROM            dbo.tbl_maradiy INNER JOIN
                          dbo.TBL_Emp.JOB_STATUS_ID, dbo.TBL_Emp.JobTypeId, dbo.TBL_Emp.Emp_Address, dbo.TBL_Emp.PHONE_NO, dbo.TBL_Emp.MOBILE_NO, dbo.TBL_Emp.Work_Start_Date, dbo.TBL_Emp.End_Work_Date, 
                          dbo.TBL_Emp.qualId, dbo.TBL_Emp.SpecializationId, dbo.TBL_Emp.QualifiedPlaceId, dbo.TBL_Emp.Moaahel_Date, dbo.TBL_Emp.tagned_id, dbo.TBL_Emp.tameen_no, dbo.TBL_Emp.tameen_date1, 
                          dbo.TBL_Emp.tameen_date2, dbo.TBL_Emp.betaka_tameen, dbo.TBL_Emp.noview, dbo.TBL_Emp.orderreport, dbo.TBL_Emp.userin, dbo.TBL_Emp.datein, dbo.TBL_Emp.JobDescriptionId, 
-                         dbo.TBL_Emp.codemortabat, dbo.TBL_Emp.eschoolcode, dbo.Users.UserName, dbo.CDGehaworktype.Gehaworktype
-FROM            dbo.TBL_Emp INNER JOIN
-                         dbo.CDGehaworktype ON dbo.TBL_Emp.GehaworkId = dbo.CDGehaworktype.GehaworktypeId INNER JOIN
-                         dbo.Users ON dbo.TBL_Emp.userin = dbo.Users.UserID";
+                         dbo.TBL_Emp.codemortabat, dbo.TBL_Emp.eschoolcode, dbo.Users.UserName, dbo.CDGehaworktype.Gehaworktype, dbo.CD_EmpJob.EmpJobName, dbo.CDQualification.qualName, 
+                         dbo.CD_Specialization.SpecializationName, dbo.CD_QualifiedPlace.QualifiedPlaceName
+FROM            dbo.TBL_Emp LEFT OUTER JOIN
+                         dbo.CD_QualifiedPlace ON dbo.TBL_Emp.QualifiedPlaceId = dbo.CD_QualifiedPlace.QualifiedPlaceId LEFT OUTER JOIN
+                         dbo.CD_Specialization ON dbo.TBL_Emp.SpecializationId = dbo.CD_Specialization.SpecializationId LEFT OUTER JOIN
+                         dbo.CDQualification ON dbo.TBL_Emp.qualId = dbo.CDQualification.qualId LEFT OUTER JOIN
+                         dbo.CDGehaworktype ON dbo.TBL_Emp.GehaworkId = dbo.CDGehaworktype.GehaworktypeId LEFT OUTER JOIN
+                         dbo.Users ON dbo.TBL_Emp.userin = dbo.Users.UserID LEFT OUTER JOIN
+                         dbo.CD_EmpJob ON dbo.TBL_Emp.EmpJobId = dbo.CD_EmpJob.EmpJobId";
             }
         }
     }
