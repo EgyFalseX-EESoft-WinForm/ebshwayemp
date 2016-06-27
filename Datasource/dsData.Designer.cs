@@ -32,9 +32,13 @@ namespace Employee.Datasource {
         
         private tblorgprogDataTable tabletblorgprog;
         
+        private EMPinoutDataTable tableEMPinout;
+        
         private global::System.Data.DataRelation relationFK_TBLManagers_TBL_Emp;
         
         private global::System.Data.DataRelation relationFK_tbl_maradiy_TBL_Emp;
+        
+        private global::System.Data.DataRelation relationFK_EMPinout_TBL_Emp;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -75,6 +79,9 @@ namespace Employee.Datasource {
                 }
                 if ((ds.Tables["tblorgprog"] != null)) {
                     base.Tables.Add(new tblorgprogDataTable(ds.Tables["tblorgprog"]));
+                }
+                if ((ds.Tables["EMPinout"] != null)) {
+                    base.Tables.Add(new EMPinoutDataTable(ds.Tables["EMPinout"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -131,6 +138,16 @@ namespace Employee.Datasource {
         public tblorgprogDataTable tblorgprog {
             get {
                 return this.tabletblorgprog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public EMPinoutDataTable EMPinout {
+            get {
+                return this.tableEMPinout;
             }
         }
         
@@ -213,6 +230,9 @@ namespace Employee.Datasource {
                 if ((ds.Tables["tblorgprog"] != null)) {
                     base.Tables.Add(new tblorgprogDataTable(ds.Tables["tblorgprog"]));
                 }
+                if ((ds.Tables["EMPinout"] != null)) {
+                    base.Tables.Add(new EMPinoutDataTable(ds.Tables["EMPinout"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -270,8 +290,15 @@ namespace Employee.Datasource {
                     this.tabletblorgprog.InitVars();
                 }
             }
+            this.tableEMPinout = ((EMPinoutDataTable)(base.Tables["EMPinout"]));
+            if ((initTable == true)) {
+                if ((this.tableEMPinout != null)) {
+                    this.tableEMPinout.InitVars();
+                }
+            }
             this.relationFK_TBLManagers_TBL_Emp = this.Relations["FK_TBLManagers_TBL_Emp"];
             this.relationFK_tbl_maradiy_TBL_Emp = this.Relations["FK_tbl_maradiy_TBL_Emp"];
+            this.relationFK_EMPinout_TBL_Emp = this.Relations["FK_EMPinout_TBL_Emp"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -290,6 +317,8 @@ namespace Employee.Datasource {
             base.Tables.Add(this.tabletbl_maradiy);
             this.tabletblorgprog = new tblorgprogDataTable();
             base.Tables.Add(this.tabletblorgprog);
+            this.tableEMPinout = new EMPinoutDataTable();
+            base.Tables.Add(this.tableEMPinout);
             this.relationFK_TBLManagers_TBL_Emp = new global::System.Data.DataRelation("FK_TBLManagers_TBL_Emp", new global::System.Data.DataColumn[] {
                         this.tableTBL_Emp.EmpIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTBLManagers.EmpIDColumn}, false);
@@ -298,6 +327,10 @@ namespace Employee.Datasource {
                         this.tableTBL_Emp.EmpIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_maradiy.EmpIDColumn}, false);
             this.Relations.Add(this.relationFK_tbl_maradiy_TBL_Emp);
+            this.relationFK_EMPinout_TBL_Emp = new global::System.Data.DataRelation("FK_EMPinout_TBL_Emp", new global::System.Data.DataColumn[] {
+                        this.tableTBL_Emp.EmpIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableEMPinout.EmpIDColumn}, false);
+            this.Relations.Add(this.relationFK_EMPinout_TBL_Emp);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -321,6 +354,12 @@ namespace Employee.Datasource {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetblorgprog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeEMPinout() {
             return false;
         }
         
@@ -390,6 +429,9 @@ namespace Employee.Datasource {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tblorgprogRowChangeEventHandler(object sender, tblorgprogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void EMPinoutRowChangeEventHandler(object sender, EMPinoutRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2540,6 +2582,358 @@ namespace Employee.Datasource {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class EMPinoutDataTable : global::System.Data.TypedTableBase<EMPinoutRow> {
+            
+            private global::System.Data.DataColumn columnEmpID;
+            
+            private global::System.Data.DataColumn columnagaza_st_date;
+            
+            private global::System.Data.DataColumn columnAgazainoutId;
+            
+            private global::System.Data.DataColumn columnagaza_end_date;
+            
+            private global::System.Data.DataColumn columnagaza_MEMEO;
+            
+            private global::System.Data.DataColumn columndatein;
+            
+            private global::System.Data.DataColumn columnuserin;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutDataTable() {
+                this.TableName = "EMPinout";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal EMPinoutDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected EMPinoutDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EmpIDColumn {
+                get {
+                    return this.columnEmpID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn agaza_st_dateColumn {
+                get {
+                    return this.columnagaza_st_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AgazainoutIdColumn {
+                get {
+                    return this.columnAgazainoutId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn agaza_end_dateColumn {
+                get {
+                    return this.columnagaza_end_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn agaza_MEMEOColumn {
+                get {
+                    return this.columnagaza_MEMEO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dateinColumn {
+                get {
+                    return this.columndatein;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn userinColumn {
+                get {
+                    return this.columnuserin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow this[int index] {
+                get {
+                    return ((EMPinoutRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EMPinoutRowChangeEventHandler EMPinoutRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EMPinoutRowChangeEventHandler EMPinoutRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EMPinoutRowChangeEventHandler EMPinoutRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EMPinoutRowChangeEventHandler EMPinoutRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddEMPinoutRow(EMPinoutRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow AddEMPinoutRow(TBL_EmpRow parentTBL_EmpRowByFK_EMPinout_TBL_Emp, System.DateTime agaza_st_date, byte AgazainoutId, System.DateTime agaza_end_date, string agaza_MEMEO, System.DateTime datein, int userin) {
+                EMPinoutRow rowEMPinoutRow = ((EMPinoutRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        agaza_st_date,
+                        AgazainoutId,
+                        agaza_end_date,
+                        agaza_MEMEO,
+                        datein,
+                        userin};
+                if ((parentTBL_EmpRowByFK_EMPinout_TBL_Emp != null)) {
+                    columnValuesArray[0] = parentTBL_EmpRowByFK_EMPinout_TBL_Emp[0];
+                }
+                rowEMPinoutRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEMPinoutRow);
+                return rowEMPinoutRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow FindByEmpIDagaza_st_date(int EmpID, System.DateTime agaza_st_date) {
+                return ((EMPinoutRow)(this.Rows.Find(new object[] {
+                            EmpID,
+                            agaza_st_date})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                EMPinoutDataTable cln = ((EMPinoutDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new EMPinoutDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnEmpID = base.Columns["EmpID"];
+                this.columnagaza_st_date = base.Columns["agaza_st_date"];
+                this.columnAgazainoutId = base.Columns["AgazainoutId"];
+                this.columnagaza_end_date = base.Columns["agaza_end_date"];
+                this.columnagaza_MEMEO = base.Columns["agaza_MEMEO"];
+                this.columndatein = base.Columns["datein"];
+                this.columnuserin = base.Columns["userin"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnEmpID = new global::System.Data.DataColumn("EmpID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmpID);
+                this.columnagaza_st_date = new global::System.Data.DataColumn("agaza_st_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnagaza_st_date);
+                this.columnAgazainoutId = new global::System.Data.DataColumn("AgazainoutId", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAgazainoutId);
+                this.columnagaza_end_date = new global::System.Data.DataColumn("agaza_end_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnagaza_end_date);
+                this.columnagaza_MEMEO = new global::System.Data.DataColumn("agaza_MEMEO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnagaza_MEMEO);
+                this.columndatein = new global::System.Data.DataColumn("datein", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndatein);
+                this.columnuserin = new global::System.Data.DataColumn("userin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnuserin);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnEmpID,
+                                this.columnagaza_st_date}, true));
+                this.columnEmpID.AllowDBNull = false;
+                this.columnagaza_st_date.AllowDBNull = false;
+                this.columnAgazainoutId.AllowDBNull = false;
+                this.columnagaza_end_date.AllowDBNull = false;
+                this.columnagaza_MEMEO.MaxLength = 200;
+                this.columndatein.AllowDBNull = false;
+                this.columnuserin.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow NewEMPinoutRow() {
+                return ((EMPinoutRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new EMPinoutRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(EMPinoutRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.EMPinoutRowChanged != null)) {
+                    this.EMPinoutRowChanged(this, new EMPinoutRowChangeEvent(((EMPinoutRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.EMPinoutRowChanging != null)) {
+                    this.EMPinoutRowChanging(this, new EMPinoutRowChangeEvent(((EMPinoutRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.EMPinoutRowDeleted != null)) {
+                    this.EMPinoutRowDeleted(this, new EMPinoutRowChangeEvent(((EMPinoutRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.EMPinoutRowDeleting != null)) {
+                    this.EMPinoutRowDeleting(this, new EMPinoutRowChangeEvent(((EMPinoutRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveEMPinoutRow(EMPinoutRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsData ds = new dsData();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "EMPinoutDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TBLManagersRow : global::System.Data.DataRow {
@@ -4145,6 +4539,17 @@ namespace Employee.Datasource {
                     return ((tbl_maradiyRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tbl_maradiy_TBL_Emp"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow[] GetEMPinoutRows() {
+                if ((this.Table.ChildRelations["FK_EMPinout_TBL_Emp"] == null)) {
+                    return new EMPinoutRow[0];
+                }
+                else {
+                    return ((EMPinoutRow[])(base.GetChildRows(this.Table.ChildRelations["FK_EMPinout_TBL_Emp"])));
+                }
+            }
         }
         
         /// <summary>
@@ -4647,6 +5052,126 @@ namespace Employee.Datasource {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class EMPinoutRow : global::System.Data.DataRow {
+            
+            private EMPinoutDataTable tableEMPinout;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal EMPinoutRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableEMPinout = ((EMPinoutDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int EmpID {
+                get {
+                    return ((int)(this[this.tableEMPinout.EmpIDColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.EmpIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime agaza_st_date {
+                get {
+                    return ((global::System.DateTime)(this[this.tableEMPinout.agaza_st_dateColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.agaza_st_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte AgazainoutId {
+                get {
+                    return ((byte)(this[this.tableEMPinout.AgazainoutIdColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.AgazainoutIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime agaza_end_date {
+                get {
+                    return ((global::System.DateTime)(this[this.tableEMPinout.agaza_end_dateColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.agaza_end_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string agaza_MEMEO {
+                get {
+                    try {
+                        return ((string)(this[this.tableEMPinout.agaza_MEMEOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'agaza_MEMEO\' in table \'EMPinout\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEMPinout.agaza_MEMEOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime datein {
+                get {
+                    return ((global::System.DateTime)(this[this.tableEMPinout.dateinColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.dateinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int userin {
+                get {
+                    return ((int)(this[this.tableEMPinout.userinColumn]));
+                }
+                set {
+                    this[this.tableEMPinout.userinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBL_EmpRow TBL_EmpRow {
+                get {
+                    return ((TBL_EmpRow)(this.GetParentRow(this.Table.ParentRelations["FK_EMPinout_TBL_Emp"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_EMPinout_TBL_Emp"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isagaza_MEMEONull() {
+                return this.IsNull(this.tableEMPinout.agaza_MEMEOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setagaza_MEMEONull() {
+                this[this.tableEMPinout.agaza_MEMEOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4768,6 +5293,40 @@ namespace Employee.Datasource {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblorgprogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class EMPinoutRowChangeEvent : global::System.EventArgs {
+            
+            private EMPinoutRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRowChangeEvent(EMPinoutRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EMPinoutRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7244,6 +7803,387 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class EMPinoutTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public EMPinoutTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "EMPinout";
+            tableMapping.ColumnMappings.Add("EmpID", "EmpID");
+            tableMapping.ColumnMappings.Add("agaza_st_date", "agaza_st_date");
+            tableMapping.ColumnMappings.Add("AgazainoutId", "AgazainoutId");
+            tableMapping.ColumnMappings.Add("agaza_end_date", "agaza_end_date");
+            tableMapping.ColumnMappings.Add("agaza_MEMEO", "agaza_MEMEO");
+            tableMapping.ColumnMappings.Add("datein", "datein");
+            tableMapping.ColumnMappings.Add("userin", "userin");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [EMPinout] WHERE (([EmpID] = @Original_EmpID) AND ([agaza_st_date] = " +
+                "@Original_agaza_st_date))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmpID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmpID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_agaza_st_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_st_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [EMPinout] ([EmpID], [agaza_st_date], [AgazainoutId], [agaza_end_date], [agaza_MEMEO], [datein], [userin]) VALUES (@EmpID, @agaza_st_date, @AgazainoutId, @agaza_end_date, @agaza_MEMEO, @datein, @userin);
+SELECT EmpID, agaza_st_date, AgazainoutId, agaza_end_date, agaza_MEMEO, datein, userin FROM EMPinout WHERE (EmpID = @EmpID) AND (agaza_st_date = @agaza_st_date)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmpID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmpID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_st_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_st_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AgazainoutId", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgazainoutId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_end_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_end_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_MEMEO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_MEMEO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datein", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datein", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [EMPinout] SET [EmpID] = @EmpID, [agaza_st_date] = @agaza_st_date, [AgazainoutId] = @AgazainoutId, [agaza_end_date] = @agaza_end_date, [agaza_MEMEO] = @agaza_MEMEO, [datein] = @datein, [userin] = @userin WHERE (([EmpID] = @Original_EmpID) AND ([agaza_st_date] = @Original_agaza_st_date));
+SELECT EmpID, agaza_st_date, AgazainoutId, agaza_end_date, agaza_MEMEO, datein, userin FROM EMPinout WHERE (EmpID = @EmpID) AND (agaza_st_date = @agaza_st_date)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmpID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmpID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_st_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_st_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AgazainoutId", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgazainoutId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_end_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_end_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_MEMEO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_MEMEO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datein", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datein", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmpID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmpID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_agaza_st_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_st_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Employee.Properties.Settings.Default.EmployeesConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        EmpID, agaza_st_date, AgazainoutId, agaza_end_date, agaza_MEMEO, da" +
+                "tein, userin\r\nFROM            EMPinout";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        EmpID, agaza_st_date, AgazainoutId, agaza_end_date, agaza_MEMEO, da" +
+                "tein, userin\r\nFROM            EMPinout\r\nWHERE EmpID = @EmpID AND agaza_st_date =" +
+                " @agaza_st_date ";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmpID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EmpID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agaza_st_date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "agaza_st_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsData.EMPinoutDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsData.EMPinoutDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsData.EMPinoutDataTable dataTable = new dsData.EMPinoutDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByID(dsData.EMPinoutDataTable dataTable, int EmpID, string agaza_st_date) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(EmpID));
+            if ((agaza_st_date == null)) {
+                throw new global::System.ArgumentNullException("agaza_st_date");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(agaza_st_date));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsData.EMPinoutDataTable GetDataByID(int EmpID, string agaza_st_date) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(EmpID));
+            if ((agaza_st_date == null)) {
+                throw new global::System.ArgumentNullException("agaza_st_date");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(agaza_st_date));
+            }
+            dsData.EMPinoutDataTable dataTable = new dsData.EMPinoutDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsData.EMPinoutDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsData dataSet) {
+            return this.Adapter.Update(dataSet, "EMPinout");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_EmpID, System.DateTime Original_agaza_st_date) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EmpID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_agaza_st_date));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int EmpID, System.DateTime agaza_st_date, byte AgazainoutId, System.DateTime agaza_end_date, string agaza_MEMEO, System.DateTime datein, int userin) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(EmpID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(agaza_st_date));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(AgazainoutId));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(agaza_end_date));
+            if ((agaza_MEMEO == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(agaza_MEMEO));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(datein));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(userin));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int EmpID, System.DateTime agaza_st_date, byte AgazainoutId, System.DateTime agaza_end_date, string agaza_MEMEO, System.DateTime datein, int userin, int Original_EmpID, System.DateTime Original_agaza_st_date) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(EmpID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(agaza_st_date));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(AgazainoutId));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(agaza_end_date));
+            if ((agaza_MEMEO == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(agaza_MEMEO));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(datein));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(userin));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_EmpID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_agaza_st_date));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(byte AgazainoutId, System.DateTime agaza_end_date, string agaza_MEMEO, System.DateTime datein, int userin, int Original_EmpID, System.DateTime Original_agaza_st_date) {
+            return this.Update(Original_EmpID, Original_agaza_st_date, AgazainoutId, agaza_end_date, agaza_MEMEO, datein, userin, Original_EmpID, Original_agaza_st_date);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7262,6 +8202,8 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
         private tbl_maradiyTableAdapter _tbl_maradiyTableAdapter;
         
         private tblorgprogTableAdapter _tblorgprogTableAdapter;
+        
+        private EMPinoutTableAdapter _eMPinoutTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7336,6 +8278,20 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public EMPinoutTableAdapter EMPinoutTableAdapter {
+            get {
+                return this._eMPinoutTableAdapter;
+            }
+            set {
+                this._eMPinoutTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -7369,6 +8325,10 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                             && (this._tblorgprogTableAdapter.Connection != null))) {
                     return this._tblorgprogTableAdapter.Connection;
                 }
+                if (((this._eMPinoutTableAdapter != null) 
+                            && (this._eMPinoutTableAdapter.Connection != null))) {
+                    return this._eMPinoutTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -7392,6 +8352,9 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                     count = (count + 1);
                 }
                 if ((this._tblorgprogTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._eMPinoutTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -7441,6 +8404,15 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._eMPinoutTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EMPinout.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._eMPinoutTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -7483,6 +8455,14 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._eMPinoutTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EMPinout.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._eMPinoutTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -7493,6 +8473,14 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._eMPinoutTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EMPinout.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._eMPinoutTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tblorgprogTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblorgprog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7584,6 +8572,11 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._eMPinoutTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._eMPinoutTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -7650,6 +8643,15 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                     if (this._tblorgprogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tblorgprogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tblorgprogTableAdapter.Adapter);
+                    }
+                }
+                if ((this._eMPinoutTableAdapter != null)) {
+                    revertConnections.Add(this._eMPinoutTableAdapter, this._eMPinoutTableAdapter.Connection);
+                    this._eMPinoutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._eMPinoutTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._eMPinoutTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._eMPinoutTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._eMPinoutTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7725,6 +8727,10 @@ SELECT orgid, orgname, logo, hederright1, hederright2, hederright3, foter1, fote
                 if ((this._tblorgprogTableAdapter != null)) {
                     this._tblorgprogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblorgprogTableAdapter]));
                     this._tblorgprogTableAdapter.Transaction = null;
+                }
+                if ((this._eMPinoutTableAdapter != null)) {
+                    this._eMPinoutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eMPinoutTableAdapter]));
+                    this._eMPinoutTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

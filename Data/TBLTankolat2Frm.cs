@@ -212,6 +212,11 @@ namespace Employee
             }
         }
         #endregion
+
+        private void btnPrint1_Click(object sender, EventArgs e)
+        {
+            
+        }
         
     }
 } 

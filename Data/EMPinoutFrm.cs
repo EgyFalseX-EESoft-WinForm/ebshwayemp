@@ -192,7 +192,13 @@ namespace Employee
                 Program.Logger.LogThis(null, Text, FXFW.Logger.OpType.fail, null, ex, this);
             }
         }
+        private void btnPrint1_Click(object sender, EventArgs e)
+        {
+            
+        }
         #endregion
+
+        
         
     }
 }

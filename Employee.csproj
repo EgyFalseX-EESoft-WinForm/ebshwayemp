@@ -193,6 +193,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsQry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datasource\dsReport.cs">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Datasource\dsReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -421,6 +425,24 @@
     <Compile Include="Data\Emp_MoaahelFrm.designer.cs">
       <DependentUpon>Emp_MoaahelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_08.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_08.designer.cs">
+      <DependentUpon>XRep_08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_07.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_07.designer.cs">
+      <DependentUpon>XRep_07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_06.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_06.designer.cs">
+      <DependentUpon>XRep_06.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRep\XRep_05.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -475,6 +497,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\tblorgprogFrm.resx">
       <DependentUpon>tblorgprogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_08.resx">
+      <DependentUpon>XRep_08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_07.resx">
+      <DependentUpon>XRep_07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_06.resx">
+      <DependentUpon>XRep_06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRep\XRep_05.resx">
       <DependentUpon>XRep_05.cs</DependentUpon>

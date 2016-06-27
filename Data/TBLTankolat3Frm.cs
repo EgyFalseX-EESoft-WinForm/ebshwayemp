@@ -203,6 +203,16 @@ namespace Employee
             }
         }
         #endregion
+
+        private void btnPrint1_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+
+            XRep.XRep_08 FrmRep = new XRep.XRep_08(Convert.ToInt32(row["TankolatId"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
         
     }
 } 

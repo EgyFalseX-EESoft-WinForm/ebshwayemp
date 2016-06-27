@@ -123,10 +123,11 @@
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer3 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItemEmpDeployRpt = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpXRep_05 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -140,7 +141,6 @@
             this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBoxSkins = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.navBarItemEmpXRep_05 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditasase_code)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerMain)).BeginInit();
@@ -1228,6 +1228,23 @@
             this.navBarControlReport.Text = "navBarControl1";
             this.navBarControlReport.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("DevExpress Style");
             // 
+            // navBarGroup6
+            // 
+            this.navBarGroup6.Caption = "تنصيب التقارير";
+            this.navBarGroup6.Expanded = true;
+            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpDeployRpt)});
+            this.navBarGroup6.Name = "navBarGroup6";
+            // 
+            // navBarItemEmpDeployRpt
+            // 
+            this.navBarItemEmpDeployRpt.Caption = "تنصيب التقارير";
+            this.navBarItemEmpDeployRpt.LargeImageIndex = 5;
+            this.navBarItemEmpDeployRpt.Name = "navBarItemEmpDeployRpt";
+            this.navBarItemEmpDeployRpt.SmallImageIndex = 5;
+            this.navBarItemEmpDeployRpt.Visible = false;
+            this.navBarItemEmpDeployRpt.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemDeployRpt_LinkClicked);
+            // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "تقارير 1";
@@ -1248,22 +1265,13 @@
             this.navBarItemEmpXRep_04.SmallImageIndex = 4;
             this.navBarItemEmpXRep_04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_04_LinkClicked);
             // 
-            // navBarGroup6
+            // navBarItemEmpXRep_05
             // 
-            this.navBarGroup6.Caption = "تنصيب التقارير";
-            this.navBarGroup6.Expanded = true;
-            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpDeployRpt)});
-            this.navBarGroup6.Name = "navBarGroup6";
-            // 
-            // navBarItemEmpDeployRpt
-            // 
-            this.navBarItemEmpDeployRpt.Caption = "تنصيب التقارير";
-            this.navBarItemEmpDeployRpt.LargeImageIndex = 5;
-            this.navBarItemEmpDeployRpt.Name = "navBarItemEmpDeployRpt";
-            this.navBarItemEmpDeployRpt.SmallImageIndex = 5;
-            this.navBarItemEmpDeployRpt.Visible = false;
-            this.navBarItemEmpDeployRpt.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemDeployRpt_LinkClicked);
+            this.navBarItemEmpXRep_05.Caption = "بيان حالة لموظف";
+            this.navBarItemEmpXRep_05.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_05.Name = "navBarItemEmpXRep_05";
+            this.navBarItemEmpXRep_05.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_05.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_05_LinkClicked);
             // 
             // navBarGroup7
             // 
@@ -1389,14 +1397,6 @@
             this.repositoryItemComboBoxSkins.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBoxSkins.Name = "repositoryItemComboBoxSkins";
-            // 
-            // navBarItemEmpXRep_05
-            // 
-            this.navBarItemEmpXRep_05.Caption = "بيان حالة لموظف";
-            this.navBarItemEmpXRep_05.LargeImageIndex = 4;
-            this.navBarItemEmpXRep_05.Name = "navBarItemEmpXRep_05";
-            this.navBarItemEmpXRep_05.SmallImageIndex = 4;
-            this.navBarItemEmpXRep_05.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_05_LinkClicked);
             // 
             // MainFrm
             // 

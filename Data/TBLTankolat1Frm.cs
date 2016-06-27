@@ -215,7 +215,28 @@ namespace Employee
                 Program.Logger.LogThis(null, Text, FXFW.Logger.OpType.fail, null, ex, this);
             }
         }
+        private void btnPrint1_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+
+            XRep.XRep_06 FrmRep = new XRep.XRep_06(Convert.ToInt32(row["EmpID"]), Convert.ToDateTime(row["EmpStatedate"]), Convert.ToDateTime(row["agaza_end_date"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
         #endregion
+
+        private void btnPrint2_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+
+            XRep.XRep_07 FrmRep = new XRep.XRep_07(Convert.ToInt32(row["EmpID"]), Convert.ToDateTime(row["EmpStatedate"]), Convert.ToDateTime(row["agaza_end_date"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
+        
         
     }
 } 
