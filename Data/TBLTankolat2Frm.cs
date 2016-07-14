@@ -33,9 +33,9 @@ namespace Employee
                     repositoryItemLookUpEditEmpStateID.ValueMember = "EmpStateID";
                     break;
                 case CodeFrm.TableNames.TBLGehawork:
-                    repositoryItemGridLookUpEditTankolattypeId.DataSource = SqlDB.LoadDataTable(@"SELECT GehaworkId, Gehawork FROM TBLGehawork");
-                    repositoryItemGridLookUpEditTankolattypeId.DisplayMember = "Gehawork";
-                    repositoryItemGridLookUpEditTankolattypeId.ValueMember = "GehaworkId";
+                    repositoryItemGridLookUpEditTankolatgeha.DataSource = SqlDB.LoadDataTable(@"SELECT GehaworkId, Gehawork FROM TBLGehawork");
+                    repositoryItemGridLookUpEditTankolatgeha.DisplayMember = "Gehawork";
+                    repositoryItemGridLookUpEditTankolatgeha.ValueMember = "GehaworkId";
                     break;
                 case CodeFrm.TableNames.All:
                     //CD_EmpState
@@ -43,9 +43,9 @@ namespace Employee
                     repositoryItemLookUpEditEmpStateID.DisplayMember = "EmpStateName";
                     repositoryItemLookUpEditEmpStateID.ValueMember = "EmpStateID";
                     //TBLGehawork
-                    repositoryItemGridLookUpEditTankolattypeId.DataSource = SqlDB.LoadDataTable(@"SELECT GehaworkId, Gehawork FROM TBLGehawork");
-                    repositoryItemGridLookUpEditTankolattypeId.DisplayMember = "Gehawork";
-                    repositoryItemGridLookUpEditTankolattypeId.ValueMember = "GehaworkId";
+                    repositoryItemGridLookUpEditTankolatgeha.DataSource = SqlDB.LoadDataTable(@"SELECT GehaworkId, Gehawork FROM TBLGehawork");
+                    repositoryItemGridLookUpEditTankolatgeha.DisplayMember = "Gehawork";
+                    repositoryItemGridLookUpEditTankolatgeha.ValueMember = "GehaworkId";
                     //TBL_Emp
                     repositoryItemGridLookUpEditEmpID.DataSource = SqlDB.LoadDataTable(@"SELECT EmpID, EMPNAME FROM TBL_Emp");
                     repositoryItemGridLookUpEditEmpID.DisplayMember = "EMPNAME";
@@ -215,7 +215,12 @@ namespace Employee
 
         private void btnPrint1_Click(object sender, EventArgs e)
         {
-            
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+
+            XRep.XRep_09 FrmRep = new XRep.XRep_09(Convert.ToInt32(row["TankolatId"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
         }
         
     }

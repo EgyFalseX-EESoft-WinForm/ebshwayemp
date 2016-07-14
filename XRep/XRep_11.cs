@@ -9,28 +9,28 @@ using System.Linq;
 
 namespace Employee.XRep
 {
-    public partial class XRep_08 : DevExpress.XtraReports.UI.XtraReport
+    public partial class XRep_11 : DevExpress.XtraReports.UI.XtraReport
     {
         Datasource.dsLinq.dsLinqQryDataContext dsLinq = new Datasource.dsLinq.dsLinqQryDataContext();
         Datasource.dsQryTableAdapters.QueriesTableAdapter adpQry = new Datasource.dsQryTableAdapters.QueriesTableAdapter();
-        Datasource.dsReportTableAdapters.XRep_08TableAdapter adp = new Datasource.dsReportTableAdapters.XRep_08TableAdapter();
-        public XRep_08(int ID)
+        Datasource.dsReportTableAdapters.XRep_07TableAdapter adp = new Datasource.dsReportTableAdapters.XRep_07TableAdapter();
+        public XRep_11(int EmpId, DateTime From, DateTime To)
         {
             InitializeComponent();
             LoadHeader();
-            adp.Fill(dsReport.XRep_08, ID);
-            if (dsReport.XRep_08.Count == 0)
+            adp.Fill(dsReport.XRep_07, EmpId);
+            if (dsReport.XRep_07.Count == 0)
                 return;
-            Datasource.dsReport.XRep_08Row row = dsReport.XRep_08[0];
+            Datasource.dsReport.XRep_07Row row = dsReport.XRep_07[0];
 
-            lblGeha.Text = row.Gehawork;
-            lblName.Text = row.EMPNAME;
+            lblName1.Text = row.EMPNAME;
             lblJob.Text = row.EmpJobName;
-            lblCountry.Text = row.geha;
-            lblNumber.Text = row.design.ToString();
-            lblDate.Text = row.EmpStatedate.ToShortDateString();
-
-            lblToday.Text = adpQry.GetServerDatetime().Value.ToShortDateString();
+            lblGeha.Text = row.Gehawork;
+            lblSchool.Text = row.Gehawork;
+            lblFrom1.Text = From.ToShortDateString();
+            lblFrom2.Text = From.ToShortDateString();
+            lblTo.Text = To.ToShortDateString();
+            lblName2.Text = row.EMPNAME;
         }
         private void LoadHeader()
         {

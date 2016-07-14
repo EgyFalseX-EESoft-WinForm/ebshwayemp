@@ -37,7 +37,7 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEditEmpStateID = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemGridLookUpEditTankolattypeId = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEditTankolatgeha = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditEmpID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpStateID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditTankolattypeId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditTankolatgeha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.VistaTimeProperties)).BeginInit();
@@ -92,7 +92,7 @@
             this.gridControlData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEditSave,
             this.repositoryItemButtonEditDel,
-            this.repositoryItemGridLookUpEditTankolattypeId,
+            this.repositoryItemGridLookUpEditTankolatgeha,
             this.repositoryItemDateEditDatein,
             this.repositoryItemGridLookUpEditEmpID,
             this.repositoryItemDateEditDMY,
@@ -200,24 +200,24 @@
             this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.Caption = "جهة النقل";
-            this.gridColumn5.ColumnEdit = this.repositoryItemGridLookUpEditTankolattypeId;
-            this.gridColumn5.FieldName = "TankolattypeId";
+            this.gridColumn5.ColumnEdit = this.repositoryItemGridLookUpEditTankolatgeha;
+            this.gridColumn5.FieldName = "Tankolatgeha";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 2;
             this.gridColumn5.Width = 145;
             // 
-            // repositoryItemGridLookUpEditTankolattypeId
+            // repositoryItemGridLookUpEditTankolatgeha
             // 
-            this.repositoryItemGridLookUpEditTankolattypeId.AutoHeight = false;
-            this.repositoryItemGridLookUpEditTankolattypeId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemGridLookUpEditTankolatgeha.AutoHeight = false;
+            this.repositoryItemGridLookUpEditTankolatgeha.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.repositoryItemGridLookUpEditTankolattypeId.Name = "repositoryItemGridLookUpEditTankolattypeId";
-            this.repositoryItemGridLookUpEditTankolattypeId.NullText = "";
-            this.repositoryItemGridLookUpEditTankolattypeId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemGridLookUpEditTankolattypeId.View = this.gridView1;
-            this.repositoryItemGridLookUpEditTankolattypeId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemGridLookUpEditagaza_type_code_ButtonClick);
+            this.repositoryItemGridLookUpEditTankolatgeha.Name = "repositoryItemGridLookUpEditTankolatgeha";
+            this.repositoryItemGridLookUpEditTankolatgeha.NullText = "";
+            this.repositoryItemGridLookUpEditTankolatgeha.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemGridLookUpEditTankolatgeha.View = this.gridView1;
+            this.repositoryItemGridLookUpEditTankolatgeha.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemGridLookUpEditagaza_type_code_ButtonClick);
             // 
             // gridView1
             // 
@@ -469,7 +469,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditEmpID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpStateID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditTankolattypeId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditTankolatgeha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).EndInit();
@@ -514,7 +514,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmpStateID;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEditTankolattypeId;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEditTankolatgeha;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.SimpleButton btnPrint1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;

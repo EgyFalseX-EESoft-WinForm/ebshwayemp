@@ -54,13 +54,17 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEditDel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnPrint3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrint2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnPrint2 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnPrint4 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditEmpID)).BeginInit();
@@ -82,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlData
@@ -402,6 +408,8 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnPrint4);
+            this.layoutControl1.Controls.Add(this.btnPrint3);
             this.layoutControl1.Controls.Add(this.btnPrint2);
             this.layoutControl1.Controls.Add(this.btnPrint1);
             this.layoutControl1.Controls.Add(this.gridControlData);
@@ -413,6 +421,28 @@
             this.layoutControl1.Size = new System.Drawing.Size(784, 362);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnPrint3
+            // 
+            this.btnPrint3.Image = global::Employee.Properties.Resources.Print;
+            this.btnPrint3.Location = new System.Drawing.Point(341, 12);
+            this.btnPrint3.Name = "btnPrint3";
+            this.btnPrint3.Size = new System.Drawing.Size(155, 22);
+            this.btnPrint3.StyleController = this.layoutControl1;
+            this.btnPrint3.TabIndex = 6;
+            this.btnPrint3.Text = "نموزج الاجازة الاعتيادي";
+            this.btnPrint3.Click += new System.EventHandler(this.btnPrint3_Click);
+            // 
+            // btnPrint2
+            // 
+            this.btnPrint2.Image = global::Employee.Properties.Resources.Print;
+            this.btnPrint2.Location = new System.Drawing.Point(182, 12);
+            this.btnPrint2.Name = "btnPrint2";
+            this.btnPrint2.Size = new System.Drawing.Size(155, 22);
+            this.btnPrint2.StyleController = this.layoutControl1;
+            this.btnPrint2.TabIndex = 5;
+            this.btnPrint2.Text = "نموزج اجازه جزء من الوقت 2";
+            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
             // 
             // btnPrint1
             // 
@@ -434,7 +464,9 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.emptySpaceItem1,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(784, 362);
@@ -469,22 +501,11 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(329, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(626, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(435, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(138, 26);
             this.emptySpaceItem1.Text = "emptySpaceItem1";
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // btnPrint2
-            // 
-            this.btnPrint2.Image = global::Employee.Properties.Resources.Print;
-            this.btnPrint2.Location = new System.Drawing.Point(182, 12);
-            this.btnPrint2.Name = "btnPrint2";
-            this.btnPrint2.Size = new System.Drawing.Size(155, 22);
-            this.btnPrint2.StyleController = this.layoutControl1;
-            this.btnPrint2.TabIndex = 5;
-            this.btnPrint2.Text = "نموزج اجازه جزء من الوقت 2";
-            this.btnPrint2.Click += new System.EventHandler(this.btnPrint2_Click);
             // 
             // layoutControlItem3
             // 
@@ -497,6 +518,41 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnPrint3;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
+            this.layoutControlItem4.Location = new System.Drawing.Point(329, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(159, 26);
+            this.layoutControlItem4.Text = "layoutControlItem4";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextToControlDistance = 0;
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // btnPrint4
+            // 
+            this.btnPrint4.Image = global::Employee.Properties.Resources.Print;
+            this.btnPrint4.Location = new System.Drawing.Point(500, 12);
+            this.btnPrint4.Name = "btnPrint4";
+            this.btnPrint4.Size = new System.Drawing.Size(134, 22);
+            this.btnPrint4.StyleController = this.layoutControl1;
+            this.btnPrint4.TabIndex = 7;
+            this.btnPrint4.Text = "نموزج اجازة الحج";
+            this.btnPrint4.Click += new System.EventHandler(this.btnPrint4_Click);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnPrint4;
+            this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
+            this.layoutControlItem5.Location = new System.Drawing.Point(488, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(138, 26);
+            this.layoutControlItem5.Text = "layoutControlItem5";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextToControlDistance = 0;
+            this.layoutControlItem5.TextVisible = false;
             // 
             // TBLTankolat1Frm
             // 
@@ -528,6 +584,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -567,5 +625,9 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SimpleButton btnPrint2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraEditors.SimpleButton btnPrint3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.SimpleButton btnPrint4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }

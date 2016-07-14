@@ -564,6 +564,11 @@ namespace Employee
             XRep.XRep_05 FrmRep = new XRep.XRep_05();
             Misc.Misc.ShowPrintPreview(FrmRep);
         }
+        private void navBarItemEmpXRep_12_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            XRep.XRep_12_Frm frm = new XRep.XRep_12_Frm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Reports.png"], 32, false) };
+            frm.Show();
+        }
 
     }
 

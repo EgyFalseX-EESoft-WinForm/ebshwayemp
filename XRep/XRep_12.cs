@@ -6,31 +6,23 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraEditors;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Employee.XRep
 {
-    public partial class XRep_08 : DevExpress.XtraReports.UI.XtraReport
+    public partial class XRep_12 : DevExpress.XtraReports.UI.XtraReport
     {
         Datasource.dsLinq.dsLinqQryDataContext dsLinq = new Datasource.dsLinq.dsLinqQryDataContext();
         Datasource.dsQryTableAdapters.QueriesTableAdapter adpQry = new Datasource.dsQryTableAdapters.QueriesTableAdapter();
-        Datasource.dsReportTableAdapters.XRep_08TableAdapter adp = new Datasource.dsReportTableAdapters.XRep_08TableAdapter();
-        public XRep_08(int ID)
+
+        public XRep_12(Datasource.dsReport.XRep_12_ADataTable lst)
         {
             InitializeComponent();
             LoadHeader();
-            adp.Fill(dsReport.XRep_08, ID);
-            if (dsReport.XRep_08.Count == 0)
-                return;
-            Datasource.dsReport.XRep_08Row row = dsReport.XRep_08[0];
-
-            lblGeha.Text = row.Gehawork;
-            lblName.Text = row.EMPNAME;
-            lblJob.Text = row.EmpJobName;
-            lblCountry.Text = row.geha;
-            lblNumber.Text = row.design.ToString();
-            lblDate.Text = row.EmpStatedate.ToShortDateString();
-
-            lblToday.Text = adpQry.GetServerDatetime().Value.ToShortDateString();
+            
+            DataSource = lst;
+            this.xrtCellName.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "EMPNAME")});
         }
         private void LoadHeader()
         {
@@ -43,10 +35,10 @@ namespace Employee.XRep
             lblH2.Text = data.hederright2;
             lblH3.Text = data.hederright3;
 
+            
             if (data.logo != null)
                 xrpbLogo.Image = Image.FromStream(new System.IO.MemoryStream(data.logo));
             
         }
-
     }
 }

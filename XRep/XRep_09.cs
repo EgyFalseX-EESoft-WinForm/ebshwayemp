@@ -9,12 +9,12 @@ using System.Linq;
 
 namespace Employee.XRep
 {
-    public partial class XRep_08 : DevExpress.XtraReports.UI.XtraReport
+    public partial class XRep_09 : DevExpress.XtraReports.UI.XtraReport
     {
         Datasource.dsLinq.dsLinqQryDataContext dsLinq = new Datasource.dsLinq.dsLinqQryDataContext();
         Datasource.dsQryTableAdapters.QueriesTableAdapter adpQry = new Datasource.dsQryTableAdapters.QueriesTableAdapter();
         Datasource.dsReportTableAdapters.XRep_08TableAdapter adp = new Datasource.dsReportTableAdapters.XRep_08TableAdapter();
-        public XRep_08(int ID)
+        public XRep_09(int ID)
         {
             InitializeComponent();
             LoadHeader();
@@ -23,14 +23,12 @@ namespace Employee.XRep
                 return;
             Datasource.dsReport.XRep_08Row row = dsReport.XRep_08[0];
 
-            lblGeha.Text = row.Gehawork;
             lblName.Text = row.EMPNAME;
             lblJob.Text = row.EmpJobName;
-            lblCountry.Text = row.geha;
+            lblFromSchool.Text = row.Gehawork;
+            lblToSchool.Text = row.Gehawork_New;
             lblNumber.Text = row.design.ToString();
             lblDate.Text = row.EmpStatedate.ToShortDateString();
-
-            lblToday.Text = adpQry.GetServerDatetime().Value.ToShortDateString();
         }
         private void LoadHeader()
         {

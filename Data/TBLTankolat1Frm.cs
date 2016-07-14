@@ -236,6 +236,24 @@ namespace Employee
             Misc.Misc.ShowPrintPreview(FrmRep);
         }
 
+        private void btnPrint3_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+            XRep.XRep_10 FrmRep = new XRep.XRep_10(Convert.ToInt32(row["EmpID"]), Convert.ToDateTime(row["EmpStatedate"]), Convert.ToDateTime(row["agaza_end_date"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
+        private void btnPrint4_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+            XRep.XRep_11 FrmRep = new XRep.XRep_11(Convert.ToInt32(row["EmpID"]), Convert.ToDateTime(row["EmpStatedate"]), Convert.ToDateTime(row["agaza_end_date"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
         
         
     }

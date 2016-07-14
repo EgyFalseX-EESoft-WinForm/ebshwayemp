@@ -425,6 +425,30 @@
     <Compile Include="Data\Emp_MoaahelFrm.designer.cs">
       <DependentUpon>Emp_MoaahelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_12.designer.cs">
+      <DependentUpon>XRep_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_11.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_11.designer.cs">
+      <DependentUpon>XRep_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_10.designer.cs">
+      <DependentUpon>XRep_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_09.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_09.designer.cs">
+      <DependentUpon>XRep_09.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRep\XRep_08.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -473,6 +497,12 @@
     <Compile Include="XRep\XRep_01.designer.cs">
       <DependentUpon>XRep_01.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_12_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_12_Frm.Designer.cs">
+      <DependentUpon>XRep_12_Frm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -498,6 +528,18 @@
     <EmbeddedResource Include="Data\tblorgprogFrm.resx">
       <DependentUpon>tblorgprogFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_12.resx">
+      <DependentUpon>XRep_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_11.resx">
+      <DependentUpon>XRep_11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_10.resx">
+      <DependentUpon>XRep_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_09.resx">
+      <DependentUpon>XRep_09.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XRep\XRep_08.resx">
       <DependentUpon>XRep_08.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XRep\XRep_01.resx">
       <DependentUpon>XRep_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_12_Frm.resx">
+      <DependentUpon>XRep_12_Frm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Datasource\dsLinq\dsLinqQry.dbml.layout">
       <DependentUpon>dsLinqQry.dbml</DependentUpon>

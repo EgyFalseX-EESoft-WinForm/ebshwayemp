@@ -141,6 +141,7 @@
             this.navBarItemEmpvQry04 = new DevExpress.XtraNavBar.NavBarItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBoxSkins = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.navBarItemEmpXRep_12 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditasase_code)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerMain)).BeginInit();
@@ -1217,7 +1218,8 @@
             this.navBarControlReport.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItemEmpDeployRpt,
             this.navBarItemEmpXRep_04,
-            this.navBarItemEmpXRep_05});
+            this.navBarItemEmpXRep_05,
+            this.navBarItemEmpXRep_12});
             this.navBarControlReport.LargeImages = this.imageCollection32;
             this.navBarControlReport.Location = new System.Drawing.Point(0, 0);
             this.navBarControlReport.Name = "navBarControlReport";
@@ -1251,7 +1253,8 @@
             this.navBarGroup4.Expanded = true;
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_12)});
             this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
             this.navBarGroup4.Name = "navBarGroup4";
             this.navBarGroup4.NavigationPaneVisible = false;
@@ -1397,6 +1400,14 @@
             this.repositoryItemComboBoxSkins.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBoxSkins.Name = "repositoryItemComboBoxSkins";
+            // 
+            // navBarItemEmpXRep_12
+            // 
+            this.navBarItemEmpXRep_12.Caption = "طلب تندرج مرتبات";
+            this.navBarItemEmpXRep_12.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_12.Name = "navBarItemEmpXRep_12";
+            this.navBarItemEmpXRep_12.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemEmpXRep_12_LinkClicked);
             // 
             // MainFrm
             // 
@@ -1563,6 +1574,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmptblorgprog;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_04;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_05;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_12;
 
     }
 }

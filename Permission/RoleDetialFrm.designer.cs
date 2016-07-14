@@ -96,20 +96,21 @@
             this.navBarItemEmpvQry03 = new DevExpress.XtraNavBar.NavBarItem();
             this.DPReport = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel5_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemEmpDeployRpt = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.CEUpdate = new DevExpress.XtraEditors.CheckEdit();
             this.CESelect = new DevExpress.XtraEditors.CheckEdit();
             this.CEDelete = new DevExpress.XtraEditors.CheckEdit();
             this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
+            this.navBarControlReport = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemEmpDeployRpt = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemEmpXRep_04 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemEmpXRep_05 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemEmpXRep_12 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlSelect)).BeginInit();
             this.groupControlSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LUEItems.Properties)).BeginInit();
@@ -130,13 +131,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).BeginInit();
             this.DPReport.SuspendLayout();
             this.dockPanel5_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlSelect
@@ -884,90 +885,6 @@
             this.dockPanel5_Container.Size = new System.Drawing.Size(326, 416);
             this.dockPanel5_Container.TabIndex = 0;
             // 
-            // navBarControlReport
-            // 
-            this.navBarControlReport.ActiveGroup = this.navBarGroup6;
-            this.navBarControlReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControlReport.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup6,
-            this.navBarGroup4,
-            this.navBarGroup7,
-            this.navBarGroup8,
-            this.navBarGroup9});
-            this.navBarControlReport.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItemEmpDeployRpt,
-            this.navBarItemEmpXRep_04,
-            this.navBarItemEmpXRep_05});
-            this.navBarControlReport.LargeImages = this.imageCollection32;
-            this.navBarControlReport.Location = new System.Drawing.Point(0, 0);
-            this.navBarControlReport.Name = "navBarControlReport";
-            this.navBarControlReport.OptionsNavPane.ExpandedWidth = 326;
-            this.navBarControlReport.Size = new System.Drawing.Size(326, 416);
-            this.navBarControlReport.SmallImages = this.imageCollection32;
-            this.navBarControlReport.TabIndex = 10;
-            this.navBarControlReport.Text = "navBarControl1";
-            this.navBarControlReport.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("DevExpress Style");
-            // 
-            // navBarGroup4
-            // 
-            this.navBarGroup4.Caption = "تقارير 1";
-            this.navBarGroup4.Expanded = true;
-            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05)});
-            this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
-            this.navBarGroup4.Name = "navBarGroup4";
-            this.navBarGroup4.NavigationPaneVisible = false;
-            this.navBarGroup4.SmallImage = global::Employee.Properties.Resources.Print;
-            // 
-            // navBarItemEmpXRep_04
-            // 
-            this.navBarItemEmpXRep_04.Caption = "سجل شؤن العاملين";
-            this.navBarItemEmpXRep_04.LargeImageIndex = 4;
-            this.navBarItemEmpXRep_04.Name = "navBarItemEmpXRep_04";
-            this.navBarItemEmpXRep_04.SmallImageIndex = 4;
-            this.navBarItemEmpXRep_04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
-            // 
-            // navBarGroup6
-            // 
-            this.navBarGroup6.Caption = "تنصيب التقارير";
-            this.navBarGroup6.Expanded = true;
-            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpDeployRpt)});
-            this.navBarGroup6.Name = "navBarGroup6";
-            // 
-            // navBarItemEmpDeployRpt
-            // 
-            this.navBarItemEmpDeployRpt.Caption = "تنصيب التقارير";
-            this.navBarItemEmpDeployRpt.LargeImageIndex = 5;
-            this.navBarItemEmpDeployRpt.Name = "navBarItemEmpDeployRpt";
-            this.navBarItemEmpDeployRpt.SmallImageIndex = 5;
-            this.navBarItemEmpDeployRpt.Visible = false;
-            // 
-            // navBarGroup7
-            // 
-            this.navBarGroup7.Caption = "تقارير 2";
-            this.navBarGroup7.Expanded = true;
-            this.navBarGroup7.LargeImage = global::Employee.Properties.Resources.Print;
-            this.navBarGroup7.Name = "navBarGroup7";
-            this.navBarGroup7.SmallImage = global::Employee.Properties.Resources.Print;
-            // 
-            // navBarGroup8
-            // 
-            this.navBarGroup8.Caption = "تقارير 3";
-            this.navBarGroup8.Expanded = true;
-            this.navBarGroup8.LargeImage = global::Employee.Properties.Resources.Print;
-            this.navBarGroup8.Name = "navBarGroup8";
-            this.navBarGroup8.SmallImage = global::Employee.Properties.Resources.Print;
-            // 
-            // navBarGroup9
-            // 
-            this.navBarGroup9.Caption = "تقارير 4";
-            this.navBarGroup9.Expanded = true;
-            this.navBarGroup9.LargeImage = global::Employee.Properties.Resources.Print;
-            this.navBarGroup9.Name = "navBarGroup9";
-            this.navBarGroup9.SmallImage = global::Employee.Properties.Resources.Print;
-            // 
             // groupControl2
             // 
             this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1015,6 +932,68 @@
             this.CEInsert.Size = new System.Drawing.Size(75, 19);
             this.CEInsert.TabIndex = 0;
             // 
+            // navBarControlReport
+            // 
+            this.navBarControlReport.ActiveGroup = this.navBarGroup6;
+            this.navBarControlReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControlReport.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup6,
+            this.navBarGroup4,
+            this.navBarGroup7,
+            this.navBarGroup8,
+            this.navBarGroup9});
+            this.navBarControlReport.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItemEmpDeployRpt,
+            this.navBarItemEmpXRep_04,
+            this.navBarItemEmpXRep_05,
+            this.navBarItemEmpXRep_12});
+            this.navBarControlReport.LargeImages = this.imageCollection32;
+            this.navBarControlReport.Location = new System.Drawing.Point(0, 0);
+            this.navBarControlReport.Name = "navBarControlReport";
+            this.navBarControlReport.OptionsNavPane.ExpandedWidth = 326;
+            this.navBarControlReport.Size = new System.Drawing.Size(326, 416);
+            this.navBarControlReport.SmallImages = this.imageCollection32;
+            this.navBarControlReport.TabIndex = 10;
+            this.navBarControlReport.Text = "navBarControl1";
+            this.navBarControlReport.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("DevExpress Style");
+            // 
+            // navBarGroup6
+            // 
+            this.navBarGroup6.Caption = "تنصيب التقارير";
+            this.navBarGroup6.Expanded = true;
+            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpDeployRpt)});
+            this.navBarGroup6.Name = "navBarGroup6";
+            // 
+            // navBarItemEmpDeployRpt
+            // 
+            this.navBarItemEmpDeployRpt.Caption = "تنصيب التقارير";
+            this.navBarItemEmpDeployRpt.LargeImageIndex = 5;
+            this.navBarItemEmpDeployRpt.Name = "navBarItemEmpDeployRpt";
+            this.navBarItemEmpDeployRpt.SmallImageIndex = 5;
+            this.navBarItemEmpDeployRpt.Visible = false;
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "تقارير 1";
+            this.navBarGroup4.Expanded = true;
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_04),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_05),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemEmpXRep_12)});
+            this.navBarGroup4.LargeImage = global::Employee.Properties.Resources.Print;
+            this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.NavigationPaneVisible = false;
+            this.navBarGroup4.SmallImage = global::Employee.Properties.Resources.Print;
+            // 
+            // navBarItemEmpXRep_04
+            // 
+            this.navBarItemEmpXRep_04.Caption = "سجل شؤن العاملين";
+            this.navBarItemEmpXRep_04.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_04.Name = "navBarItemEmpXRep_04";
+            this.navBarItemEmpXRep_04.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_04.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            // 
             // navBarItemEmpXRep_05
             // 
             this.navBarItemEmpXRep_05.Caption = "بيان حالة لموظف";
@@ -1022,6 +1001,38 @@
             this.navBarItemEmpXRep_05.Name = "navBarItemEmpXRep_05";
             this.navBarItemEmpXRep_05.SmallImageIndex = 4;
             this.navBarItemEmpXRep_05.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            // 
+            // navBarItemEmpXRep_12
+            // 
+            this.navBarItemEmpXRep_12.Caption = "طلب تندرج مرتبات";
+            this.navBarItemEmpXRep_12.LargeImageIndex = 4;
+            this.navBarItemEmpXRep_12.Name = "navBarItemEmpXRep_12";
+            this.navBarItemEmpXRep_12.SmallImageIndex = 4;
+            this.navBarItemEmpXRep_12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem_LinkClicked);
+            // 
+            // navBarGroup7
+            // 
+            this.navBarGroup7.Caption = "تقارير 2";
+            this.navBarGroup7.Expanded = true;
+            this.navBarGroup7.LargeImage = global::Employee.Properties.Resources.Print;
+            this.navBarGroup7.Name = "navBarGroup7";
+            this.navBarGroup7.SmallImage = global::Employee.Properties.Resources.Print;
+            // 
+            // navBarGroup8
+            // 
+            this.navBarGroup8.Caption = "تقارير 3";
+            this.navBarGroup8.Expanded = true;
+            this.navBarGroup8.LargeImage = global::Employee.Properties.Resources.Print;
+            this.navBarGroup8.Name = "navBarGroup8";
+            this.navBarGroup8.SmallImage = global::Employee.Properties.Resources.Print;
+            // 
+            // navBarGroup9
+            // 
+            this.navBarGroup9.Caption = "تقارير 4";
+            this.navBarGroup9.Expanded = true;
+            this.navBarGroup9.LargeImage = global::Employee.Properties.Resources.Print;
+            this.navBarGroup9.Name = "navBarGroup9";
+            this.navBarGroup9.SmallImage = global::Employee.Properties.Resources.Print;
             // 
             // RoleDetialFrm
             // 
@@ -1055,13 +1066,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlQry)).EndInit();
             this.DPReport.ResumeLayout(false);
             this.dockPanel5_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CEUpdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CESelect.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEDelete.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CEInsert.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControlReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1140,13 +1151,14 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmptbl_maradiy;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmptblorgprog;
         private DevExpress.XtraNavBar.NavBarControl navBarControlReport;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_04;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
         private DevExpress.XtraNavBar.NavBarItem navBarItemEmpDeployRpt;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_04;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_05;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_12;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup7;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup9;
-        private DevExpress.XtraNavBar.NavBarItem navBarItemEmpXRep_05;
     }
 }
