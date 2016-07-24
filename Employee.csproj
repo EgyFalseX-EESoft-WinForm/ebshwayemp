@@ -425,6 +425,24 @@
     <Compile Include="Data\Emp_MoaahelFrm.designer.cs">
       <DependentUpon>Emp_MoaahelFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\XRep_15.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_15.designer.cs">
+      <DependentUpon>XRep_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_14.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_14.designer.cs">
+      <DependentUpon>XRep_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\XRep_13.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\XRep_13.designer.cs">
+      <DependentUpon>XRep_13.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRep\XRep_12.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -527,6 +545,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\tblorgprogFrm.resx">
       <DependentUpon>tblorgprogFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_15.resx">
+      <DependentUpon>XRep_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_14.resx">
+      <DependentUpon>XRep_14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\XRep_13.resx">
+      <DependentUpon>XRep_13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRep\XRep_12.resx">
       <DependentUpon>XRep_12.cs</DependentUpon>

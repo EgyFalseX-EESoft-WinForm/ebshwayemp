@@ -254,6 +254,33 @@ namespace Employee
             Misc.Misc.ShowPrintPreview(FrmRep);
         }
 
+        private void btnPrint5_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+            XRep.XRep_13 FrmRep = new XRep.XRep_13(Convert.ToInt32(row["TankolatId"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
+        private void btnPrint6_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+            XRep.XRep_14 FrmRep = new XRep.XRep_14(Convert.ToInt32(row["TankolatId"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
+        private void btnPrint7_Click(object sender, EventArgs e)
+        {
+            DataRow row = gridViewData.GetFocusedDataRow();
+            if (row == null)
+                return;
+            XRep.XRep_15 FrmRep = new XRep.XRep_15(Convert.ToInt32(row["TankolatId"]));
+            Misc.Misc.ShowPrintPreview(FrmRep);
+        }
+
         
         
     }
